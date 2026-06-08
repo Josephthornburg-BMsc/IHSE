@@ -1,0 +1,19 @@
+# Temporary files
+.~lock.*
+*.tmp
+*.log
+
+# Print source documents and design assets
+*.odt
+*.docx
+*.odg
+*.pdf
+*.zip
+zmnm5k4_print-ready/
+image.png
+image2.jpg
+backcover.jpg
+cryptozoology.pdf
+
+# Dev/test scripts
+verify_ids.js
