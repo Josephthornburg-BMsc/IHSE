@@ -4616,7 +4616,9 @@ let currentState = {
     quizSubmitted: false,
     userName: "",
     userRole: "guest",
-    paymentMethod: "paypal"
+    paymentMethod: "paypal",
+    isAdmin: false,
+    adminBypassAll: false
 };
 
 // --- INITIALIZATION ---
@@ -4736,7 +4738,7 @@ function renderBookPage() {
     rightHeader.innerText = rightPageData ? `${rightPageData.title}` : `IHSE Field Archives`;
 
     const RESTRICTED_CHAPTERS = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook", "project"];
-    if (RESTRICTED_CHAPTERS.includes(chapId) && currentState.userRole !== "investigator") {
+    if (RESTRICTED_CHAPTERS.includes(chapId) && currentState.userRole !== "investigator" && !currentState.adminBypassAll) {
         const isPending = (currentState.userRole === "pending");
         leftContent.innerHTML = `
             <div style="text-align: center; padding: 2rem 1.5rem;">
@@ -5646,7 +5648,7 @@ window.restartExam = function() {
 
 // --- MANUAL COMPILING & DOWNLOAD / PRINT UTILITIES ---
 window.downloadHtmlBook = function() {
-    if (currentState.userRole !== "investigator") {
+    if (currentState.userRole !== "investigator" && !currentState.adminBypassAll) {
         alert("Access Denied: Clearance required to download the E-Book. Please apply for Investigator Status.");
         openJoinModal();
         return;
@@ -5873,7 +5875,7 @@ window.downloadHtmlBook = function() {
 };
 
 window.printFullManual = function() {
-    if (currentState.userRole !== "investigator") {
+    if (currentState.userRole !== "investigator" && !currentState.adminBypassAll) {
         alert("Access Denied: Clearance required to print or save the Compendium. Please apply for Investigator Status.");
         openJoinModal();
         return;
@@ -6004,7 +6006,7 @@ window.printFullManual = function() {
 };
 
 window.downloadProjectTemplate = function() {
-    if (currentState.userRole !== "investigator") {
+    if (currentState.userRole !== "investigator" && !currentState.adminBypassAll) {
         alert("Access Denied: Clearance required to download the Field Project Dossier. Please apply for Investigator Status.");
         openJoinModal();
         return;
@@ -6174,6 +6176,24 @@ function loadUserSession() {
     const examName = document.getElementById("student-name-input");
     if (examName && name) {
         examName.value = name;
+    }
+
+    // Load Admin credentials
+    const adminSession = sessionStorage.getItem("ihse_isAdmin");
+    if (adminSession === "true") {
+        currentState.isAdmin = true;
+        // Display panel
+        const panel = document.getElementById("admin-floating-panel");
+        if (panel) {
+            panel.style.display = "block";
+        }
+        // Style toggle button
+        const toggleBtn = document.getElementById("admin-toggle-btn");
+        if (toggleBtn) {
+            toggleBtn.style.borderColor = "var(--accent-green)";
+            toggleBtn.style.color = "var(--accent-green)";
+            toggleBtn.style.background = "rgba(63,110,82,0.08)";
+        }
     }
 }
 
@@ -6608,7 +6628,7 @@ function renderClearanceGate(isPending) {
 }
 
 function updateAccessGates() {
-    const isApproved = (currentState.userRole === "investigator");
+    const isApproved = (currentState.userRole === "investigator" || currentState.adminBypassAll);
     const isPending = (currentState.userRole === "pending");
 
     // Handle Exam Section
@@ -6665,3 +6685,116 @@ function updateAccessGates() {
         }
     }
 }
+
+// --- ADMIN CONTROL SYSTEM ---
+window.toggleAdminPanel = function() {
+    if (currentState.isAdmin) {
+        // Toggle floating panel visibility
+        const panel = document.getElementById("admin-floating-panel");
+        if (panel) {
+            panel.style.display = (panel.style.display === "none") ? "block" : "none";
+        }
+    } else {
+        // Open admin login modal
+        const overlay = document.getElementById("admin-login-overlay");
+        if (overlay) {
+            overlay.classList.add("active");
+            document.getElementById("admin-username-input").value = "";
+            document.getElementById("admin-password-input").value = "";
+        }
+    }
+};
+
+window.closeAdminLoginModal = function() {
+    const overlay = document.getElementById("admin-login-overlay");
+    if (overlay) {
+        overlay.classList.remove("active");
+    }
+};
+
+window.submitAdminLogin = function() {
+    const user = document.getElementById("admin-username-input").value.trim();
+    const pass = document.getElementById("admin-password-input").value.trim();
+    
+    if (user === "admin" && pass === "admin") {
+        currentState.isAdmin = true;
+        sessionStorage.setItem("ihse_isAdmin", "true");
+        closeAdminLoginModal();
+        
+        const panel = document.getElementById("admin-floating-panel");
+        if (panel) {
+            panel.style.display = "block";
+        }
+        
+        // Style the toggle button as active/logged-in admin
+        const toggleBtn = document.getElementById("admin-toggle-btn");
+        if (toggleBtn) {
+            toggleBtn.style.borderColor = "var(--accent-green)";
+            toggleBtn.style.color = "var(--accent-green)";
+            toggleBtn.style.background = "rgba(63,110,82,0.08)";
+        }
+        
+        alert("Authenticated as Administrator. Access control panel unlocked.");
+    } else {
+        alert("Invalid admin credentials. Access Denied.");
+    }
+};
+
+window.adminLogout = function() {
+    currentState.isAdmin = false;
+    currentState.adminBypassAll = false;
+    sessionStorage.removeItem("ihse_isAdmin");
+    
+    const panel = document.getElementById("admin-floating-panel");
+    if (panel) {
+        panel.style.display = "none";
+    }
+    
+    const toggleBtn = document.getElementById("admin-toggle-btn");
+    if (toggleBtn) {
+        toggleBtn.style.borderColor = "var(--accent-red)";
+        toggleBtn.style.color = "var(--accent-red)";
+        toggleBtn.style.background = "rgba(235,87,87,0.08)";
+    }
+    
+    updateAccessGates();
+    renderBookPage();
+    alert("Logged out of Administrator Control Panel.");
+};
+
+window.minimizeAdminPanel = function() {
+    const panel = document.getElementById("admin-floating-panel");
+    if (panel) {
+        panel.style.display = "none";
+    }
+};
+
+window.adminSetRole = function(role) {
+    currentState.userRole = role;
+    if (role === "guest") {
+        currentState.userName = "";
+        saveUserSession("", "guest", "paypal", "", "");
+    } else if (role === "pending") {
+        if (!currentState.userName) currentState.userName = "Field Candidate";
+        saveUserSession(currentState.userName, "pending", "paypal", "PENDING-TX-88888", "");
+    } else if (role === "investigator") {
+        if (!currentState.userName) currentState.userName = "Field Investigator";
+        saveUserSession(currentState.userName, "investigator", "paypal", "ADMIN-TX-99999", "");
+        
+        // Sync name to exam input
+        const examName = document.getElementById("student-name-input");
+        if (examName) {
+            examName.value = currentState.userName;
+        }
+    }
+    
+    updateAccessGates();
+    renderBookPage();
+};
+
+window.adminToggleAllLocks = function() {
+    currentState.adminBypassAll = !currentState.adminBypassAll;
+    updateAccessGates();
+    renderBookPage();
+    alert(`Gated access bypass is now ${currentState.adminBypassAll ? "ENABLED (everything unlocked)" : "DISABLED (gates active)"}.`);
+};
