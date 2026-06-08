@@ -884,6 +884,466 @@ const TEXTBOOK_DB = {
             `
         }
     ],
+    outline: [
+        {
+            title: "IHSE 101: Introduction to Cryptozoology",
+            content: `
+                <div style="text-align:center; padding: 2rem 0;">
+                    <h3 style="font-family:var(--font-ui); font-size:1rem; letter-spacing:3px; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem;">Official Course Outline</h3>
+                    <h1 style="font-family:var(--font-header); font-size:2rem; line-height:1.3; color:#2b2319; margin-bottom:1rem;">IHSE 101 &mdash; INTRODUCTION TO CRYPTOZOOLOGY</h1>
+                    <div style="margin: 2rem 0; height:2px; background-color:#8d7657; opacity:0.3;"></div>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; font-weight:600; color:#2b2319; margin-bottom:1.5rem; text-align:center;">Course Syllabus &amp; Curriculum</h2>
+                    <p style="font-family:var(--font-body); font-style:italic; font-size:1rem; color:#5a4b37; line-height:1.6; margin-bottom:2rem; text-align:justify; text-indent:0;">
+                        This syllabus outlines the academic, historical, and methodological foundations of cryptozoology as established in the primary textbook. It provides students with a roadmap of the 6-week curriculum.
+                    </p>
+                    <div class="academic-note" style="margin-top:2rem;">
+                        <strong>Enrollment Note:</strong> This course is designed for college graduates seeking professional accreditation in anomalous biology and field metrology.
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "Table of Contents",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">Table of Contents</h2>
+                    <table style="width:100%; border-collapse:collapse; font-size:0.9rem; margin-bottom:1.5rem; border:none;">
+                        <tbody>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; font-weight:bold;">IHSE 101 — INTRODUCTION TO CRYPTOZOOLOGY</td><td style="text-align:right; font-weight:bold; color:#8d7657;">3</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; font-weight:bold;">WEEK-BY-WEEK SYLLABUS</td><td style="text-align:right; font-weight:bold; color:#8d7657;">4</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 1 — Foundations of Cryptozoological Science</td><td style="text-align:right; color:#8d7657;">7</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 2 — Taxonomy, Holotypes & IHSE Protocols</td><td style="text-align:right; color:#8d7657;">10</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 3 — Metrology, Calibration & Field Reliability</td><td style="text-align:right; color:#8d7657;">14</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 4 — Historical Foundations & Archival Analysis</td><td style="text-align:right; color:#8d7657;">17</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 5 — Modern Tools: eDNA, Cognitive Bias & Constraints</td><td style="text-align:right; color:#8d7657;">20</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 6 — Terrestrial Hominids & the Fossil Gap</td><td style="text-align:right; color:#8d7657;">25</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            `
+        },
+        {
+            title: "Official Course Syllabus",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">Official Course Syllabus</h2>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify;">
+                        <strong>Academic Term:</strong> Fall / Spring / Summer (Flexible Enrollment)<br>
+                        <strong>Course Length:</strong> 6 Weeks<br>
+                        <strong>Delivery Format:</strong> Online + Optional Field Practicum<br>
+                        <strong>Primary Text:</strong> IHSE Cryptozoology Compendium – Print Edition (Smokeline Press, 2026)
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">Course Description</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify;">
+                        IHSE 101 introduces students to the scientific, historical, and methodological foundations of cryptozoology as established in the primary textbook. Students learn the academic posture, taxonomic principles, metrology standards, and investigative frameworks required for advanced IHSE coursework and field operations. The course emphasizes critical thinking, evidence evaluation, and the integration of modern tools such as eDNA, metagenomics, LiDAR, and acoustic analysis.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Required Materials & outcomes",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">Required Materials & outcomes</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">Required Texts & Materials</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify;">
+                        &bull; Primary Text (Exclusive): <em>IHSE Cryptozoology Compendium – Print Edition</em> &copy; 2026 Joseph Bryan Thornburg, Smokeline Press. ISBN: 978-1-105-47315-9.<br>
+                        &bull; IHSE Calibration Log Templates &amp; Evidence Documentation Forms.<br>
+                        &bull; Access to IHSE Digital Evidence Vault (Student Tier).<br>
+                        &bull; Optional Field Kit: Plaster, evidence bags, gloves, red-light headlamp.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">Course Learning Outcomes</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify;">
+                        Upon successful completion of this course, students will be able to explain the scientific foundations of cryptozoology as defined in the Compendium, apply holotype alternative protocols, perform metrology-compliant calibrations, and analyze historical sighting logs.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Syllabus Overview: Weeks 1&ndash;3",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">Syllabus Weeks 1&ndash;3</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">WEEK 1 &mdash; Foundations of Cryptozoological Science</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.5rem; text-align:justify;">
+                        Topics include definitions, boundaries, Heuvelmans&rsquo; posture, and ICZN holotype requirements. Readings: Preface, Pages 1-10. Assignment: Reflection Essay on scientific posture.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">WEEK 2 &mdash; Taxonomy, Holotypes & IHSE Protocols</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.5rem; text-align:justify;">
+                        Topics include holotype alternative protocols (Protocols 10 & 13), multi-spectral imaging, and genomic validation. Readings: Pages 6, 11, 14. Assignment: Protocol Design Exercise.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">WEEK 3 &mdash; Metrology, Calibration & Field Reliability</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.5rem; text-align:justify;">
+                        Topics cover metrology standards, tolerances, auditability, and instrument reliability in extreme field conditions. Readings: Pages 12 & 15. Assignment: Calibration Log submission.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Syllabus Overview: Weeks 4&ndash;6 &amp; Grading",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">Syllabus Weeks 4&ndash;6 &amp; Grading</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">WEEK 4 &mdash; Historical Foundations & Archival Analysis</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; margin-bottom:0.4rem; text-align:justify;">
+                        Bestiaries vs. Linnaean zoology, historical logs (ARC411, ARC912, ARC181), and transition case studies. Readings: Prolegomena Pages 1-15. Assignment: Archival Analysis.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">WEEK 5 &mdash; eDNA, Cognitive Bias & Constraints</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; margin-bottom:0.4rem; text-align:justify;">
+                        eDNA sampling, metagenomics, pareidolia, anchoring, witness reliability, and ecological plausibility. Readings: Prolegomena Pages 5-6. Assignment: Sighting Bias-Filtering.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">WEEK 6 &mdash; Terrestrial Hominids & the Fossil Gap</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; margin-bottom:0.4rem; text-align:justify;">
+                        Relict hominids, Gigantopithecus, taphonomy, and biomechanics. Readings: Chapter I, Pages 1-2. Assignment: Comparative Morphology Paper.
+                    </p>
+                    <div style="margin: 0.5rem 0; height:1px; background-color:#8d7657; opacity:0.2;"></div>
+                    <p style="font-size:0.8rem; line-height:1.4; margin: 0; color:#5a4b37;">
+                        <strong>Grading:</strong> Assignments (40%), Calibration Log (10%), Archival Analysis (15%), Final Dossier (25%), Participation (10%). Tuition: $249 (Course) / $149 (Practicum).
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 1: Definitions & Scope",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Definitions &amp; Scope</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Definition and Scope of Cryptozoology</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Cryptozoology, as defined in the Compendium, is the scientific investigation of unverified biological taxa whose existence is suggested by persistent regional folklore, repeated eyewitness accounts, physical traces (tracks, scat, hair, nesting sites), environmental DNA anomalies, and historical records. The Compendium emphasizes that cryptozoology is a biological discipline. Its scope includes relict megafauna, ecologically plausible species that remain unclassified, and species known historically but lacking modern physical specimens.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 1: Boundaries of Zoology",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Boundaries of Zoology</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Boundaries of Zoology vs. Anomalous Biology</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        The Compendium&rsquo;s Page 5 (&ldquo;The Boundaries of Zoology&rdquo;) establishes a scientific tension: Zoology requires physical holotypes, repeatable observations, and formal morphological descriptions. Anomalous Biology, by contrast, must deal with incomplete datasets, often lacking physical specimens, and must integrate ecology, anthropology, cognitive science, and forensics. The Compendium argues that zoology&rsquo;s boundaries are porous: many species (giant squid, mountain gorilla, okapi) were cryptids before formal recognition.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 1: Heuvelmans&rsquo; Posture",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Posture &amp; Holotypes</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Heuvelmans&rsquo; Scientific Posture</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Bernard Heuvelmans, the founder of modern cryptozoology, advocated a dual-discipline posture. First, <strong>Open-Mindedness</strong>: anomalies should not be dismissed simply because they challenge consensus, and folklore may encode zoological data. Second, <strong>Scientific Rigor</strong>: every claim must be testable, falsifiable, and grounded in biological plausibility, evaluated using forensic standards.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 1: ICZN Holotype Requirements",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; ICZN Standards</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">4. ICZN Holotype Requirements</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        The International Commission on Zoological Nomenclature (ICZN) requires a single physical holotype specimen deposited in a recognized repository, a formal morphological description, genetic sequencing, and repeatability of examination. The Compendium stresses that eyewitness accounts, tracks, and photographs do not qualify, and eDNA alone cannot establish a species. The absence of a physical holotype is the primary barrier preventing cryptids from entering formal taxonomy, justifying IHSE&rsquo;s Holotype Alternatives in Extremis (Protocols 10 & 13).
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 1: Limits & Assignments",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Limits &amp; assignments</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Epistemological Limits (Taxonomic Principle 9)</h4>
+                    <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        Principle 9 addresses the philosophy of scientific limits: Failure to recover a specimen is not evidence of nonexistence. Low-density populations in extreme terrain can evade detection for centuries. However, researchers must guard against confirmation bias and cognitive anchoring.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">6. Required Reading</h4>
+                    <p style="font-size:0.85rem; margin-bottom:0.8rem;">Page 5 &mdash; The Boundaries of Zoology; Page 6 &mdash; The Criterion of Holotypes; Page 10 &mdash; Taxonomic Principle 9.</p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">7. Assignment</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; text-align:justify;">
+                        <strong>Reflection Essay (500 words):</strong> Explain how IHSE defines the scientific posture required for cryptozoological research, addressing the balance between skepticism and open-mindedness, holotype limitations, and historical zoological precedents. Cite at least three Compendium passages.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 2: Holotype Standards",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Holotype Standards</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Holotype Standards</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        The Compendium emphasizes that formal zoological recognition requires strict adherence to the International Commission on Zoological Nomenclature (ICZN). A species cannot be named without a holotype.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.02rem; color:#8d7657; margin-bottom:0.4rem;">1.1 Physical Integrity &amp; 1.2 Deposition</h4>
+                    <p style="font-size:0.9rem; line-height:1.5; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        A holotype must be a single, intact physical specimen representing the species&rsquo; diagnostic traits (e.g., complete body, partial skeleton, skin, or skull) ensuring anatomical validity. The specimen must be stored in a recognized scientific repository (e.g., natural history museums, accredited research institutions) for permanent accessibility.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 2: Descriptions & Genetics",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Descriptions &amp; Genetics</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1.3 Morphological Description</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        The holotype must be accompanied by detailed anatomical measurements, high-resolution photographs, comparative morphology with related taxa, and specific diagnostic traits.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1.4 Genetic Sequencing &amp; 1.5 Limitations</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Modern taxonomy requires high-coverage genomic sequencing, independent replication by at least two laboratories, and deposition of sequence data in public databases (e.g., GenBank). Cryptozoological investigations often lack recoverable remains, accessible populations, or ethical/ecological feasibility of specimen collection. This is why holotype alternatives are necessary.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 2: Alternatives in Extremis",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Holotype Alternatives</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Holotype Alternatives in Extremis (Protocols 10 & 13)</h4>
+                    <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        <strong>2.1 Purpose:</strong> Address situations where a species is critically endangered, a population is too small to risk specimen collection, or ethical/environmental constraints prohibit lethal sampling.
+                    </p>
+                    <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        <strong>2.2 Protocol 10 (Page 11) &mdash; Alternative Nomenclatural Benchmarks:</strong> Allows high-fidelity, non-lethal documentation as a temporary holotype substitute. Acceptable forms include high-definition anatomical photography, 3D laser scans, multi-angle videography, and high-coverage genome sequencing from shed biological traces.
+                    </p>
+                    <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        <strong>2.3 Protocol 13 (Page 14) &mdash; Validation Requirements:</strong> Expands on Protocol 10 by requiring multi-spectral imaging (visible, IR, UV), structural depth mapping (LiDAR), independent genomic validation from two or more labs, and blind peer review.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 2: Verification Methods",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Verification Methods</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Multi-Spectral Verification</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        Required to prevent digital manipulation or hoaxes. Uses visible light (400–700 nm), infrared (700–1400 nm) to reveal heat and vascular signatures, ultraviolet (10–400 nm) to highlight biological fluorescence, and LiDAR structural mapping.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">4. Independent Genomic Validation</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        Genomic evidence must be independently replicated across multiple accredited labs. Requires high-coverage sequencing (&ge;30&times; nuclear, &ge;100&times; mitochondrial) and robust phylogenetic placement. eDNA alone is only supporting evidence.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Required Reading &amp; 6. Assignment</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; text-align:justify;">
+                        Read Pages 11 (Protocol 10) & 14 (Protocol 13) of the Compendium. Assignment: Create a holotype-alternative submission packet for a hypothetical species. Include proposed taxonomic name, diagnostic traits, 3D scan and multispectral plans, genomic sequencing strategy, and ethical justifications.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 3: Metrology Standards",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 3 &mdash; Metrology, Calibration & Field Reliability</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. IHSE Metrology Standards</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        IHSE metrology is built on the principle that data is only as reliable as the instruments that produce it. Calibration tables establish strict tolerances derived from error propagation models, environmental interference studies, and forensic admissibility standards. IHSE metrology values three imperatives: <strong>Precision</strong> (narrow tolerances), <strong>Repeatability</strong> (independent duplication), and <strong>Auditability</strong> (traceable records).
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 3: Calibration Tolerances",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 3 &mdash; Calibration Tolerances</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Calibration Tolerances</h4>
+                    <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        &bull; <strong>eDNA Filter Kit:</strong> Pore Size Consistency &plusmn;0.02 microns. Calibration: Pre-expedition. Rationale: Prevent contamination or targeted biological exclusion.<br>
+                        &bull; <strong>Acoustic Recorder:</strong> Frequency Response &plusmn;1.5 Hz. Calibration: Every 6 months. Rationale: Avoid distortion of vocal infrasound (10–40 Hz) or harmonics.<br>
+                        &bull; <strong>LiDAR Scanner:</strong> Spatial Resolution &plusmn;2 mm. Calibration: Annual. Rationale: Ensure forensic-grade limb and gait reconstruction.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 3: Auditability & Reliability",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 3 &mdash; Auditability &amp; reliability</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Auditability Requirements &amp; 4. Instrument Reliability</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        All calibration events must be logged (date, technician, raw vs. corrected values), digitally archived, chain-of-custody compliant, and field-verifiable to meet peer-review and legal standards. Environmental stressors (temperature, humidity, dust, battery voltage) degrade calibration. Spot checks and recalibration are mandatory.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Required Reading &amp; 6. Assignment</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; text-align:justify;">
+                        Read Reference Guides 11 and 14: Metrology Calibration Tables. Assignment: Submit a complete calibration record for an eDNA kit, acoustic recorder, and LiDAR scanner showing raw errors, corrections, standards, and digital signatures.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 4: Bestiaries vs. Zoology",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Historical Foundations &amp; Archival Analysis</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Bestiaries vs. Scientific Zoology</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Early natural history blurred the line between observation and myth. Medieval bestiaries mixed real and mythic animals, treating folklore as zoological fact. The Scientific Revolution introduced Linnaean taxonomy, requiring physical specimens. Cryptozoology must operate as a scientific discipline, not a folkloric study. It is not the study of myths &mdash; it is the study of unresolved zoological hypotheses.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 4: Heuvelmans & Modern Cryptozoology",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Birth of Modern Cryptozoology</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Heuvelmans and the Birth of Modern Cryptozoology</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Bernard Heuvelmans reframed the field in 1955 by treating folklore as data: categorizing reports by morphology, comparing traditions for cross-cultural consistency, and evaluating biological plausibility. Persistent descriptions across independent cultures point toward real biological entities. Folklore is not evidence &mdash; but it is a map pointing toward evidence.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 4: Skepticism & Sighting Logs",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Skepticism &amp; Logs</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Skeptical Movement &amp; 4. Archival Sighting Logs</h4>
+                    <p style="font-size:0.9rem; line-height:1.5; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Skepticism is scientifically necessary to weed out misidentifications and hoaxes. However, dogmatic dismissal is anti-empirical. The Compendium includes three archival logs (ARC411, ARC912, ARC181) describing the "Hairy Forest Dweller" over centuries. These logs allow tracking of morphological consistency, identifying range contraction, and detecting cultural patterns. Cross-century consistency suggests a real biological basis.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 4: Transitions & Assignments",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Transitions &amp; assignments</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Historical Cryptid-to-Species Transitions</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
+                        Several species were once considered cryptids: the giant squid (described in 1857 from a carcass), okapi (1901, skin/skull), and mountain gorilla (1902, specimen). Lessons: absence of evidence is not evidence of absence, large animals can hide in dense canopy, and folklore preserves zoological memory.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">6. Required Reading &amp; 7. Assignment</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; text-align:justify;">
+                        Read Prolegomena Pages 1&ndash;15. Assignment: Compare two archival logs and evaluate morphological consistency (height, proportions, gait, tail). Analyze whether differences are observer bias, environmental distortion, or species variation.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 5: eDNA & Metagenomics",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Modern Tools: eDNA &amp; Metagenomics</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Environmental DNA (eDNA)</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Environmental DNA (eDNA) has revolutionized cryptozoology by allowing the detection of organisms without direct observation. Organisms shed skin, hair, mucus, or fecal matter containing genetic material. eDNA is vital for detecting low-density, nocturnal, or alpine species in extreme terrains.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.02rem; color:#8d7657; margin-bottom:0.4rem;">1.1 eDNA Sampling Workflow &amp; 1.2 Limitations</h4>
+                    <p style="font-size:0.9rem; line-height:1.5; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        The workflow includes: sample collection, filtration (&plusmn;0.02 micron pore tolerance), DNA extraction, high-throughput metagenomic sequencing, and bioinformatic database comparison. eDNA degrades under UV/heat, cannot verify morphology, and serves as supporting evidence only.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 5: Metagenomics",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Metagenomics</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Metagenomics</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Metagenomics sequences all DNA present in a sample, producing a complete ecosystem snapshot. It allows researchers to identify entire food webs, verify ecological carrying capacity, and detect rare or unknown species. If a region repeatedly produces primate sightings, metagenomics can reveal primate DNA or rule out known species.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 5: Cognitive Bias & Plausibility",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Bias &amp; Plausibility</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Cognitive Bias &amp; 3.1 Cognitive Bias Filtering</h4>
+                    <p style="font-size:0.9rem; line-height:1.5; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Human perception is highly unreliable without controls. <strong>Pareidolia</strong> causes the brain to interpret ambiguous shapes (shadows, branches) as faces or animals. <strong>Folkloric Anchoring</strong> occurs when dominant regional narratives cause witnesses to subconsciously reconstruct memories to match famous cryptids. IHSE filters sighting reports by evaluating lighting, angle, distance, observer emotional state/experience, and cultural context.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 5: Ecological Plausibility",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Ecological Plausibility</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">4. Ecological Plausibility Analysis</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        No cryptid claim is credible unless the ecosystem can support it. Investigators must ask: Is there sufficient biomass and prey? Is there cover for a low-density breeding population? Has human encroachment altered range boundaries? IHSE uses GIS mapping, range overlays, and predator-prey models to verify environmental sustainability.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 5: Readings & Sighting Assignment",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Assignments &amp; readings</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Required Reading</h4>
+                    <p style="font-size:0.85rem; margin-bottom:1rem;">Prolegomena Page 5 (Metagenomics & eDNA) and Page 6 (Cognitive Bias) of the Compendium.</p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">6. Assignment</h4>
+                    <p style="font-size:0.85rem; line-height:1.5; text-align:justify;">
+                        <strong>Bias-Filtering Exercise:</strong> Analyze 10 sighting reports. Evaluate environmental conditions, observer wildlife experience, morphological consistency, and ecological carrying capacity. Classify and rank each report from 1 (Hoax) to 5 (Plausible Biological Encounter) using the Compendium matrix.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 6: Relict Hominoids & Gigantopithecus",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 6 &mdash; Terrestrial Hominids &amp; the Fossil Gap</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Global Distribution of Relict Hominoids</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Large, bipedal primate reports occur globally, not regionally (e.g. Sasquatch in North America, Yeti in Himalayas, Yeren in China, Orang Pendek in Indonesia). This cross-continental distribution suggests a shared Pleistocene lineage surviving in low-density, high-canopy, low-contact ecosystems. The Compendium frames these global patterns as biological, non-random phenomena.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Gigantopithecus blacki &mdash; The Paleoprimate Candidate</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Gigantopithecus blacki (Southeast Asia, 2M–300k years ago) reached 10 feet in height and 600–1000 lbs. It is the largest known primate. The Compendium notes that its extinction timeline is uncertain, and its morphology and forest habitat match descriptions of Yeti and Yeren, making it a biologically plausible ancestral candidate.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 6: North American Fossil Gap",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 6 &mdash; Fossil Gap &amp; Biomechanics</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. The North American Fossil Gap</h4>
+                    <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
+                        Skeptics argue the lack of North American hominid fossils disproves Sasquatch. The Compendium provides counterpoints: forest primates leave poor fossil records; acidic soils destroy bone rapidly; North American fossil sampling is &lt;1% complete; and large mammals like black bears have extremely sparse fossil records despite huge populations. The fossil gap is taphonomic, not evidentiary proof of nonexistence.
+                    </p>
+                </div>
+            `
+        },
+        {
+            title: "Week 6: Biomechanics & Capstone Assignment",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 6 &mdash; Course Capstone</h2>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">5. Required Reading &amp; 6. Assignment</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; margin-bottom:0.6rem; text-align:justify;">
+                        Read Chapter I, Pages 1-2. Assignment: Comparative Morphology Paper. Compare hominoid bipedalism, gait pressure ridges, and midtarsal breaks with known primates.
+                    </p>
+                    <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">7. Grading Breakdown &amp; 8. Final Project</h4>
+                    <p style="font-size:0.85rem; line-height:1.4; text-align:justify; margin:0;">
+                        Final project requires producing a full IHSE-standard investigative dossier on a cryptid. Grading: Weekly assignments (40%), Calibration (10%), Archival (15%), Final Dossier (25%), Participation (10%). Tuition: $249 (Course) / $149 (Practicum).
+                    </p>
+                </div>
+            `
+        }
+    ],
     protocols: [
         {
             title: "Field Protocol Manual: Standard Operating Procedures",
@@ -1870,6 +2330,7 @@ const PROC_DATA = {
 
 function getChapterPageCount(chapId) {
     if (chapId === "preface" || chapId === "intro") return 15;
+    if (chapId === "outline") return 28;
     if (chapId === "protocols") return 14;
     if (chapId === "workbook") return 8;
     if (chapId === "ch1" || chapId === "ch2" || chapId === "ch3" || chapId === "ch4" || chapId === "ch5") return 80;
@@ -3598,7 +4059,7 @@ function renderBookPage() {
     const leftHeader = document.getElementById("left-page-header");
     const rightHeader = document.getElementById("right-page-header");
 
-    let romanNumerals = { preface: "Preface", intro: "Prolegomena", ch1: "Chapter I", ch2: "Chapter II", ch3: "Chapter III", ch4: "Chapter IV", ch5: "Chapter V", protocols: "Field Protocols", workbook: "Student Workbook" };
+    let romanNumerals = { preface: "Preface", intro: "Prolegomena", ch1: "Chapter I", ch2: "Chapter II", ch3: "Chapter III", ch4: "Chapter IV", ch5: "Chapter V", outline: "Course Outline", protocols: "Field Protocols", workbook: "Student Workbook" };
     let chapterTitleStr = romanNumerals[chapId] || "IHSE Compendium";
     
     leftHeader.innerText = `IHSE Compendium — ${chapterTitleStr}`;
@@ -3606,7 +4067,7 @@ function renderBookPage() {
 
     // Render Left Page
     let leftHtml = `<h2>${leftPageData.title}</h2>`;
-    if (pageIdx === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook") {
+    if (pageIdx === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook" && chapId !== "outline") {
         // First page of textbook chapters receives a drop-cap
         leftHtml += leftPageData.content.replace("<p>", '<p class="page-drop-cap">');
     } else {
@@ -4658,8 +5119,8 @@ window.downloadHtmlBook = function() {
         </div>
 `;
 
-    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "protocols", "workbook"];
-    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", protocols: "Field Protocol Manual", workbook: "Student Workbook" };
+    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook"];
+    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", outline: "Course Outline", protocols: "Field Protocol Manual", workbook: "Student Workbook" };
     
     const illustrations = {
         ch1: "assets/bigfoot.png",
@@ -4684,7 +5145,7 @@ window.downloadHtmlBook = function() {
             if (!page) continue;
             htmlContent += `<h2>${page.title}</h2>`;
             let contentHtml = page.content;
-            if (index === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook") {
+            if (index === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook" && chapId !== "outline") {
                 contentHtml = contentHtml.replace("<p>", '<p class="page-drop-cap">');
             } else {
                 contentHtml = contentHtml.replace("<p>", '<p class="first-p">');
@@ -4800,8 +5261,8 @@ window.printFullManual = function() {
         </div>
     `;
 
-    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "protocols", "workbook"];
-    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", protocols: "Field Protocol Manual", workbook: "Student Workbook" };
+    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook"];
+    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", outline: "Course Outline", protocols: "Field Protocol Manual", workbook: "Student Workbook" };
 
     keys.forEach(chapId => {
         htmlContent += `<div class="page-break">`;
