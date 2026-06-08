@@ -2267,6 +2267,662 @@ const TEXTBOOK_DB = {
                 </div>
             `
         }
+    ],
+    project: [
+        {
+            title: "IHSE Field Project Dossier &mdash; Cover Page",
+            content: `
+                <div style="text-align:center; padding: 1.5rem 0;">
+                    <h3 style="font-family:var(--font-ui); font-size:0.8rem; letter-spacing:4px; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem;">Institute of Hidden Species Expeditions</h3>
+                    <div style="margin: 1.5rem auto; width: 80px; height: 80px; border: 2px solid #8d7657; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
+                        <div style="width: 60px; height: 60px; border: 1px dashed #8d7657; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-family:var(--font-header); font-size:1.4rem; font-weight:bold; color:#8d7657;">IHSE</span>
+                        </div>
+                    </div>
+                    <h1 style="font-family:var(--font-header); font-size:2rem; line-height:1.3; color:#2b2319; margin-bottom:0.5rem;">FIELD EXPEDITION DOSSIER</h1>
+                    <h2 style="font-family:var(--font-header); font-size:1.15rem; font-weight:600; color:#5a4b37; margin-bottom:2.5rem; letter-spacing:1px;">Introductory Cryptozoology &mdash; Level 1</h2>
+                    
+                    <div style="max-width: 420px; margin: 0 auto; text-align: left; background-color: rgba(141,118,87,0.03); padding: 1.5rem; border: 1px solid rgba(141,118,87,0.2); border-radius: 4px;">
+                        <div style="display: flex; align-items: baseline; margin-bottom: 1rem;">
+                            <span style="font-family:var(--font-ui); font-size: 0.75rem; font-weight:600; color:#8d7657; width: 130px; letter-spacing: 1px;">INVESTIGATOR:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 1rem;">
+                            <span style="font-family:var(--font-ui); font-size: 0.75rem; font-weight:600; color:#8d7657; width: 130px; letter-spacing: 1px;">FIELD RANK:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 1rem;">
+                            <span style="font-family:var(--font-ui); font-size: 0.75rem; font-weight:600; color:#8d7657; width: 130px; letter-spacing: 1px;">COMMENCE DATE:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline;">
+                            <span style="font-family:var(--font-ui); font-size: 0.75rem; font-weight:600; color:#8d7657; width: 130px; letter-spacing: 1px;">RESEARCH SECTOR:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 3rem; font-family:var(--font-body); font-size: 0.8rem; font-style: italic; color: var(--text-muted);">
+                        Notice: This document is the property of the Institute of Hidden Species Expeditions (IHSE). Copying or unauthorized dissemination of classified cryptid records is strictly prohibited under Protocol 9.
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "Field Project Guidelines",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:12rem;">📋 IHSE Dossier Guidelines</h2>
+                    <p style="font-size:0.9rem; line-height:1.6; text-align:justify; margin-bottom:1rem; text-indent: 1.5rem;">
+                        This workbook template constitutes the final practical examination for <strong>Introductory Cryptozoology (Level 1)</strong>. Student investigators are required to compile a rigorous, scientific field dossier evaluating a candidate anomalous species of their choosing.
+                    </p>
+                    <p style="font-size:0.9rem; line-height:1.6; text-align:justify; margin-bottom:1rem; text-indent: 1.5rem;">
+                        All research and evidence submissions must strictly adhere to the academic standards of the Institute of Hidden Species Expeditions. Hypothetical classifications, ecological data, and physical evidence evaluations must be documented clearly without copyrighted text or unsubstantiated claims.
+                    </p>
+                    
+                    <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.5rem; margin-top:1.2rem;">Evaluation Criteria</h4>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; font-size:0.85rem; line-height:1.5; color:#2b2319;">
+                        <li style="margin-bottom:0.3rem;"><strong>Scientific Rigor (25%):</strong> Standardized classification and biomechanical plausibility.</li>
+                        <li style="margin-bottom:0.3rem;"><strong>Ecological Integration (25%):</strong> Biomass calculations and human encroachment models.</li>
+                        <li style="margin-bottom:0.3rem;"><strong>Evidence Auditing (25%):</strong> Integrity hashes, metrology records, and Protocol 13 compliance.</li>
+                        <li style="margin-bottom:0.3rem;"><strong>Cognitive Filtering (25%):</strong> Misidentification lists and witness reliability ratings.</li>
+                    </ul>
+
+                    <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.5rem;">Dossier Structure</h4>
+                    <table style="width:100%; border-collapse:collapse; font-size:0.8rem; border:1px solid #8d7657;">
+                        <thead>
+                            <tr style="background-color:#8d7657; color:#f7f5ef;">
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Section</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Description</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">Page</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">0 &amp; 1</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Cryptid Selection &amp; Executive Summary</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">3</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">2</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Scientific Classification &amp; Morphology</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">4</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">3</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Ecological Plausibility Analysis</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">5</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">4</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Historical Record &amp; Consistency Table</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">6</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">5</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Evidence Evaluation (Trackway, eDNA)</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">7</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">6</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Cognitive-Bias &amp; Witness Reliability</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">8</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">7</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Comparative Morphology &amp; Biomechanics</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">9</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">8</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Protocol 10 Holotype Alternatives</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">10</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">9</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Field Instrument Calibration Logs</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">11</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">10</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;">Final Assessment &amp; Verdict</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            `
+        },
+        {
+            title: "0. Cryptid Selection &amp; 1. Executive Summary",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📌 0. Cryptid Selection Page</h2>
+                    
+                    <div style="margin-bottom: 0.8rem;">
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.6rem;">
+                            <span style="font-weight: 600; font-size: 0.85rem; color:#2b2319; width: 120px;">Cryptid Name:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.6rem;">
+                            <span style="font-weight: 600; font-size: 0.85rem; color:#2b2319; width: 120px;">Alternate Names:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.6rem;">
+                            <span style="font-weight: 600; font-size: 0.85rem; color:#2b2319; width: 120px;">Geographic Region:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="font-family:var(--font-header); font-size:0.9rem; color:#8d7657; margin-bottom:0.4rem;">Cryptid Category</h4>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.8rem; margin-bottom: 1.2rem;">
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Relict Hominid</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Aquatic Cryptid</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Winged Cryptid</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Terrestrial Quadruped</div>
+                        <div style="display: flex; align-items: center; grid-column: span 2;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Other: <span style="flex-grow: 1; border-bottom: 1px dotted #8d7657; margin-left: 5px; height: 1rem;"></span></div>
+                    </div>
+
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:0.6rem; margin-top:1.2rem;">📝 1. Executive Summary</h2>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem; font-style:italic;">Provide a concise overview of the cryptid and your investigative goals (150&ndash;250 words).</p>
+                    
+                    <div style="border: 1px dashed rgba(141,118,87,0.4); padding: 0.5rem; border-radius: 4px; background-color: rgba(141,118,87,0.02); min-height: 180px;">
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.5rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.5rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.5rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.5rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.5rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.5rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.5rem;"></div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "2. Species Candidate Overview",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🧬 2. Species Candidate Overview</h2>
+                    
+                    <h3 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.6rem;">2.1 Proposed Scientific Classification (Hypothetical)</h3>
+                    <div style="margin-left: 1rem; margin-bottom: 1.2rem; font-size: 0.85rem;">
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.4rem;">
+                            <span style="width: 150px; font-weight: 600; color:#5a4b37;">Kingdom:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.4rem;">
+                            <span style="width: 150px; font-weight: 600; color:#5a4b37;">Phylum:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.4rem;">
+                            <span style="width: 150px; font-weight: 600; color:#5a4b37;">Class:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.4rem;">
+                            <span style="width: 150px; font-weight: 600; color:#5a4b37;">Order:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.4rem;">
+                            <span style="width: 150px; font-weight: 600; color:#5a4b37;">Family:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.4rem;">
+                            <span style="width: 150px; font-weight: 600; color:#5a4b37;">Genus:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.4rem;">
+                            <span style="width: 150px; font-weight: 600; color:#5a4b37;">Species (proposed):</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                    </div>
+
+                    <h3 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.6rem;">2.2 General Morphological Description</h3>
+                    <div style="font-size: 0.85rem;">
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.5rem;">
+                            <span style="width: 130px; font-weight: 600; color:#5a4b37;">Key Traits:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+                            <div style="display: flex; align-items: baseline; flex-grow: 1;">
+                                <span style="width: 130px; font-weight: 600; color:#5a4b37;">Height/Length:</span>
+                                <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                            </div>
+                            <div style="display: flex; align-items: baseline; flex-grow: 1;">
+                                <span style="width: 100px; font-weight: 600; color:#5a4b37;">Weight Est:</span>
+                                <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: baseline; margin-bottom: 0.5rem;">
+                            <span style="width: 130px; font-weight: 600; color:#5a4b37;">Locomotion:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                        <div style="margin-bottom: 0.5rem;">
+                            <span style="font-weight: 600; color:#5a4b37; display:block; margin-bottom:0.2rem;">Distinguishing Features:</span>
+                            <div style="border-bottom: 1px dotted #8d7657; height: 1.3rem;"></div>
+                            <div style="border-bottom: 1px dotted #8d7657; height: 1.3rem;"></div>
+                        </div>
+                        <div>
+                            <span style="font-weight: 600; color:#5a4b37; display:block; margin-bottom:0.2rem;">Behavioral Notes:</span>
+                            <div style="border-bottom: 1px dotted #8d7657; height: 1.3rem;"></div>
+                            <div style="border-bottom: 1px dotted #8d7657; height: 1.3rem;"></div>
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "3. Ecological Plausibility Analysis",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🌲 3. Ecological Plausibility Analysis</h2>
+                    
+                    <div style="font-size: 0.85rem; margin-bottom: 1rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">3.1 Habitat Region</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.3rem; font-style:italic;">Describe the environment, flora, elevation, and climate where reported.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; margin-bottom: 1rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">3.2 Biomass &amp; Food Availability</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.3rem; font-style:italic;">Is there sufficient prey base or vegetational carrying capacity to sustain a breeding population?</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; margin-bottom: 1rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">3.3 Range Contraction &amp; Human Encroachment</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.3rem; font-style:italic;">Document historical range contraction using geographic barriers or human developmental data.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; border-top: 1px solid rgba(141,118,87,0.2); padding-top: 0.8rem; margin-top: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem;">3.4 IHSE Ecological Assessment</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.4rem; font-style:italic;">Based on the ecological carry limits, rate the biological plausibility of the target cryptid:</p>
+                        <div style="display: flex; gap: 2rem; margin-bottom: 0.6rem;">
+                            <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> High</div>
+                            <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Moderate</div>
+                            <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Low</div>
+                        </div>
+                        <div style="display: flex; align-items: baseline;">
+                            <span style="font-weight: 600; color:#5a4b37; margin-right: 5px;">Rationale:</span>
+                            <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "4. Historical Record Analysis",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📜 4. Historical Record Analysis</h2>
+                    
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">4.1 Indigenous or Early Cultural Accounts</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.3rem; font-style:italic;">Summaries only &mdash; do not use copyrighted content or folklore extracts.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">4.2 Archival Logs (If Applicable)</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.3rem; font-style:italic;">List historical database reports, ship logs, or early local newspaper sightings.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem; margin-top:0.8rem;">4.3 Morphological Consistency Table</h3>
+                    <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:0.8rem; border:1px solid #8d7657;">
+                        <thead>
+                            <tr style="background-color:#8d7657; color:#f7f5ef;">
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Feature</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Source 1</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Source 2</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Source 3</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">Consistent?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Height</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ] Y [ ] N</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Gait</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ] Y [ ] N</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Head/Body</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ] Y [ ] N</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Behavior</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ] Y [ ] N</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="font-size: 0.85rem; display: flex; align-items: baseline;">
+                        <span style="font-weight: 600; color:#5a4b37; margin-right: 5px; white-space:nowrap;">IHSE Historical Assessment:</span>
+                        <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "5. Evidence Evaluation",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🔍 5. Evidence Evaluation</h2>
+                    
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">5.1 Trackway Evidence</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem; font-style:italic;">Substrate type, gait cycle measurements, structural toe/heel impressions.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">5.2 Acoustic Evidence</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem; font-style:italic;">Spectrogram parameters, peak frequencies, biophonic vocal patterns.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">5.3 Photographic/Video Evidence</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem; font-style:italic;">Camera metadata, focal lengths, pixel compression analysis (Protocol 13).</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">5.4 eDNA or Biological Samples</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem; font-style:italic;">PCR runs, primer specificity, amplicon sequences, or hair medullary structures.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; border-top: 1px solid rgba(141,118,87,0.2); padding-top: 0.6rem; display: flex; align-items: baseline;">
+                        <span style="font-weight: 600; color:#5a4b37; margin-right: 5px; white-space:nowrap;">Conclusion:</span>
+                        <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "6. Cognitive‑Bias Filtering",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🧠 6. Cognitive-Bias Filtering</h2>
+                    
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">6.1 Misidentification Candidates</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem; font-style:italic;">Identify local known species or meteorological conditions commonly mistaken for the cryptid.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
+                        <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">6.2 Folkloric Anchoring</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem; font-style:italic;">Analyze cultural storytelling, modern media myths, and psychological anchoring biases.</p>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">6.3 Witness Reliability Scoring</h3>
+                    <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:0.8rem; border:1px solid #8d7657;">
+                        <thead>
+                            <tr style="background-color:#8d7657; color:#f7f5ef;">
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Witness Name / ID</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Relationship to Sighting</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">Score (1-5)</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">IHSE Criteria Check</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"><span style="border-bottom: 1px dotted #8d7657; display:inline-block; width:100%; height:1rem;"></span></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"><span style="border-bottom: 1px dotted #8d7657; display:inline-block; width:100%; height:1rem;"></span></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ]</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ] Validated</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"><span style="border-bottom: 1px dotted #8d7657; display:inline-block; width:100%; height:1rem;"></span></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"><span style="border-bottom: 1px dotted #8d7657; display:inline-block; width:100%; height:1rem;"></span></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ]</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ] Validated</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"><span style="border-bottom: 1px dotted #8d7657; display:inline-block; width:100%; height:1rem;"></span></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"><span style="border-bottom: 1px dotted #8d7657; display:inline-block; width:100%; height:1rem;"></span></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ]</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; text-align:center;">[ ] Validated</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="font-size: 0.85rem; display: flex; align-items: baseline;">
+                        <span style="font-weight: 600; color:#5a4b37; margin-right: 5px; white-space:nowrap;">IHSE Cognitive Assessment:</span>
+                        <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1.1rem;"></div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "7. Comparative Morphology &amp; Biomechanics",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🦍 7. Comparative Morphology</h2>
+                    
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem;">7.1 Comparison Table</h3>
+                    <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:1rem; border:1px solid #8d7657;">
+                        <thead>
+                            <tr style="background-color:#8d7657; color:#f7f5ef;">
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Trait</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Cryptid Specimen</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Species A (Known)</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Species B (Known)</th>
+                                <th style="border:1px solid #8d7657; padding:0.3rem; text-align:left;">Comparative Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Height/Length</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Gait</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Limb Ratio</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Cranial Shape</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #8d7657; padding:0.3rem; font-weight:600;">Foot Morphology</td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">7.2 Biomechanical Analysis</h3>
+                    <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.3rem; font-style:italic;">Explain the gait model, weight distribution, or joint angle plausibility for skeletal support.</p>
+                    <div style="font-size: 0.85rem;">
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                        <div style="border-bottom: 1px dotted #8d7657; height: 1.2rem;"></div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "8. Holotype or Holotype‑Alternative Proposal",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📌 8. Holotype or Holotype-Alternative Proposal</h2>
+                    
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem;">8.1 Proposed Holotype Alternative (Protocol 10)</h3>
+                    <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem; font-style:italic;">Select all non-lethal methodologies planned to satisfy species description parameters:</p>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 0.4rem; font-size: 0.8rem; margin-bottom: 1.2rem; margin-left:0.5rem;">
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Multi-spectral imaging (IR/UV spectrum validation)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> 3D LiDAR scan (Skeletal volumetric measurements)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> eDNA sampling (Sanger/Next-Gen metagenomic barcode)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Thermal imaging (Endothermic signature profile)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Trackway casting (Dental stone structural replica)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Acoustic triangulation (Multi-directional microphone array)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Environmental context documentation (Soil/Barometric baseline)</div>
+                    </div>
+
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">8.2 Ethical Considerations</h3>
+                    <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.4rem; font-style:italic;">Explain why non-lethal documentation is preferred for low-density cryptid populations (Protocol 10 ethics).</p>
+                    <div style="border: 1px dashed rgba(141,118,87,0.4); padding: 0.5rem; border-radius: 4px; background-color: rgba(141,118,87,0.02); min-height: 120px;">
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "9. Calibration Documentation Summary",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📐 9. Calibration Documentation Summary</h2>
+                    <p style="font-size:0.8rem; line-height:1.5; text-align:justify; margin-bottom:1rem;">
+                        All metrological field measurements submitted to the IHSE database must be calibrated against secondary reference standards. List all field instruments used, their respective calibration dates, tolerance values, and certifying officers.
+                    </p>
+
+                    <h4 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.5rem;">Instrument Calibration Ledger</h4>
+                    <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:1rem; border:1px solid #8d7657;">
+                        <thead>
+                            <tr style="background-color:#8d7657; color:#f7f5ef;">
+                                <th style="border:1px solid #8d7657; padding:0.4rem; text-align:left;">Instrument</th>
+                                <th style="border:1px solid #8d7657; padding:0.4rem; text-align:left;">Calibration Date</th>
+                                <th style="border:1px solid #8d7657; padding:0.4rem; text-align:left;">Tolerance</th>
+                                <th style="border:1px solid #8d7657; padding:0.4rem; text-align:left;">Verified By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 1.6rem;">
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr style="height: 1.6rem;">
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr style="height: 1.6rem;">
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr style="height: 1.6rem;">
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                            <tr style="height: 1.6rem;">
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                                <td style="border:1px solid #8d7657; padding:0.3rem;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="font-family:var(--font-ui); font-size:0.75rem; border:1px solid rgba(141,118,87,0.3); border-radius:4px; padding:0.6rem; background-color:rgba(141,118,87,0.03);">
+                        <strong>Calibration Standard Rule:</strong> Tolerances must align with IHSE Metrological Protocol 4. Specimen measurements taken with unverified instruments are classified as anecdotal and cannot be added to the registry.
+                    </div>
+                </div>
+            `
+        },
+        {
+            title: "10. Final Assessment &amp; Verdict",
+            content: `
+                <div style="padding: 0.5rem 0;">
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:0.8rem;">🎓 10. Final Assessment</h2>
+                    
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem;">IHSE Scientific Verdict</h3>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 0.4rem; font-size: 0.8rem; margin-bottom: 0.8rem; margin-left:0.5rem;">
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Confirmed Misidentification (Known species/Phenomenon)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Unresolved Phenomenon (Further evidence required)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> Plausible Biological Species (Taxonomic candidate)</div>
+                        <div style="display: flex; align-items: center;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 8px; border-radius: 2px;"></span> High-Priority Candidate for Further Study (Funding requested)</div>
+                    </div>
+
+                    <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">Final Justification</h3>
+                    <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.4rem; font-style:italic;">Synthesize classification, evidence strength, and ecology (200&ndash;300 words).</p>
+                    <div style="border: 1px dashed rgba(141,118,87,0.4); padding: 0.5rem; border-radius: 4px; background-color: rgba(141,118,87,0.02); min-height: 140px; margin-bottom:0.8rem;">
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                        <div style="border-bottom: 1px dotted rgba(141,118,87,0.25); height: 1.4rem;"></div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; border-top: 1px solid rgba(141,118,87,0.2); padding-top: 0.6rem; font-size:0.75rem;">
+                        <div style="flex-grow: 1;">
+                            <div style="display: flex; align-items: baseline; margin-bottom:0.3rem;">
+                                <span style="font-weight: 600; color:#5a4b37;">Investigator Sign:</span>
+                                <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1rem;"></div>
+                            </div>
+                            <div style="display: flex; align-items: baseline;">
+                                <span style="font-weight: 600; color:#5a4b37;">Date:</span>
+                                <div style="flex-grow: 1; border-bottom: 1px dotted #8d7657; height: 1rem;"></div>
+                            </div>
+                        </div>
+                        <div style="width: 70px; height: 70px; border: 1px double #8d7657; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; font-family:var(--font-header); font-size:0.5rem; color:#8d7657; font-weight:600; opacity:0.7;">
+                            IHSE<br>OFFICIAL<br>SEAL
+                        </div>
+                    </div>
+                </div>
+            `
+        }
     ]
 };
 
@@ -2333,6 +2989,7 @@ function getChapterPageCount(chapId) {
     if (chapId === "outline") return 28;
     if (chapId === "protocols") return 14;
     if (chapId === "workbook") return 8;
+    if (chapId === "project") return 12;
     if (chapId === "ch1" || chapId === "ch2" || chapId === "ch3" || chapId === "ch4" || chapId === "ch5") return 80;
     return 0;
 }
@@ -4059,7 +4716,7 @@ function renderBookPage() {
     const leftHeader = document.getElementById("left-page-header");
     const rightHeader = document.getElementById("right-page-header");
 
-    let romanNumerals = { preface: "Preface", intro: "Prolegomena", ch1: "Chapter I", ch2: "Chapter II", ch3: "Chapter III", ch4: "Chapter IV", ch5: "Chapter V", outline: "Course Outline", protocols: "Field Protocols", workbook: "Student Workbook" };
+    let romanNumerals = { preface: "Preface", intro: "Prolegomena", ch1: "Chapter I", ch2: "Chapter II", ch3: "Chapter III", ch4: "Chapter IV", ch5: "Chapter V", outline: "Course Outline", protocols: "Field Protocols", workbook: "Student Workbook", project: "Field Project Template" };
     let chapterTitleStr = romanNumerals[chapId] || "IHSE Compendium";
     
     leftHeader.innerText = `IHSE Compendium — ${chapterTitleStr}`;
@@ -4067,7 +4724,7 @@ function renderBookPage() {
 
     // Render Left Page
     let leftHtml = `<h2>${leftPageData.title}</h2>`;
-    if (pageIdx === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook" && chapId !== "outline") {
+    if (pageIdx === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook" && chapId !== "outline" && chapId !== "project") {
         // First page of textbook chapters receives a drop-cap
         leftHtml += leftPageData.content.replace("<p>", '<p class="page-drop-cap">');
     } else {
@@ -5119,8 +5776,8 @@ window.downloadHtmlBook = function() {
         </div>
 `;
 
-    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook"];
-    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", outline: "Course Outline", protocols: "Field Protocol Manual", workbook: "Student Workbook" };
+    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook", "project"];
+    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", outline: "Course Outline", protocols: "Field Protocol Manual", workbook: "Student Workbook", project: "Field Project Template" };
     
     const illustrations = {
         ch1: "assets/bigfoot.png",
@@ -5145,7 +5802,7 @@ window.downloadHtmlBook = function() {
             if (!page) continue;
             htmlContent += `<h2>${page.title}</h2>`;
             let contentHtml = page.content;
-            if (index === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook" && chapId !== "outline") {
+            if (index === 0 && chapId !== "preface" && chapId !== "intro" && chapId !== "protocols" && chapId !== "workbook" && chapId !== "outline" && chapId !== "project") {
                 contentHtml = contentHtml.replace("<p>", '<p class="page-drop-cap">');
             } else {
                 contentHtml = contentHtml.replace("<p>", '<p class="first-p">');
@@ -5261,8 +5918,8 @@ window.printFullManual = function() {
         </div>
     `;
 
-    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook"];
-    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", outline: "Course Outline", protocols: "Field Protocol Manual", workbook: "Student Workbook" };
+    const keys = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook", "project"];
+    const romanNumerals = { preface: "Preface: The Science", intro: "Prolegomena: History", ch1: "Chapter I: Terrestrial Hominids", ch2: "Chapter II: Aquatic and Marine", ch3: "Chapter III: Aerial Cryptids", ch4: "Chapter IV: Forensic Field Methods", ch5: "Chapter V: Epistemology and Hoaxes", outline: "Course Outline", protocols: "Field Protocol Manual", workbook: "Student Workbook", project: "Field Project Template" };
 
     keys.forEach(chapId => {
         htmlContent += `<div class="page-break">`;
