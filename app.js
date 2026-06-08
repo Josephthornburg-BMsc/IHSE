@@ -4586,6 +4586,14 @@ const QUIZ_QUESTIONS = [
     }
 ];
 
+// --- CONFIGURATION ---
+const IHSE_CONFIG = {
+    paypalClientId: "sb", // Swap with your live Client ID for production
+    cashAppTag: "ihse",   // Cash App $Cashtag (without $)
+    tuitionFee: "249.00", // Tuition fee in USD
+    currency: "USD"
+};
+
 // --- APP STATE ---
 let currentState = {
     currentTab: "textbook",
@@ -4619,6 +4627,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initMap();
     initLab();
     initExam();
+    loadUserSession();
     updateAccessGates();
 });
 
@@ -4726,7 +4735,7 @@ function renderBookPage() {
     leftHeader.innerText = `IHSE Compendium — ${chapterTitleStr}`;
     rightHeader.innerText = rightPageData ? `${rightPageData.title}` : `IHSE Field Archives`;
 
-    const RESTRICTED_CHAPTERS = ["ch1", "ch2", "ch3", "ch4", "ch5", "protocols", "workbook", "project"];
+    const RESTRICTED_CHAPTERS = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook", "project"];
     if (RESTRICTED_CHAPTERS.includes(chapId) && currentState.userRole !== "investigator") {
         const isPending = (currentState.userRole === "pending");
         leftContent.innerHTML = `
@@ -5637,6 +5646,11 @@ window.restartExam = function() {
 
 // --- MANUAL COMPILING & DOWNLOAD / PRINT UTILITIES ---
 window.downloadHtmlBook = function() {
+    if (currentState.userRole !== "investigator") {
+        alert("Access Denied: Clearance required to download the E-Book. Please apply for Investigator Status.");
+        openJoinModal();
+        return;
+    }
     let htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5859,6 +5873,11 @@ window.downloadHtmlBook = function() {
 };
 
 window.printFullManual = function() {
+    if (currentState.userRole !== "investigator") {
+        alert("Access Denied: Clearance required to print or save the Compendium. Please apply for Investigator Status.");
+        openJoinModal();
+        return;
+    }
     const printWindow = window.open("", "_blank");
     if (!printWindow) {
         alert("Pop-up blocker is preventing opening the print view. Please allow popups for this site.");
@@ -5985,6 +6004,11 @@ window.printFullManual = function() {
 };
 
 window.downloadProjectTemplate = function() {
+    if (currentState.userRole !== "investigator") {
+        alert("Access Denied: Clearance required to download the Field Project Dossier. Please apply for Investigator Status.");
+        openJoinModal();
+        return;
+    }
     let htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6124,6 +6148,198 @@ window.downloadProjectTemplate = function() {
 };
 
 // --- USER ROLE ACCESS & MEMBERSHIP GATES ---
+// --- SESSION HELPERS & PERSISTENCE ---
+function saveUserSession(name, role, method, txId, cashtag) {
+    localStorage.setItem("ihse_userName", name || "");
+    localStorage.setItem("ihse_userRole", role || "guest");
+    localStorage.setItem("ihse_paymentMethod", method || "");
+    localStorage.setItem("ihse_paymentTxId", txId || "");
+    localStorage.setItem("ihse_cashappTag", cashtag || "");
+}
+
+function loadUserSession() {
+    const role = localStorage.getItem("ihse_userRole") || "guest";
+    const name = localStorage.getItem("ihse_userName") || "";
+    const method = localStorage.getItem("ihse_paymentMethod") || "paypal";
+    const txId = localStorage.getItem("ihse_paymentTxId") || "";
+    const cashtag = localStorage.getItem("ihse_cashappTag") || "";
+    
+    currentState.userRole = role;
+    currentState.userName = name;
+    currentState.paymentMethod = method;
+    currentState.paymentTxId = txId;
+    currentState.cashappTag = cashtag;
+    
+    // Sync name to exam input
+    const examName = document.getElementById("student-name-input");
+    if (examName && name) {
+        examName.value = name;
+    }
+}
+
+window.resetUserSession = function() {
+    localStorage.removeItem("ihse_userRole");
+    localStorage.removeItem("ihse_userName");
+    localStorage.removeItem("ihse_paymentMethod");
+    localStorage.removeItem("ihse_paymentTxId");
+    localStorage.removeItem("ihse_cashappTag");
+    
+    currentState.userRole = "guest";
+    currentState.userName = "";
+    currentState.paymentMethod = "paypal";
+    currentState.paymentTxId = "";
+    currentState.cashappTag = "";
+    
+    // Clear inputs in modal
+    const nameIn = document.getElementById("join-name-input");
+    if (nameIn) nameIn.value = "";
+    const emailIn = document.getElementById("join-email-input");
+    if (emailIn) emailIn.value = "";
+    const tagIn = document.getElementById("join-cashapp-tag");
+    if (tagIn) tagIn.value = "";
+    const txIn = document.getElementById("join-cashapp-txid");
+    if (txIn) txIn.value = "";
+    
+    const examName = document.getElementById("student-name-input");
+    if (examName) {
+        examName.value = "";
+    }
+    
+    updateAccessGates();
+    
+    // Switch views
+    document.getElementById("join-form-view").style.display = "block";
+    document.getElementById("join-pending-view").style.display = "none";
+    document.getElementById("join-success-view").style.display = "none";
+    
+    // Re-initialize paypal buttons
+    initPaypalPayment();
+    
+    renderBookPage();
+    alert("Session reset successfully. Returned to Guest status.");
+};
+
+// --- DYNAMIC PAYPAL BUTTONS RENDERING ---
+function initPaypalPayment() {
+    const container = document.getElementById("paypal-button-container");
+    if (!container) return;
+    
+    container.innerHTML = "";
+    
+    if (typeof paypal === 'undefined') {
+        container.innerHTML = `
+            <div style="background: rgba(235,87,87,0.1); border: 1px solid var(--accent-red); padding: 0.8rem; border-radius: 4px; font-size: 0.8rem; color: #ff5e5e; margin-bottom: 0.8rem; text-align: left; line-height: 1.4;">
+                <strong>Offline Mode:</strong> PayPal JS SDK failed to load. A simulation checkout button is provided for testing.
+            </div>
+            <button class="primary-btn" onclick="submitSimulatedPaypal()" style="width: 100%; margin: 0; padding: 0.9rem; background: #0070ba; border-color: #0070ba;">Simulate PayPal Payment</button>
+        `;
+        return;
+    }
+    
+    paypal.Buttons({
+        style: {
+            layout: 'vertical',
+            color:  'gold',
+            shape:  'rect',
+            label:  'paypal'
+        },
+        createOrder: function(data, actions) {
+            const name = document.getElementById("join-name-input").value.trim();
+            const email = document.getElementById("join-email-input").value.trim();
+            if (!name || !email) {
+                alert("Please enter your Full Name and Email Address before proceeding to payment.");
+                return Promise.reject(new Error("Name or Email missing"));
+            }
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        currency_code: IHSE_CONFIG.currency,
+                        value: IHSE_CONFIG.tuitionFee
+                    },
+                    description: "IHSE Cryptozoology Course Tuition & Registration"
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                const name = document.getElementById("join-name-input").value.trim() || (details.payer.name.given_name + " " + details.payer.name.surname);
+                
+                currentState.userName = name;
+                currentState.userRole = "investigator";
+                currentState.paymentMethod = "paypal";
+                currentState.paymentTxId = details.id;
+                
+                // Save session
+                saveUserSession(name, "investigator", "paypal", details.id, "");
+                
+                // Sync name to exam input
+                const examNameInput = document.getElementById("student-name-input");
+                if (examNameInput) {
+                    examNameInput.value = name;
+                }
+                
+                updateAccessGates();
+                
+                // Switch views
+                document.getElementById("join-form-view").style.display = "none";
+                document.getElementById("join-pending-view").style.display = "none";
+                const successView = document.getElementById("join-success-view");
+                successView.style.display = "block";
+                document.getElementById("success-welcome-text").innerHTML = `
+                    Welcome to the Institute, Investigator <strong>${name}</strong>!<br><br>
+                    Your PayPal payment has been successfully processed.<br>
+                    <strong>Transaction ID:</strong> ${details.id}<br><br>
+                    All content gates have been unlocked.
+                `;
+                
+                renderBookPage();
+            });
+        },
+        onError: function(err) {
+            console.error(err);
+            alert("An error occurred during the PayPal transaction. Please try again.");
+        }
+    }).render('#paypal-button-container');
+}
+
+window.submitSimulatedPaypal = function() {
+    const name = document.getElementById("join-name-input").value.trim();
+    const email = document.getElementById("join-email-input").value.trim();
+    if (!name || !email) {
+        alert("Please enter your Full Name and Email Address.");
+        return;
+    }
+    
+    currentState.userName = name;
+    currentState.paymentMethod = "paypal";
+    currentState.userRole = "pending";
+    
+    saveUserSession(name, "pending", "paypal", "SIMULATED-TX-12345", "");
+    updateAccessGates();
+    
+    // Switch views
+    document.getElementById("join-form-view").style.display = "none";
+    const pendingView = document.getElementById("join-pending-view");
+    pendingView.style.display = "block";
+    document.getElementById("pending-status-text").innerText = `Your request is currently under administrative audit. We are verifying the simulated PayPal payment on your account.`;
+    
+    // Animate the audit bar
+    const timerBar = document.getElementById("audit-timer-bar");
+    timerBar.style.width = "0%";
+    
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 2;
+        timerBar.style.width = `${progress}%`;
+        if (progress >= 100) {
+            clearInterval(interval);
+            mockApproveRequest();
+        }
+    }, 100); // 5 seconds total
+    currentState.auditInterval = interval;
+};
+
+// --- USER ROLE ACCESS & MEMBERSHIP GATES ---
 window.openJoinModal = function() {
     const modal = document.getElementById("join-modal-overlay");
     if (modal) {
@@ -6138,16 +6354,40 @@ window.openJoinModal = function() {
             formView.style.display = "none";
             pendingView.style.display = "none";
             successView.style.display = "block";
-            document.getElementById("success-welcome-text").innerText = `Welcome to the Institute of Hidden Species Expeditions, Investigator ${currentState.userName}! Your credentials have been authenticated. You have full clearance.`;
+            document.getElementById("success-welcome-text").innerHTML = `Welcome to the Institute of Hidden Species Expeditions, Investigator <strong>${currentState.userName}</strong>!<br><br>Your credentials have been authenticated. You have full clearance.`;
         } else if (currentState.userRole === "pending") {
             formView.style.display = "none";
             pendingView.style.display = "block";
             successView.style.display = "none";
-            document.getElementById("pending-status-text").innerText = `Your request is currently under administrative audit. We are verifying the $249 USD payment on your ${currentState.paymentMethod === 'paypal' ? 'PayPal' : 'Cash App'} account.`;
+            
+            if (currentState.paymentMethod === "cashapp") {
+                const txId = localStorage.getItem("ihse_paymentTxId") || "";
+                const tag = localStorage.getItem("ihse_cashappTag") || "";
+                document.getElementById("pending-status-text").innerHTML = `
+                    Your payment of <strong>$249.00 USD</strong> is pending manual verification.<br>
+                    <strong>$Cashtag:</strong> ${tag}<br>
+                    <strong>Transaction ID:</strong> ${txId}<br><br>
+                    Please allow up to 24 hours for the registrar to verify the receipt. For testing/evaluation, you may bypass this check using the Administrator Control Console below.
+                `;
+            } else {
+                document.getElementById("pending-status-text").innerText = `Your request is currently under administrative audit. We are verifying the $249 USD payment on your PayPal account.`;
+            }
+            document.getElementById("audit-timer-bar").style.width = "100%";
         } else {
             formView.style.display = "block";
             pendingView.style.display = "none";
             successView.style.display = "none";
+            
+            // Populate fields if name is already set
+            document.getElementById("join-name-input").value = currentState.userName || "";
+            
+            // Set up Cash App URL
+            const cashappLink = document.getElementById("cashapp-pay-link");
+            if (cashappLink) {
+                cashappLink.href = `https://cash.app/$${IHSE_CONFIG.cashAppTag}/${IHSE_CONFIG.tuitionFee}`;
+            }
+            
+            selectPaymentMethod(currentState.paymentMethod);
         }
     }
 };
@@ -6165,6 +6405,7 @@ window.selectPaymentMethod = function(method) {
     const cashappBtn = document.getElementById("pay-method-cashapp");
     const paypalDetails = document.getElementById("paypal-details-view");
     const cashappDetails = document.getElementById("cashapp-details-view");
+    const submitBtn = document.getElementById("submit-tuition-btn");
     
     if (method === "paypal") {
         paypalBtn.style.borderColor = "var(--accent-gold)";
@@ -6177,6 +6418,11 @@ window.selectPaymentMethod = function(method) {
         
         paypalDetails.style.display = "block";
         cashappDetails.style.display = "none";
+        
+        if (submitBtn) submitBtn.style.display = "none";
+        
+        // Render buttons
+        initPaypalPayment();
     } else {
         cashappBtn.style.borderColor = "#00D632";
         cashappBtn.style.color = "#00D632";
@@ -6188,6 +6434,8 @@ window.selectPaymentMethod = function(method) {
         
         paypalDetails.style.display = "none";
         cashappDetails.style.display = "block";
+        
+        if (submitBtn) submitBtn.style.display = "block";
     }
 };
 
@@ -6205,28 +6453,40 @@ window.submitJoinRequest = function() {
     }
     
     if (currentState.paymentMethod === "paypal") {
-        const paypalEmail = document.getElementById("join-paypal-email").value.trim();
-        if (!paypalEmail) {
-            alert("Please enter your PayPal account email.");
-            return;
-        }
-    } else {
-        const cashappTag = document.getElementById("join-cashapp-tag").value.trim();
-        if (!cashappTag) {
-            alert("Please enter your Cash App $Cashtag.");
-            return;
-        }
+        submitSimulatedPaypal();
+        return;
+    }
+    
+    // Cash App Flow
+    const cashappTag = document.getElementById("join-cashapp-tag").value.trim();
+    const cashappTxId = document.getElementById("join-cashapp-txid").value.trim();
+    
+    if (!cashappTag) {
+        alert("Please enter your Cash App $Cashtag.");
+        return;
+    }
+    if (!cashappTxId) {
+        alert("Please enter your Cash App Transaction ID.");
+        return;
     }
     
     currentState.userName = nameInput;
     currentState.userRole = "pending";
+    
+    saveUserSession(nameInput, "pending", "cashapp", cashappTxId, cashappTag);
     updateAccessGates();
     
     // Switch views
     document.getElementById("join-form-view").style.display = "none";
     const pendingView = document.getElementById("join-pending-view");
     pendingView.style.display = "block";
-    document.getElementById("pending-status-text").innerText = `Your request is currently under administrative audit. We are verifying the $249 USD payment on your ${currentState.paymentMethod === 'paypal' ? 'PayPal' : 'Cash App'} account.`;
+    document.getElementById("pending-status-text").innerHTML = `
+        Your membership request is currently under administrative audit.<br><br>
+        We are verifying the payment of <strong>$249.00 USD</strong> via Cash App.<br>
+        <strong>$Cashtag:</strong> ${cashappTag}<br>
+        <strong>Transaction ID:</strong> ${cashappTxId}<br><br>
+        The IHSE Registrar will review the transaction logs. Your access will remain gated until approved.
+    `;
     
     // Animate the audit bar
     const timerBar = document.getElementById("audit-timer-bar");
@@ -6238,8 +6498,14 @@ window.submitJoinRequest = function() {
         timerBar.style.width = `${progress}%`;
         if (progress >= 100) {
             clearInterval(interval);
-            // Auto-approve after completion of the verification timer
-            mockApproveRequest();
+            // DO NOT auto-approve Cash App since payment is real.
+            // Just display that it is pending manual review.
+            document.getElementById("pending-status-text").innerHTML = `
+                Your payment of <strong>$249.00 USD</strong> is pending manual verification.<br>
+                <strong>$Cashtag:</strong> ${cashappTag}<br>
+                <strong>Transaction ID:</strong> ${cashappTxId}<br><br>
+                Please allow up to 24 hours for the registrar to verify the receipt. For testing/evaluation, you may bypass this check using the Administrator Control Console below.
+            `;
         }
     }, 100); // 5 seconds total
     currentState.auditInterval = interval;
@@ -6250,6 +6516,11 @@ window.mockApproveRequest = function() {
         clearInterval(currentState.auditInterval);
     }
     currentState.userRole = "investigator";
+    if (!currentState.userName) {
+        currentState.userName = document.getElementById("join-name-input").value.trim() || "Field Investigator";
+    }
+    
+    saveUserSession(currentState.userName, "investigator", currentState.paymentMethod, currentState.paymentTxId || "MOCK-TX-12345", currentState.cashappTag || "");
     updateAccessGates();
     
     // Update the exam name input field automatically to save typing!
@@ -6263,7 +6534,10 @@ window.mockApproveRequest = function() {
     document.getElementById("join-pending-view").style.display = "none";
     const successView = document.getElementById("join-success-view");
     successView.style.display = "block";
-    document.getElementById("success-welcome-text").innerText = `Welcome to the Institute of Hidden Species Expeditions! Your credentials have been authenticated. You now have full clearance to view chapters, workbooks, and sit for the exam.`;
+    document.getElementById("success-welcome-text").innerHTML = `
+        Welcome to the Institute of Hidden Species Expeditions!<br><br>
+        Your credentials have been authenticated. You now have full clearance to view chapters, workbooks, and sit for the exam.
+    `;
     
     // Refresh active book page to unlock it if currently on a restricted page
     renderBookPage();
@@ -6274,6 +6548,7 @@ window.mockRejectRequest = function() {
         clearInterval(currentState.auditInterval);
     }
     currentState.userRole = "guest";
+    saveUserSession("", "guest", "paypal", "", "");
     updateAccessGates();
     
     alert("Application rejected by administrator. Reverting status to Guest.");

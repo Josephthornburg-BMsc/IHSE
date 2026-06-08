@@ -6,6 +6,8 @@
     <title>Cryptozoology: An Advanced Exploration for College Graduates</title>
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Real PayPal JS SDK (Sandbox Client ID by default) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
 </head>
 <body>
 
@@ -483,25 +485,35 @@
 
                         <!-- PayPal Details -->
                         <div id="paypal-details-view" style="display: block;">
-                            <label style="font-family: var(--font-ui); font-size: 0.7rem; color: var(--text-muted); display:block; margin-bottom:0.4rem; font-weight:600;">PAYPAL ACCOUNT EMAIL</label>
-                            <input type="email" id="join-paypal-email" class="search-input" style="width:100%; text-align:left; margin-bottom: 0.5rem;" placeholder="paypal@example.com">
-                            <p style="font-size:0.75rem; color:var(--text-muted); font-style:italic; line-height:1.4;">
-                                Clicking the button below will simulate a PayPal transaction. A payment receipt verification request will be sent to the IHSE Registrar.
+                            <p style="font-size:0.75rem; color:var(--text-muted); font-style:italic; line-height:1.4; margin-bottom: 1rem;">
+                                Click the PayPal button below to pay the tuition fee of $249.00 USD and instantly unlock full investigator clearance.
                             </p>
+                            <div id="paypal-button-container" style="margin-top:0.5rem; min-height: 150px;"></div>
                         </div>
 
                         <!-- Cash App Details -->
                         <div id="cashapp-details-view" style="display: none;">
-                            <label style="font-family: var(--font-ui); font-size: 0.7rem; color: var(--text-muted); display:block; margin-bottom:0.4rem; font-weight:600;">CASH APP $CASHTAG</label>
-                            <input type="text" id="join-cashapp-tag" class="search-input" style="width:100%; text-align:left; margin-bottom: 0.5rem;" placeholder="$YourTag">
+                            <a id="cashapp-pay-link" href="https://cash.app/$ihse/249.00" target="_blank" class="primary-btn" style="display: block; text-align: center; text-decoration: none; background: #00D632; border-color: #00D632; color: white; margin-bottom: 1.2rem; padding: 0.8rem; font-weight: 700; font-family: var(--font-ui); border-radius: var(--border-radius); transition: all 0.2s;">
+                                Pay $249.00 via Cash App
+                            </a>
+                            <div style="display: flex; gap: 1rem; margin-bottom: 0.8rem;">
+                                <div style="flex: 1;">
+                                    <label style="font-family: var(--font-ui); font-size: 0.7rem; color: var(--text-muted); display:block; margin-bottom:0.4rem; font-weight:600;">CASH APP $CASHTAG</label>
+                                    <input type="text" id="join-cashapp-tag" class="search-input" style="width:100%; text-align:left;" placeholder="$YourTag">
+                                </div>
+                                <div style="flex: 1;">
+                                    <label style="font-family: var(--font-ui); font-size: 0.7rem; color: var(--text-muted); display:block; margin-bottom:0.4rem; font-weight:600;">TRANSACTION ID</label>
+                                    <input type="text" id="join-cashapp-txid" class="search-input" style="width:100%; text-align:left;" placeholder="e.g. #12345678">
+                                </div>
+                            </div>
                             <p style="font-size:0.75rem; color:var(--text-muted); font-style:italic; line-height:1.4;">
-                                Please enter your $Cashtag. A verification lock will trace this tag against the IHSE Cash receipt log.
+                                Please complete the payment on Cash App first, then fill in your $Cashtag and Transaction ID above and click "Submit Application" below.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <button class="primary-btn" onclick="submitJoinRequest()" style="width:100%; margin:0; padding: 0.9rem;">Submit & Pay Tuition</button>
+                <button id="submit-tuition-btn" class="primary-btn" onclick="submitJoinRequest()" style="width:100%; margin:0; padding: 0.9rem;">Submit Application</button>
             </div>
 
             <!-- Pending View -->
@@ -520,9 +532,10 @@
                 
                 <div style="border-top:1px solid var(--border-color); padding-top:1.5rem; display:flex; flex-direction:column; gap:0.8rem;">
                     <span style="font-size:0.75rem; color:var(--text-muted);">Administrator Control Console (Local Bypass)</span>
-                    <div style="display:flex; gap:0.8rem;">
-                        <button class="primary-btn" onclick="mockApproveRequest()" style="flex:1; margin:0; background:var(--accent-green); border-color:var(--accent-green); font-size:0.8rem; padding:0.6rem;">Approve Request</button>
-                        <button class="secondary-btn" onclick="mockRejectRequest()" style="flex:1; margin:0; background:var(--accent-red); border-color:var(--accent-red); color:white; font-size:0.8rem; padding:0.6rem;">Reject Request</button>
+                    <div style="display:flex; gap:0.5rem; flex-wrap: wrap;">
+                        <button class="primary-btn" onclick="mockApproveRequest()" style="flex:1; min-width: 100px; margin:0; background:var(--accent-green); border-color:var(--accent-green); font-size:0.75rem; padding:0.6rem;">Approve Request</button>
+                        <button class="secondary-btn" onclick="mockRejectRequest()" style="flex:1; min-width: 100px; margin:0; background:var(--accent-red); border-color:var(--accent-red); color:white; font-size:0.75rem; padding:0.6rem;">Reject Request</button>
+                        <button class="secondary-btn" onclick="resetUserSession()" style="flex:1; min-width: 100px; margin:0; border-color:var(--text-muted); color:var(--text-muted); font-size:0.75rem; padding:0.6rem;">Reset Session</button>
                     </div>
                 </div>
             </div>
@@ -534,7 +547,12 @@
                 <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 2rem;" id="success-welcome-text">
                     Welcome to the Institute of Hidden Species Expeditions! Your credentials have been authenticated. You now have full clearance to view chapters, workbooks, and sit for the exam.
                 </p>
-                <button class="primary-btn" onclick="closeJoinModal()" style="width:100%; margin:0; padding: 0.9rem;">Enter Archives</button>
+                <button class="primary-btn" onclick="closeJoinModal()" style="width:100%; margin:0; padding: 0.9rem; margin-bottom: 1.5rem;">Enter Archives</button>
+                
+                <div style="border-top:1px solid var(--border-color); padding-top:1.5rem; display:flex; flex-direction:column; gap:0.8rem;">
+                    <span style="font-size:0.75rem; color:var(--text-muted);">Administrator Control Console (Local Bypass)</span>
+                    <button class="secondary-btn" onclick="resetUserSession()" style="width:100%; margin:0; border-color:var(--text-muted); color:var(--text-muted); font-size:0.75rem; padding:0.6rem;">Reset Session (Go back to Guest)</button>
+                </div>
             </div>
         </div>
     </div>
