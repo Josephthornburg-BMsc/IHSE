@@ -5,6 +5,10 @@
    and certificate exports under the Institute of Hidden Spice Expeditions (IHSE).
    ========================================================================== */
 
+// Preload the official seal for high-res canvas rendering
+const sealImage = new Image();
+sealImage.src = "seal.png";
+
 // --- ACADEMIC TEXTBOOK DATABASE (EXPANDED TO 110 PAGES TOTAL) ---
 const TEXTBOOK_DB = {
     preface: [
@@ -5540,15 +5544,42 @@ function evaluateQuiz() {
         scoreValText.style.color = "var(--accent-green)";
         resultsStatement.innerHTML = `<strong>Congratulations, Researcher!</strong> You have demonstrated a comprehensive academic command of taxonomic cryptozoology and field methodology. The institute herewith awards you the certificate below.`;
         
-        document.getElementById("cert-student-name").innerText = currentState.userName;
+        // 1. Generate/Retrieve Persistent Certificate ID
+        let certId = localStorage.getItem("ihse_certId");
+        if (!certId) {
+            const randNum = Math.floor(100000 + Math.random() * 900000);
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const randChar = chars.charAt(Math.floor(Math.random() * chars.length));
+            certId = `IHSE-101-L1-${randNum}${randChar}`;
+            localStorage.setItem("ihse_certId", certId);
+        }
+        currentState.certId = certId;
+
+        // 2. Format Date (e.g. 8th day of June, 2026)
+        const today = new Date();
+        const day = today.getDate();
+        const year = today.getFullYear();
+        const month = today.toLocaleString('default', { month: 'long' });
         
-        const dateString = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
-        document.getElementById("cert-issue-date").innerText = `Issued on this day: ${dateString}`;
+        let suffix = "th";
+        if (day < 11 || day > 13) {
+            switch (day % 10) {
+                case 1:  suffix = "st"; break;
+                case 2:  suffix = "nd"; break;
+                case 3:  suffix = "rd"; break;
+            }
+        }
+        const ordinalDateString = `Awarded this ${day}${suffix} day of ${month}, ${year}.`;
+        
+        // 3. Update DOM
+        document.getElementById("cert-student-name").innerText = currentState.userName || "FIELD INVESTIGATOR";
+        document.getElementById("cert-issue-date").innerText = ordinalDateString;
+        document.getElementById("cert-id-display").innerText = `Certificate ID: ${certId}`;
         
         certWrapper.style.display = "block";
         downloadBtn.style.display = "inline-block";
         
-        drawCanvasCertificate(currentState.userName, dateString);
+        drawCanvasCertificate(currentState.userName || "FIELD INVESTIGATOR", ordinalDateString, certId);
     } else {
         scoreValText.style.color = "var(--accent-red)";
         resultsStatement.innerHTML = `<strong>Examination Incomplete.</strong> Your score of ${percent}% falls short of the required 70% threshold. You are encouraged to re-read the textbook chapters and test again.`;
@@ -5558,74 +5589,188 @@ function evaluateQuiz() {
 }
 
 // Canvas-based High-Res Certificate Generation for Downloading
-function drawCanvasCertificate(name, dateStr) {
+function drawCanvasCertificate(name, dateStr, certId) {
     const canvas = document.getElementById("cert-canvas");
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     
+    // Set high-res dimensions
     canvas.width = 1200;
     canvas.height = 800;
     
+    // Background
     ctx.fillStyle = "#f7f5ef";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
+    // Double outer borders
     ctx.strokeStyle = "#8d7657";
-    ctx.lineWidth = 16;
+    ctx.lineWidth = 12;
     ctx.strokeRect(30, 30, canvas.width - 60, canvas.height - 60);
     
     ctx.strokeStyle = "#5a4b37";
-    ctx.lineWidth = 4;
-    ctx.strokeRect(50, 50, canvas.width - 100, canvas.height - 100);
+    ctx.lineWidth = 2;
+    ctx.strokeRect(45, 45, canvas.width - 90, canvas.height - 90);
     
+    // Inner thin border
+    ctx.strokeStyle = "#5a4b37";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(55, 55, canvas.width - 110, canvas.height - 110);
+    
+    // Header
     ctx.fillStyle = "#5a4b37";
     ctx.textAlign = "center";
-    ctx.font = "bold 24px 'Cinzel', Times, serif";
-    ctx.fillText("INSTITUTE OF HIDDEN SPICE EXPEDITIONS (IHSE)", canvas.width / 2, 160);
+    ctx.font = "bold 20px 'Cinzel', Times, serif";
+    ctx.fillText("INSTITUTE OF HIDDEN SPECIES EXPEDITIONS", canvas.width / 2, 110);
     
-    ctx.font = "italic 16px 'Lora', Georgia, serif";
-    ctx.fillText("DEPARTMENT OF ANOMALOUS BIOLOGICAL FORENSICS", canvas.width / 2, 200);
+    ctx.font = "normal 14px 'Montserrat', sans-serif";
+    ctx.fillText("IHSE ACADEMY", canvas.width / 2, 135);
     
+    // Title
     ctx.fillStyle = "#2b2319";
-    ctx.font = "bold 52px 'Cinzel', Times, serif";
-    ctx.fillText("CERTIFICATE IN CRYPTID STUDIES", canvas.width / 2, 310);
+    ctx.font = "bold 38px 'Cinzel', Times, serif";
+    ctx.fillText("CERTIFICATE OF COMPLETION", canvas.width / 2, 210);
     
+    // Underline for title
+    ctx.strokeStyle = "#8d7657";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2 - 120, 230);
+    ctx.lineTo(canvas.width / 2 + 120, 230);
+    ctx.stroke();
+    
+    // Body Text
     ctx.fillStyle = "#5a4b37";
-    ctx.font = "italic 22px 'Lora', Georgia, serif";
-    ctx.fillText("This document certifies that the academic registry of IHSE has examined", canvas.width / 2, 400);
+    ctx.font = "italic 18px 'Lora', Georgia, serif";
+    ctx.fillText("This certifies that", canvas.width / 2, 280);
     
+    // Student Name
     ctx.fillStyle = "#2b2319";
-    ctx.font = "black 46px 'Cinzel', Times, serif";
-    ctx.fillText(name.toUpperCase(), canvas.width / 2, 480);
+    ctx.font = "bold 32px 'Cinzel', Times, serif";
+    ctx.fillText(name.toUpperCase(), canvas.width / 2, 335);
     
+    // Name underline
     ctx.strokeStyle = "#c5a880";
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(canvas.width / 2 - 250, 500);
-    ctx.lineTo(canvas.width / 2 + 250, 500);
+    ctx.moveTo(canvas.width / 2 - 200, 345);
+    ctx.lineTo(canvas.width / 2 + 200, 345);
     ctx.stroke();
     
+    // Core Course Title
     ctx.fillStyle = "#5a4b37";
-    ctx.font = "italic 20px 'Lora', Georgia, serif";
-    ctx.fillText("possessing academic competency in taxonomic cataloging and field forensics.", canvas.width / 2, 550);
+    ctx.font = "normal 16px 'Lora', Georgia, serif";
+    ctx.fillText("has successfully completed all academic requirements for", canvas.width / 2, 385);
     
-    ctx.font = "16px 'Lora', Georgia, serif";
-    ctx.fillText(dateStr, canvas.width / 2, 620);
+    ctx.fillStyle = "#2b2319";
+    ctx.font = "bold 18px 'Cinzel', Times, serif";
+    ctx.fillText("INTRODUCTORY CRYPTOZOOLOGY — LEVEL 1 (IHSE 101)", canvas.width / 2, 420);
     
-    const cx = canvas.width / 2;
-    const cy = 700;
+    // Curriculum summary box
+    const boxWidth = 560;
+    const boxHeight = 125;
+    const boxX = canvas.width / 2 - boxWidth / 2;
+    const boxY = 445;
+    
+    ctx.fillStyle = "rgba(141, 118, 87, 0.03)";
+    ctx.fillRect(boxX, boxY, boxWidth, boxHeight);
+    
+    ctx.strokeStyle = "rgba(141, 118, 87, 0.3)";
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    ctx.strokeRect(boxX, boxY, boxWidth, boxHeight);
+    ctx.setLineDash([]); // Reset dash
+    
+    ctx.fillStyle = "#2b2319";
+    ctx.font = "bold 11px 'Montserrat', sans-serif";
+    ctx.fillText("FOUNDATIONAL CURRICULUM COVERED:", canvas.width / 2, boxY + 22);
+    
+    ctx.fillStyle = "#5a4b37";
+    ctx.font = "normal 12px 'Lora', Georgia, serif";
+    ctx.textAlign = "left";
+    
+    // List points in two columns
+    const col1X = boxX + 25;
+    const col2X = boxX + 295;
+    
+    ctx.fillText("• Scientific cryptozoological methodology", col1X, boxY + 47);
+    ctx.fillText("• Holotype & holotype-alternative standards", col1X, boxY + 72);
+    ctx.fillText("• Metrology & calibration protocols", col1X, boxY + 97);
+    
+    ctx.fillText("• Archival & historical analysis", col2X, boxY + 47);
+    ctx.fillText("• eDNA & metagenomic investigation", col2X, boxY + 72);
+    ctx.fillText("• Cognitive-bias filtering & ecological plausibility", col2X, boxY + 97);
+    
+    // Reset alignment
+    ctx.textAlign = "center";
+    
+    // Proficiency statement
+    ctx.fillStyle = "#5a4b37";
+    ctx.font = "normal 15px 'Lora', Georgia, serif";
+    ctx.fillText("and has demonstrated proficiency in IHSE-standard investigative practices.", canvas.width / 2, 600);
+    
+    // Award Date
+    ctx.font = "italic 16px 'Lora', Georgia, serif";
+    ctx.fillText(dateStr, canvas.width / 2, 635);
+    
+    // Signature block lines
+    ctx.strokeStyle = "rgba(141, 118, 87, 0.5)";
+    ctx.lineWidth = 1;
+    
+    // Left signature line
     ctx.beginPath();
-    ctx.arc(cx, cy, 50, 0, Math.PI * 2);
-    ctx.fillStyle = "#d4b285";
-    ctx.fill();
-    ctx.strokeStyle = "#8d7657";
-    ctx.lineWidth = 4;
+    ctx.moveTo(100, 715);
+    ctx.lineTo(380, 715);
     ctx.stroke();
     
+    // Right signature line
+    ctx.beginPath();
+    ctx.moveTo(820, 715);
+    ctx.lineTo(1100, 715);
+    ctx.stroke();
+    
+    // Signature text details
     ctx.fillStyle = "#5a4b37";
-    ctx.font = "bold 11px 'Cinzel', Times, serif";
-    ctx.fillText("IHSE", cx, cy - 10);
-    ctx.fillText("OFFICIAL", cx, cy + 5);
-    ctx.fillText("SEAL", cx, cy + 20);
+    ctx.font = "bold 10px 'Montserrat', sans-serif";
+    ctx.fillText("ACADEMIC DIRECTOR", 240, 730);
+    ctx.fillText("LEAD INSTRUCTOR, IHSE 101", 960, 730);
+    
+    ctx.fillStyle = "#2b2319";
+    ctx.font = "italic 14px 'Lora', Georgia, serif";
+    ctx.fillText("Dr. Joseph Bryan Thornburg, PhD.", 240, 710);
+    ctx.fillText("Dr. Joseph Bryan Thornburg, PhD.", 960, 710);
+    
+    ctx.fillStyle = "#8d7657";
+    ctx.font = "10px 'Montserrat', sans-serif";
+    ctx.fillText("IHSE Board of Trustees", 240, 745);
+    ctx.fillText("Anomalous Biological Department", 960, 745);
+    
+    // Stamp the seal
+    const cx = canvas.width / 2;
+    const cy = 690;
+    
+    if (sealImage.complete && sealImage.naturalWidth !== 0) {
+        ctx.drawImage(sealImage, cx - 45, cy - 45, 90, 90);
+    } else {
+        // Fallback: draw gold seal circle
+        ctx.beginPath();
+        ctx.arc(cx, cy, 40, 0, Math.PI * 2);
+        ctx.fillStyle = "#d4b285";
+        ctx.fill();
+        ctx.strokeStyle = "#8d7657";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+        
+        ctx.fillStyle = "#5a4b37";
+        ctx.font = "bold 9px 'Cinzel', Times, serif";
+        ctx.fillText("IHSE", cx, cy - 8);
+        ctx.fillText("OFFICIAL", cx, cy + 4);
+        ctx.fillText("SEAL", cx, cy + 16);
+    }
+    
+    // Certificate ID at the bottom
+    ctx.fillStyle = "#8d7657";
+    ctx.font = "10px 'Montserrat', sans-serif";
+    ctx.fillText("Certificate ID: " + certId, canvas.width / 2, 775);
 }
 
 window.downloadCertificate = function() {
