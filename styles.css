@@ -1711,3 +1711,10 @@ footer {
         display: none;
     }
 }
+
+/* User Role Access Gate Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.75; }
+    100% { transform: scale(1); opacity: 1; }
+}

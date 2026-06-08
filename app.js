@@ -4606,7 +4606,9 @@ let currentState = {
     activeQuizQuestions: [],
     quizAnswers: [],
     quizSubmitted: false,
-    userName: ""
+    userName: "",
+    userRole: "guest",
+    paymentMethod: "paypal"
 };
 
 // --- INITIALIZATION ---
@@ -4617,6 +4619,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initMap();
     initLab();
     initExam();
+    updateAccessGates();
 });
 
 // --- NAVIGATION SYSTEM ---
@@ -4655,6 +4658,7 @@ function switchTab(tabId) {
         resetLabSimulators();
     }
     
+    updateAccessGates();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -4721,6 +4725,35 @@ function renderBookPage() {
     
     leftHeader.innerText = `IHSE Compendium — ${chapterTitleStr}`;
     rightHeader.innerText = rightPageData ? `${rightPageData.title}` : `IHSE Field Archives`;
+
+    const RESTRICTED_CHAPTERS = ["ch1", "ch2", "ch3", "ch4", "ch5", "protocols", "workbook", "project"];
+    if (RESTRICTED_CHAPTERS.includes(chapId) && currentState.userRole !== "investigator") {
+        const isPending = (currentState.userRole === "pending");
+        leftContent.innerHTML = `
+            <div style="text-align: center; padding: 2rem 1.5rem;">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem; color: var(--accent-red);">🔒</div>
+                <h3 style="font-family: var(--font-header); font-size: 1.1rem; color: #2b2319; margin-bottom: 0.5rem; border:none; padding:0; text-transform:uppercase;">Clearance Required</h3>
+                <div style="width: 50px; height: 1px; background: #8d7657; margin: 1rem auto; opacity:0.5;"></div>
+                <p style="font-family: var(--font-body); font-size: 0.82rem; color: #5a4b37; line-height: 1.6; text-align: justify; text-indent:0; margin-bottom: 1.5rem;">
+                    ${isPending ? 'Your membership request is currently pending verification of PayPal or Cash App receipt logs. Once verified, full clearance will be granted instantly.' : 'This archive contains advanced field intelligence and standard operating procedures. Access is restricted to registered members.'}
+                </p>
+                <button class="primary-btn" onclick="openJoinModal()" style="font-size:0.75rem; padding: 0.5rem 1.2rem; margin:0;">
+                    ${isPending ? 'Check Receipt Status' : 'Submit Access Application'}
+                </button>
+            </div>
+        `;
+        rightContent.innerHTML = `
+            <div style="height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; opacity:0.08; padding-top:4rem;">
+                <div class="cover-seal-icon" style="width:100px; height:100px; border-width:4px; font-size:1.2rem; margin: 0 auto; color: #2b2319; border-color: #2b2319;">IHSE</div>
+                <div style="font-family:var(--font-header); font-size:0.8rem; margin-top:1rem; letter-spacing:2px; color: #2b2319;">Access Restricted</div>
+            </div>
+        `;
+        leftNum.innerText = "-";
+        rightNum.innerText = "-";
+        rightNum.style.display = "inline";
+        updatePaginationUI(totalPages);
+        return;
+    }
 
     // Render Left Page
     let leftHtml = `<h2>${leftPageData.title}</h2>`;
@@ -5950,3 +5983,410 @@ window.printFullManual = function() {
     printWindow.document.write(htmlContent);
     printWindow.document.close();
 };
+
+window.downloadProjectTemplate = function() {
+    let htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IHSE Final Project Dossier Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-gold: #c5a880;
+            --border-gold: #8d7657;
+            --text-primary: #2b2319;
+            --text-muted: #8d7657;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #16120e;
+            color: var(--text-primary);
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            padding: 0;
+        }
+        .book-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #fbf6ec;
+            border: 8px solid #231610;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            padding: 4rem 5rem;
+        }
+        .page-break {
+            page-break-before: always;
+            margin-top: 5rem;
+            border-top: 2px double var(--border-gold);
+            padding-top: 3rem;
+        }
+        .page-break:first-of-type {
+            page-break-before: avoid;
+            margin-top: 0;
+            border-top: none;
+            padding-top: 0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Cinzel', serif;
+            color: #2b2319;
+            page-break-after: avoid;
+        }
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-gold);
+            padding-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed rgba(141,118,87,0.3);
+            padding-bottom: 0.3rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #8d7657;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        th, td {
+            border: 1px solid var(--border-gold);
+            padding: 0.6rem;
+            text-align: left;
+        }
+        th {
+            background-color: var(--border-gold);
+            color: #fbf6ec;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        @media print {
+            body { background: #fff; padding: 0; }
+            .book-container { border: none; box-shadow: none; padding: 0; max-width: 100%; margin: 0; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print" style="position: sticky; top: 0; left: 0; right: 0; background: #231610; color: #f5f2eb; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000;">
+        <span>IHSE Field Project Dossier &mdash; Interactive Template</span>
+        <button onclick="window.print()" style="background: #c5a880; color: #231610; border: none; padding: 0.4rem 1rem; font-weight: 600; cursor: pointer; border-radius: 4px; font-family: 'Montserrat', sans-serif; transition: background 0.2s;" onmouseover="this.style.background='#e0c29b'" onmouseout="this.style.background='#c5a880'">Print / Save to PDF</button>
+    </div>
+    
+    <div class="book-container">
+`;
+
+    const pageCount = getChapterPageCount("project");
+    for (let index = 0; index < pageCount; index++) {
+        const page = getTextbookPage("project", index);
+        if (!page) continue;
+        htmlContent += `
+        <div class="page-break">
+            <h1>${page.title}</h1>
+            \${page.content}
+        </div>
+        `;
+    }
+
+    htmlContent += `
+    </div>
+</body>
+</html>`;
+
+    const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8;" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "IHSE_Field_Project_Dossier_Template.html";
+    link.click();
+};
+
+// --- USER ROLE ACCESS & MEMBERSHIP GATES ---
+window.openJoinModal = function() {
+    const modal = document.getElementById("join-modal-overlay");
+    if (modal) {
+        modal.classList.add("active");
+        
+        // Reset modal views based on current state
+        const formView = document.getElementById("join-form-view");
+        const pendingView = document.getElementById("join-pending-view");
+        const successView = document.getElementById("join-success-view");
+        
+        if (currentState.userRole === "investigator") {
+            formView.style.display = "none";
+            pendingView.style.display = "none";
+            successView.style.display = "block";
+            document.getElementById("success-welcome-text").innerText = `Welcome to the Institute of Hidden Species Expeditions, Investigator ${currentState.userName}! Your credentials have been authenticated. You have full clearance.`;
+        } else if (currentState.userRole === "pending") {
+            formView.style.display = "none";
+            pendingView.style.display = "block";
+            successView.style.display = "none";
+            document.getElementById("pending-status-text").innerText = `Your request is currently under administrative audit. We are verifying the $249 USD payment on your ${currentState.paymentMethod === 'paypal' ? 'PayPal' : 'Cash App'} account.`;
+        } else {
+            formView.style.display = "block";
+            pendingView.style.display = "none";
+            successView.style.display = "none";
+        }
+    }
+};
+
+window.closeJoinModal = function() {
+    const modal = document.getElementById("join-modal-overlay");
+    if (modal) {
+        modal.classList.remove("active");
+    }
+};
+
+window.selectPaymentMethod = function(method) {
+    currentState.paymentMethod = method;
+    const paypalBtn = document.getElementById("pay-method-paypal");
+    const cashappBtn = document.getElementById("pay-method-cashapp");
+    const paypalDetails = document.getElementById("paypal-details-view");
+    const cashappDetails = document.getElementById("cashapp-details-view");
+    
+    if (method === "paypal") {
+        paypalBtn.style.borderColor = "var(--accent-gold)";
+        paypalBtn.style.color = "var(--accent-gold)";
+        paypalBtn.style.background = "rgba(197, 168, 128, 0.15)";
+        
+        cashappBtn.style.borderColor = "var(--border-color)";
+        cashappBtn.style.color = "var(--text-secondary)";
+        cashappBtn.style.background = "none";
+        
+        paypalDetails.style.display = "block";
+        cashappDetails.style.display = "none";
+    } else {
+        cashappBtn.style.borderColor = "#00D632";
+        cashappBtn.style.color = "#00D632";
+        cashappBtn.style.background = "rgba(0, 214, 50, 0.08)";
+        
+        paypalBtn.style.borderColor = "var(--border-color)";
+        paypalBtn.style.color = "var(--text-secondary)";
+        paypalBtn.style.background = "none";
+        
+        paypalDetails.style.display = "none";
+        cashappDetails.style.display = "block";
+    }
+};
+
+window.submitJoinRequest = function() {
+    const nameInput = document.getElementById("join-name-input").value.trim();
+    const emailInput = document.getElementById("join-email-input").value.trim();
+    
+    if (!nameInput) {
+        alert("Please enter your name to apply.");
+        return;
+    }
+    if (!emailInput) {
+        alert("Please enter your email to apply.");
+        return;
+    }
+    
+    if (currentState.paymentMethod === "paypal") {
+        const paypalEmail = document.getElementById("join-paypal-email").value.trim();
+        if (!paypalEmail) {
+            alert("Please enter your PayPal account email.");
+            return;
+        }
+    } else {
+        const cashappTag = document.getElementById("join-cashapp-tag").value.trim();
+        if (!cashappTag) {
+            alert("Please enter your Cash App $Cashtag.");
+            return;
+        }
+    }
+    
+    currentState.userName = nameInput;
+    currentState.userRole = "pending";
+    updateAccessGates();
+    
+    // Switch views
+    document.getElementById("join-form-view").style.display = "none";
+    const pendingView = document.getElementById("join-pending-view");
+    pendingView.style.display = "block";
+    document.getElementById("pending-status-text").innerText = `Your request is currently under administrative audit. We are verifying the $249 USD payment on your ${currentState.paymentMethod === 'paypal' ? 'PayPal' : 'Cash App'} account.`;
+    
+    // Animate the audit bar
+    const timerBar = document.getElementById("audit-timer-bar");
+    timerBar.style.width = "0%";
+    
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 2;
+        timerBar.style.width = `${progress}%`;
+        if (progress >= 100) {
+            clearInterval(interval);
+            // Auto-approve after completion of the verification timer
+            mockApproveRequest();
+        }
+    }, 100); // 5 seconds total
+    currentState.auditInterval = interval;
+};
+
+window.mockApproveRequest = function() {
+    if (currentState.auditInterval) {
+        clearInterval(currentState.auditInterval);
+    }
+    currentState.userRole = "investigator";
+    updateAccessGates();
+    
+    // Update the exam name input field automatically to save typing!
+    const examName = document.getElementById("student-name-input");
+    if (examName) {
+        examName.value = currentState.userName;
+    }
+    
+    // Switch to success view
+    document.getElementById("join-form-view").style.display = "none";
+    document.getElementById("join-pending-view").style.display = "none";
+    const successView = document.getElementById("join-success-view");
+    successView.style.display = "block";
+    document.getElementById("success-welcome-text").innerText = `Welcome to the Institute of Hidden Species Expeditions! Your credentials have been authenticated. You now have full clearance to view chapters, workbooks, and sit for the exam.`;
+    
+    // Refresh active book page to unlock it if currently on a restricted page
+    renderBookPage();
+};
+
+window.mockRejectRequest = function() {
+    if (currentState.auditInterval) {
+        clearInterval(currentState.auditInterval);
+    }
+    currentState.userRole = "guest";
+    updateAccessGates();
+    
+    alert("Application rejected by administrator. Reverting status to Guest.");
+    
+    // Switch back to form view
+    document.getElementById("join-form-view").style.display = "block";
+    document.getElementById("join-pending-view").style.display = "none";
+    document.getElementById("join-success-view").style.display = "none";
+    
+    renderBookPage();
+};
+
+function renderClearanceGate(isPending) {
+    if (isPending) {
+        return `
+            <div class="clearance-gate-overlay" style="max-width: 600px; margin: 3rem auto; padding: 3rem; background-color: var(--bg-card); border: 2px solid var(--accent-gold); border-radius: var(--border-radius); text-align: center; box-shadow: var(--box-shadow);">
+                <div style="font-size: 3rem; margin-bottom: 1rem; animation: pulse 2s infinite;">⏳</div>
+                <h2 style="font-family: var(--font-header); font-size: 1.8rem; color: var(--text-primary); margin-bottom: 1.5rem; border: none; padding: 0;">MEMBERSHIP REQUEST PENDING</h2>
+                <div style="width: 80px; height: 2px; background: var(--accent-gold); margin: 1.5rem auto;"></div>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+                    Your application for <strong>Field Investigator Status</strong> has been received. 
+                    We are currently verifying the tuition payment of <strong>$249 USD</strong> via <strong>${currentState.paymentMethod === 'paypal' ? 'PayPal' : 'Cash App'}</strong>.
+                </p>
+                <div style="background: rgba(141,118,87,0.08); border: 1px dashed var(--accent-gold); padding: 1rem; border-radius: 4px; font-family: var(--font-ui); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 2rem;">
+                    <strong>Current Status:</strong> Verifying Receipt & Credentials
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="secondary-btn" onclick="openJoinModal()" style="margin:0; font-size: 0.8rem; padding: 0.5rem 1rem;">View Payment Info</button>
+                    <button class="primary-btn" onclick="mockApproveRequest()" style="margin:0; font-size: 0.8rem; padding: 0.5rem 1rem; background: var(--accent-green); border-color: var(--accent-green); color: white;">[Mock Admin: Approve Now]</button>
+                </div>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="clearance-gate-overlay" style="max-width: 600px; margin: 3rem auto; padding: 3rem; background-color: var(--bg-card); border: 2px solid var(--accent-gold); border-radius: var(--border-radius); text-align: center; box-shadow: var(--box-shadow);">
+            <div style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--accent-red);">🔒</div>
+            <h2 style="font-family: var(--font-header); font-size: 1.8rem; color: var(--text-primary); margin-bottom: 1rem; border: none; padding: 0;">IHSE CLEARANCE LEVEL REQUIRED</h2>
+            <div style="width: 80px; height: 2px; background: var(--accent-gold); margin: 1.5rem auto;"></div>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+                You are currently accessing the Institute's network under a <strong>Guest Profile</strong>. 
+                Advanced field methodologies, laboratory simulators, and the certification exam are restricted to registered investigators.
+            </p>
+            <div style="background: rgba(197, 168, 128, 0.04); border: 1px solid rgba(197, 168, 128, 0.15); padding: 1.2rem; border-radius: 4px; margin-bottom: 2rem; text-align: left; font-size: 0.85rem;">
+                <strong style="color: var(--accent-gold); display: block; margin-bottom: 0.4rem;">Membership Benefits:</strong>
+                <ul style="margin: 0; padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.5;">
+                    <li>Unlock Textbook Chapters I &mdash; V (Hominids, Marine, Aerial, etc.)</li>
+                    <li>Access the Field Protocol Manual &amp; Student Workbook</li>
+                    <li>Download/Print the 12-page Final Field Project Dossier template</li>
+                    <li>Use interactive DNA sequencing &amp; micro-optics simulators</li>
+                    <li>Take the 50-question comprehensive certification exam for official credentials</li>
+                </ul>
+            </div>
+            <button class="primary-btn" onclick="openJoinModal()" style="margin:0; font-size: 0.9rem; padding: 0.75rem 2rem;">Apply for Investigator Status</button>
+        </div>
+    `;
+}
+
+function updateAccessGates() {
+    const isApproved = (currentState.userRole === "investigator");
+    const isPending = (currentState.userRole === "pending");
+
+    // Handle Exam Section
+    const examGate = document.getElementById("exam-access-gate");
+    const examContent = document.getElementById("exam-main-content");
+    if (examGate && examContent) {
+        if (isApproved) {
+            examGate.style.display = "none";
+            examContent.style.display = "block";
+        } else {
+            examGate.style.display = "block";
+            examContent.style.display = "none";
+            examGate.innerHTML = renderClearanceGate(isPending);
+        }
+    }
+
+    // Handle Lab Section
+    const labGate = document.getElementById("lab-access-gate");
+    const labContent = document.getElementById("lab-main-content");
+    if (labGate && labContent) {
+        if (isApproved) {
+            labGate.style.display = "none";
+            labContent.style.display = "block";
+        } else {
+            labGate.style.display = "block";
+            labContent.style.display = "none";
+            labGate.innerHTML = renderClearanceGate(isPending);
+        }
+    }
+
+    // Update Header Status Widget
+    const roleBadge = document.getElementById("user-role-badge");
+    const actionLink = document.getElementById("user-action-link");
+    const statusWidget = document.getElementById("user-status-widget");
+    if (roleBadge && actionLink && statusWidget) {
+        if (isApproved) {
+            roleBadge.innerText = `Investigator: ${currentState.userName || "Approved"}`;
+            actionLink.innerText = "View Profile";
+            statusWidget.style.borderColor = "var(--accent-green)";
+            statusWidget.style.color = "var(--accent-green)";
+            statusWidget.style.background = "rgba(63,110,82,0.08)";
+        } else if (isPending) {
+            roleBadge.innerText = "Request Pending";
+            actionLink.innerText = "View Status";
+            statusWidget.style.borderColor = "var(--accent-gold)";
+            statusWidget.style.color = "var(--accent-gold)";
+            statusWidget.style.background = "rgba(197,168,128,0.15)";
+        } else {
+            roleBadge.innerText = "Guest Access";
+            actionLink.innerText = "Join IHSE";
+            statusWidget.style.borderColor = "var(--accent-gold)";
+            statusWidget.style.color = "var(--accent-gold)";
+            statusWidget.style.background = "rgba(197,168,128,0.08)";
+        }
+    }
+}
