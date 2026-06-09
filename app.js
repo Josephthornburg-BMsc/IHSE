@@ -4593,7 +4593,8 @@ const QUIZ_QUESTIONS = [
 // --- CONFIGURATION ---
 const IHSE_CONFIG = {
     paypalClientId: "sb", // Swap with your live Client ID for production
-    cashAppTag: "ihse",   // Cash App $Cashtag (without $)
+    paypalEmail: "joseph.thornburg08@gmail.com", // PayPal receiver email
+    cashAppTag: "JosephThornburg1",   // Cash App $Cashtag (without $)
     tuitionFee: "249.00", // Tuition fee in USD
     currency: "USD"
 };
@@ -6420,6 +6421,9 @@ function initPaypalPayment() {
                     amount: {
                         currency_code: IHSE_CONFIG.currency,
                         value: IHSE_CONFIG.tuitionFee
+                    },
+                    payee: {
+                        email_address: IHSE_CONFIG.paypalEmail
                     },
                     description: "IHSE Cryptozoology Course Tuition & Registration"
                 }]
