@@ -20,7 +20,7 @@ const TEXTBOOK_DB = {
                     <h1 style="font-family:var(--font-header); font-size:2.2rem; line-height:1.3; color:#2b2319; margin-bottom:1rem;">Cryptozoology: An Advanced Exploration for College Graduates</h1>
                     <div style="margin: 2rem 0; height:2px; background-color:#8d7657; opacity:0.3;"></div>
                     <p style="font-family:var(--font-body); font-style:italic; font-size:1.1rem; color:#5a4b37; text-align:center; text-indent:0; margin-bottom:2rem;">By</p>
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; font-weight:600; color:#2b2319; margin-bottom:0.5rem; text-align:center;">Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; font-weight:600; color:#2b2319; margin-bottom:0.5rem; text-align:center;">Joseph Bryan Thornburg, M. Msc. (Cryptozoology)</h2>
                     <p style="font-family:var(--font-ui); font-size:0.85rem; line-height:1.6; color:#5a4b37; text-align:center; text-indent:0;">
                         Ordained Minister<br>
                         Founder & Expedition Architect, Institute of Hidden Spice Expeditions
@@ -878,12 +878,12 @@ const TEXTBOOK_DB = {
             title: "About the Author",
             content: `
                 <div style="font-family:var(--font-ui); font-size:0.8rem; line-height:1.6; color:#5a4b37; padding: 0.5rem 0;">
-                    <p style="text-indent:0; margin-bottom:1rem;"><strong>Dr. Joseph Bryan Thornburg, PhD</strong></p>
+                    <p style="text-indent:0; margin-bottom:1rem;"><strong>Joseph Bryan Thornburg, M. Msc.</strong></p>
                     <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Joseph Bryan Thornburg was born on December 6, 1967, in Chula Vista, California, and raised in Tampa, Florida. A graduate of Hillsborough Senior High School, he entered the United States Army in 1987, serving as a 13B10 Cannon Crewmember. His military career included active duty during Operation Desert Shield and Operation Desert Storm, where he developed the discipline, fieldcraft, and operational mindset that would later shape his scientific and expeditionary work. After completing his Army service in 1991, he continued to serve his state and community in the Florida Army National Guard until 1995, including deployment during Hurricane Andrew.</p>
                     <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Following his military career, Thornburg worked as a line chef and personal chef, honing precision, timing, and resource management&mdash;skills that would later influence his expedition planning and methodological rigor. He also worked as an independent contractor with Uber, DoorDash, and Amazon Flex, experiences that deepened his understanding of logistics, adaptability, and modern systems navigation.</p>
                     <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Thornburg pursued higher education at Thomas Francis University, earning a Bachelor&rsquo;s and Master&rsquo;s degree in Metaphysical Humanistic Science, followed by a Doctor of Philosophy in Metaphysical Humanistic Science with a concentration in Cryptozoology. His academic work blends zoological theory, metaphysical inquiry, and field investigation, forming the foundation of his mythic-scientific approach to cryptid research.</p>
                     <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">In 2001, on the day of Epiphany, he married his wife, Darlene. He is the proud stepfather of two sons who regard him as their father&mdash;a role he considers one of the greatest honors of his life.</p>
-                    <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Today, Dr. Thornburg is recognized for his interdisciplinary approach to cryptozoology, integrating scientific methodology, expeditionary practice, and cultural analysis. His work reflects a lifelong commitment to exploring the boundaries of the known world and encouraging others to approach the unknown with curiosity, discipline, and respect.</p>
+                    <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Today, Thornburg is recognized for his interdisciplinary approach to cryptozoology, integrating scientific methodology, expeditionary practice, and cultural analysis. His work reflects a lifelong commitment to exploring the boundaries of the known world and encouraging others to approach the unknown with curiosity, discipline, and respect.</p>
                 </div>
             `
         }
@@ -4209,7 +4209,7 @@ const QUIZ_QUESTIONS = [
         correct: 0
     },
     {
-        question: "The study of metaphysical humanistic science in Dr. Thornburg's background focuses on:",
+        question: "The study of metaphysical humanistic science in Thornburg's background focuses on:",
         options: [
             "Blending humanistic inquiry, metaphysical concepts, and scientific methodology.",
             "Replacing physics with psychic divination.",
@@ -5736,8 +5736,8 @@ function drawCanvasCertificate(name, dateStr, certId) {
     
     ctx.fillStyle = "#2b2319";
     ctx.font = "italic 14px 'Lora', Georgia, serif";
-    ctx.fillText("Dr. Joseph Bryan Thornburg, PhD.", 240, 710);
-    ctx.fillText("Dr. Joseph Bryan Thornburg, PhD.", 960, 710);
+    ctx.fillText("Joseph Bryan Thornburg, M. Msc.", 240, 710);
+    ctx.fillText("Joseph Bryan Thornburg, M. Msc.", 960, 710);
     
     ctx.fillStyle = "#8d7657";
     ctx.font = "10px 'Montserrat', sans-serif";
@@ -5957,7 +5957,7 @@ window.downloadHtmlBook = function() {
                 <div class="cover-institute">Institute of Hidden Spice Expeditions</div>
                 <div class="cover-title" style="font-size:2.2rem; font-weight:900; margin-bottom:0.5rem;">CRYPTOZOOLOGY</div>
                 <div class="cover-subtitle" style="font-size:1.1rem; margin-bottom:1.5rem; letter-spacing:1px;">An Advanced Exploration for College Graduates</div>
-                <div style="font-family:'Montserrat', sans-serif; font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; color:#2b2319;">Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</div>
+                <div style="font-family:'Montserrat', sans-serif; font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; color:#2b2319;">Joseph Bryan Thornburg, M. Msc. (Cryptozoology)</div>
                 <div style="font-family:'Lora', serif; font-size:0.8rem; line-height:1.4; font-style:italic; margin-bottom:3rem; color:#5a4b37;">
                     Ordained Minister<br>
                     Founder &amp; Expedition Architect, Institute of Hidden Spice Expeditions
@@ -6108,7 +6108,7 @@ window.printFullManual = function() {
             <div class="cover-subtitle">Institute of Hidden Spice Expeditions</div>
             <div class="cover-title" style="font-size: 2.5rem;">CRYPTOZOOLOGY</div>
             <div class="cover-subtitle" style="font-size: 1.1rem; margin-top: 0.5rem; letter-spacing: 2px;">An Advanced Exploration for College Graduates</div>
-            <div style="font-family:'Montserrat', sans-serif; font-size:1.3rem; font-weight:600; margin-top: 2rem; color:#2b2319;">Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</div>
+            <div style="font-family:'Montserrat', sans-serif; font-size:1.3rem; font-weight:600; margin-top: 2rem; color:#2b2319;">Joseph Bryan Thornburg, M. Msc. (Cryptozoology)</div>
             <div style="font-family:'Lora', serif; font-size:0.95rem; line-height:1.5; font-style:italic; margin-top:0.5rem; margin-bottom:2rem; color:#5a4b37;">
                 Ordained Minister<br>
                 Founder &amp; Expedition Architect, Institute of Hidden Spice Expeditions
