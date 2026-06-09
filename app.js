@@ -6943,3 +6943,82 @@ window.adminToggleAllLocks = function() {
     renderBookPage();
     alert(`Gated access bypass is now ${currentState.adminBypassAll ? "ENABLED (everything unlocked)" : "DISABLED (gates active)"}.`);
 };
+
+window.adminPreviewCertificate = function() {
+    // 1. Enforce investigator role so we can bypass gates and see the exam
+    if (currentState.userRole !== "investigator") {
+        adminSetRole("investigator");
+    }
+    
+    // 2. Ensure we have a valid userName (default to "Field Investigator" if empty)
+    if (!currentState.userName) {
+        currentState.userName = "Field Investigator";
+    }
+    
+    // 3. Switch to the exam tab
+    switchTab("exam");
+    
+    // 4. Update the exam panels to show the results (simulating a passing score)
+    document.getElementById("exam-intro-panel").style.display = "none";
+    document.getElementById("quiz-panel").style.display = "none";
+    document.getElementById("exam-results-panel").style.display = "block";
+    
+    const scoreValText = document.getElementById("results-score-value");
+    if (scoreValText) {
+        scoreValText.innerText = "100%";
+        scoreValText.style.color = "var(--accent-green)";
+    }
+    
+    const resultsStatement = document.getElementById("results-statement");
+    if (resultsStatement) {
+        resultsStatement.innerHTML = `<strong>Congratulations, Researcher!</strong> You have demonstrated a comprehensive academic command of taxonomic cryptozoology and field methodology. The institute herewith awards you the certificate below.`;
+    }
+    
+    // 5. Generate/Retrieve Persistent Certificate ID
+    let certId = localStorage.getItem("ihse_certId");
+    if (!certId) {
+        const randNum = Math.floor(100000 + Math.random() * 900000);
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const randChar = chars.charAt(Math.floor(Math.random() * chars.length));
+        certId = `IHSE-101-L1-${randNum}${randChar}`;
+        localStorage.setItem("ihse_certId", certId);
+    }
+    currentState.certId = certId;
+
+    // 6. Format Date (e.g. 8th day of June, 2026)
+    const today = new Date();
+    const day = today.getDate();
+    const year = today.getFullYear();
+    const month = today.toLocaleString('default', { month: 'long' });
+    
+    let suffix = "th";
+    if (day < 11 || day > 13) {
+        switch (day % 10) {
+            case 1:  suffix = "st"; break;
+            case 2:  suffix = "nd"; break;
+            case 3:  suffix = "rd"; break;
+        }
+    }
+    const ordinalDateString = `Awarded this ${day}${suffix} day of ${month}, ${year}.`;
+    
+    // 7. Update DOM certificate elements
+    document.getElementById("cert-student-name").innerText = currentState.userName;
+    document.getElementById("cert-issue-date").innerText = ordinalDateString;
+    document.getElementById("cert-id-display").innerText = `Certificate ID: ${certId}`;
+    
+    const certWrapper = document.getElementById("certificate-wrapper");
+    if (certWrapper) {
+        certWrapper.style.display = "block";
+    }
+    const downloadBtn = document.getElementById("download-cert-btn");
+    if (downloadBtn) {
+        downloadBtn.style.display = "inline-block";
+    }
+    
+    // 8. Draw certificate on canvas
+    drawCanvasCertificate(currentState.userName, ordinalDateString, certId);
+    
+    // 9. Minimize/hide the admin floating panel so the user can see the certificate clearly
+    minimizeAdminPanel();
+};
+
