@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    CRYPTOZOOLOGY: AN ADVANCED EXPLORATION FOR COLLEGE GRADUATES
    Handles interactive textbook navigation (now with 20 pages per chapter),
    codex database, map plots, Web Audio growl synthesizer, canvas-based lab,
@@ -138,7 +138,7 @@ const TEXTBOOK_DB = {
         {
             title: "Bernard Heuvelmans and the Birth of Cryptozoology",
             content: `
-                <p>In 1955, Belgian zoologist Bernard Heuvelmans published <em>Sur la piste des bêtes ignorées</em> (On the Track of Unknown Animals), establishing the intellectual foundation of modern cryptozoology. Heuvelmans argued that local names, native drawings, and traditional lore were not random fabrications but valuable clues. He classified reports into distinct morphological categories, laying out a systematic framework for searching for unknown species.</p>
+                <p>In 1955, Belgian zoologist Bernard Heuvelmans published <em>Sur la piste des bÃªtes ignorÃ©es</em> (On the Track of Unknown Animals), establishing the intellectual foundation of modern cryptozoology. Heuvelmans argued that local names, native drawings, and traditional lore were not random fabrications but valuable clues. He classified reports into distinct morphological categories, laying out a systematic framework for searching for unknown species.</p>
                 <p>Heuvelmans' work inspired a generation of researchers, leading to the creation of the International Society of Cryptozoology (ISC) in 1982. The society's journal, <em>Cryptozoology</em>, attempted to bring academic peer-review to the field. Despite these efforts, the lack of verifiable physical evidence and the rise of sensationalized television documentaries led to a decline in mainstream scientific participation by the late 1990s.</p>
             `
         },
@@ -176,7 +176,7 @@ const TEXTBOOK_DB = {
             title: "The Fossil Gap: Gigantopithecus blacki",
             content: `
                 <p><em>Gigantopithecus blacki</em> was the largest primate to ever walk the Earth, standing up to 10 feet tall and estimated to weigh over 800 pounds. First discovered in 1935 by G.H.R. von Koenigswald in a Hong Kong apothecary, the species is known only from fossilized teeth and a few jawbones. The fossil record indicates that <em>Gigantopithecus</em> went extinct approximately 300,000 years ago, likely due to climate shifts that replaced its forest habitat with savannahs.</p>
-                <p>Proponents of the Sasquatch hypothesis argue that a relict population of <em>Gigantopithecus</em> could have adapted to temperate climates and migrated across the Bering land bridge during the late Pleistocene. However, the complete absence of hominid fossils in the Americas—aside from modern humans—remains a major hurdle for this theory, requiring a ghost lineage spanning hundreds of thousands of years.</p>
+                <p>Proponents of the Sasquatch hypothesis argue that a relict population of <em>Gigantopithecus</em> could have adapted to temperate climates and migrated across the Bering land bridge during the late Pleistocene. However, the complete absence of hominid fossils in the Americasâ€”aside from modern humansâ€”remains a major hurdle for this theory, requiring a ghost lineage spanning hundreds of thousands of years.</p>
             `
         },
         {
@@ -189,7 +189,7 @@ const TEXTBOOK_DB = {
         {
             title: "Mid-tarsal Break: Primates Foot Morphology",
             content: `
-                <p>Unlike humans, who have a rigid arch in their feet to facilitate efficient long-distance bipedal running, non-human primates possess a **mid-tarsal break**—a joint that allows the foot to flex in the middle. This flexibility is crucial for climbing and grasping branches, but it is rarely seen in bipedal locomotion.</p>
+                <p>Unlike humans, who have a rigid arch in their feet to facilitate efficient long-distance bipedal running, non-human primates possess a **mid-tarsal break**â€”a joint that allows the foot to flex in the middle. This flexibility is crucial for climbing and grasping branches, but it is rarely seen in bipedal locomotion.</p>
                 <p>Analysis of several Bigfoot footprint casts, particularly the "Cripplefoot" track found in Bossburg, Washington, in 1969, reveals a distinct indentation indicative of a mid-tarsal break. Dr. Jeff Meldrum argues that this morphology would be highly difficult for a hoaxer to design, suggesting that if the tracks are real, they belong to an evolutionary branch that developed bipedalism independently of humans.</p>
             `
         },
@@ -245,7 +245,7 @@ const TEXTBOOK_DB = {
         {
             title: "Mapimi Silent Zone: Hominid Migration Corridors",
             content: `
-                <p>The Mapimí Silent Zone in Durango, Mexico, is a desert region known for unusual electromagnetic phenomena and biological adaptations. It is also the source of periodic reports of tall, bipedal, hairless hominids that travel across the desert plains at night.</p>
+                <p>The MapimÃ­ Silent Zone in Durango, Mexico, is a desert region known for unusual electromagnetic phenomena and biological adaptations. It is also the source of periodic reports of tall, bipedal, hairless hominids that travel across the desert plains at night.</p>
                 <p>Unlike forest-dwelling hominids, these desert cryptids are described as lean and fast, suggesting adaptations to high temperatures and water scarcity. Researchers speculate that these sightings are either misidentifications of desert wildlife or nomadic groups of humans, as the harsh environment would make it difficult for an undiscovered primate population to survive.</p>
             `
         },
@@ -253,7 +253,7 @@ const TEXTBOOK_DB = {
             title: "Nutritional Models: Caloric Density in Coniferous Forests",
             content: `
                 <p>A major criticism of the Bigfoot hypothesis is the nutritional requirements of a 700-pound hominid. In the temperate coniferous forests of the Pacific Northwest, caloric density is lower than in tropical rainforests, requiring a large animal to forage continuously or hunt large mammals like deer.</p>
-                <p>IHSE researchers have modeled the nutritional carrying capacity of regional forests. The study indicates that if Bigfoot is omnivorous—feeding on berries, shoots, roots, fish, and deer—a single individual would require approximately 5,000 to 8,000 calories per day, indicating that home ranges would need to be extremely large, likely exceeding 50 square miles per individual.</p>
+                <p>IHSE researchers have modeled the nutritional carrying capacity of regional forests. The study indicates that if Bigfoot is omnivorousâ€”feeding on berries, shoots, roots, fish, and deerâ€”a single individual would require approximately 5,000 to 8,000 calories per day, indicating that home ranges would need to be extremely large, likely exceeding 50 square miles per individual.</p>
             `
         },
         {
@@ -317,7 +317,7 @@ const TEXTBOOK_DB = {
         {
             title: "The Coelacanth Precedent: Surviving Extinction Events",
             content: `
-                <p>The discovery of the Coelacanth in 1938 off the coast of South Africa is the most famous example of a **Lazarus taxon**—a species that disappears from the fossil record only to reappear alive. Prior to this discovery, coelacanths were believed to have gone extinct at the end of the Cretaceous period, 66 million years ago.</p>
+                <p>The discovery of the Coelacanth in 1938 off the coast of South Africa is the most famous example of a **Lazarus taxon**â€”a species that disappears from the fossil record only to reappear alive. Prior to this discovery, coelacanths were believed to have gone extinct at the end of the Cretaceous period, 66 million years ago.</p>
                 <p>The coelacanth's survival shows that deep-sea environments can shield species from global extinction events. Cryptozoologists use this precedent to argue that other prehistoric marine creatures, such as plesiosaurs or giant sharks, could have survived in the deep oceans, though marine biologists point out that the coelacanth is a small, deep-water fish rather than a massive surface reptile.</p>
             `
         },
@@ -325,13 +325,13 @@ const TEXTBOOK_DB = {
             title: "Plesiosaur Hypothesis: Lung Capacity & Ecology",
             content: `
                 <p>The hypothesis that lake monsters are surviving plesiosaurs is popular in folklore, but it fails standard physiological tests. Plesiosaurs were reptiles and possessed lungs, meaning they had to surface to breathe air. In a small, closed ecosystem like Loch Ness, a breeding population of large, air-breathing reptiles would be spotted constantly by locals and tourists.</p>
-                <p>Furthermore, plesiosaurs were adapted to warm, tropical seas. Loch Ness is a cold, glacial lake with temperatures averaging 5°C (41°F) year-round. A reptile, being ectothermic (cold-blooded), would be unable to maintain metabolic functions in such cold water, making the plesiosaur hypothesis biologically impossible.</p>
+                <p>Furthermore, plesiosaurs were adapted to warm, tropical seas. Loch Ness is a cold, glacial lake with temperatures averaging 5Â°C (41Â°F) year-round. A reptile, being ectothermic (cold-blooded), would be unable to maintain metabolic functions in such cold water, making the plesiosaur hypothesis biologically impossible.</p>
             `
         },
         {
             title: "Sonar Anomalies: Thermoclines and False Echoes",
             content: `
-                <p>Over the years, several sonar surveys of Loch Ness have registered large, moving targets in the deep water. Proponents argue these are the monster, but oceanographers point out that Loch Ness is subject to **thermoclines**—layers of water with sharp temperature differences that reflect sonar waves, creating false echo readings.</p>
+                <p>Over the years, several sonar surveys of Loch Ness have registered large, moving targets in the deep water. Proponents argue these are the monster, but oceanographers point out that Loch Ness is subject to **thermoclines**â€”layers of water with sharp temperature differences that reflect sonar waves, creating false echo readings.</p>
                 <p>These thermoclines, combined with schools of fish or floating debris, can mimic the sonar signature of a large, solid object. Modern surveys use multi-beam sonar and underwater cameras to verify targets, showing that the majority of sonar anomalies are caused by environmental reflections rather than giant animals.</p>
             `
         },
@@ -423,20 +423,20 @@ const TEXTBOOK_DB = {
             title: "Hydroacoustic Anomalies: The 'Bloop' Analysis",
             content: `
                 <p>In 1997, the U.S. National Oceanic and Atmospheric Administration (NOAA) recorded an ultra-low-frequency underwater sound. Known as the "Bloop," the sound was picked up by hydrophones across the Pacific Ocean, traveling over 3,000 miles. Its acoustic profile resembled that of a living organism, but on a scale far larger than a blue whale.</p>
-                <p>Speculation grew that the Bloop was produced by a giant marine cryptid. However, in 2012, NOAA confirmed that the acoustic signature matched that of a **glacierquake**—the cracking and calving of massive icebergs in Antarctica, resolving the mystery with environmental geology.</p>
+                <p>Speculation grew that the Bloop was produced by a giant marine cryptid. However, in 2012, NOAA confirmed that the acoustic signature matched that of a **glacierquake**â€”the cracking and calving of massive icebergs in Antarctica, resolving the mystery with environmental geology.</p>
             `
         },
         {
             title: "Sea Serpent Sightings and Refraction Anomalies",
             content: `
-                <p>Many sea serpent reports describe a creature with multiple humps undulating through the water. Metrological analysis shows that some of these sightings are caused by **Fata Morgana**—a complex mirage caused by temperature inversions that bend light rays, distorting distant objects.</p>
+                <p>Many sea serpent reports describe a creature with multiple humps undulating through the water. Metrological analysis shows that some of these sightings are caused by **Fata Morgana**â€”a complex mirage caused by temperature inversions that bend light rays, distorting distant objects.</p>
                 <p>Under these atmospheric conditions, ordinary objects like low-lying islands, rocks, or a line of seabirds can appear elongated and elevated, resembling a giant, multi-humped serpent. IHSE field teams document these conditions to evaluate the reliability of marine sighting reports.</p>
             `
         },
         {
             title: "Limnological Eutrophication and Cryptid Extinction",
             content: `
-                <p>Even if a large cryptid population survived in a freshwater lake, modern environmental changes present a serious threat to their survival. **Eutrophication**—caused by agricultural runoff that feeds algae blooms—depletes oxygen levels in the water, leading to massive fish kills.</p>
+                <p>Even if a large cryptid population survived in a freshwater lake, modern environmental changes present a serious threat to their survival. **Eutrophication**â€”caused by agricultural runoff that feeds algae bloomsâ€”depletes oxygen levels in the water, leading to massive fish kills.</p>
                 <p>For a large aquatic predator, the loss of prey and oxygen would be fatal. This suggests that if some lakes hosted undiscovered megafauna in the early 20th century, human industrial and agricultural activities may have driven them to extinction before they could be documented, highlighting the urgency of conservation biology.</p>
             `
         },
@@ -452,14 +452,14 @@ const TEXTBOOK_DB = {
         {
             title: "Flight Biomechanics: Wing loading Limits",
             content: `
-                <p>The sky presents the hardest medium in which to conceal a breeding population of large creatures. Yet, reports of winged cryptids like the Mothman of Point Pleasant, West Virginia, and the Native American legends of the Thunderbird remain prominent. The Mothman, described as a gray, winged, humanoid figure standing 7 feet tall with glowing red eyes, was sighted repeatedly in 1966–1967.</p>
+                <p>The sky presents the hardest medium in which to conceal a breeding population of large creatures. Yet, reports of winged cryptids like the Mothman of Point Pleasant, West Virginia, and the Native American legends of the Thunderbird remain prominent. The Mothman, described as a gray, winged, humanoid figure standing 7 feet tall with glowing red eyes, was sighted repeatedly in 1966â€“1967.</p>
                 <p>From a biological perspective, a humanoid flying creature violates the laws of biomechanics. For a human-sized animal to achieve lift, its pectoralis muscles would need to project outward by several feet to power wings with a span of at least 20 to 25 feet. Humans lack the keeled sternum found in birds and bats that anchors such muscles. Additionally, the metabolic cost of flight for a 200-pound hominid would require an enormous caloric intake, far exceeding what could be obtained covertly in temperate forests.</p>
             `
         },
         {
             title: "Mothman Sighting Chronology: Point Pleasant",
             content: `
-                <p>The Mothman sightings began on November 12, 1966, when five gravediggers in Clendenin, West Virginia, reported a brown, winged humanoid rising from the trees. Three days later, two young couples in Point Pleasant reported a large, gray, flying creature with glowing red eyes near the "TNT Area"—an abandoned WWII munitions plant.</p>
+                <p>The Mothman sightings began on November 12, 1966, when five gravediggers in Clendenin, West Virginia, reported a brown, winged humanoid rising from the trees. Three days later, two young couples in Point Pleasant reported a large, gray, flying creature with glowing red eyes near the "TNT Area"â€”an abandoned WWII munitions plant.</p>
                 <p>Over the next thirteen months, dozens of sightings were reported, accompanied by reports of electromagnetic interference, animal mutilations, and mysterious visitors. The sightings ended abruptly on December 15, 1967, following the tragic collapse of the Silver Bridge, which killed 46 people, cementing the Mothman's reputation as a harbinger of doom.</p>
             `
         },
@@ -508,7 +508,7 @@ const TEXTBOOK_DB = {
         {
             title: "Atmospheric Beasts: Theoretical Aeroplankton",
             content: `
-                <p>A fringe theory in cryptozoology suggests the existence of **atmospheric beasts**—low-density, gelatinous organisms that live entirely in the upper atmosphere, floating like jellyfish in the ocean. These creatures, constructed of light, transparent tissues, would be invisible to radar and human eyes under normal conditions.</p>
+                <p>A fringe theory in cryptozoology suggests the existence of **atmospheric beasts**â€”low-density, gelatinous organisms that live entirely in the upper atmosphere, floating like jellyfish in the ocean. These creatures, constructed of light, transparent tissues, would be invisible to radar and human eyes under normal conditions.</p>
                 <p>While creative, this theory lacks biological basis. The upper atmosphere is cold, dry, and subject to intense solar radiation, providing no food source to support a large organism. Mainstream science attributes "atmospheric beast" reports to meteorological phenomena, weather balloons, or optical lens flares.</p>
             `
         },
@@ -522,7 +522,7 @@ const TEXTBOOK_DB = {
         {
             title: "Nocturnal Raptor Vision and Retinal Reflectivity",
             content: `
-                <p>Many winged cryptid sightings describe glowing eyes. In biology, this reflection is caused by the **tapetum lucidum**—a retroreflector layer behind the retina in many nocturnal animals that reflects visible light back through the photoreceptors, increasing sensitivity in low light.</p>
+                <p>Many winged cryptid sightings describe glowing eyes. In biology, this reflection is caused by the **tapetum lucidum**â€”a retroreflector layer behind the retina in many nocturnal animals that reflects visible light back through the photoreceptors, increasing sensitivity in low light.</p>
                 <p>Birds like owls and nightjars possess highly reflective eyes that appear as bright red or gold disks when illuminated by a flashlight. Sighted in a tree, a large owl's reflective eyes can appear humanoid in height, showing how a simple optical reflection can be misinterpreted as a monster.</p>
             `
         },
@@ -536,14 +536,14 @@ const TEXTBOOK_DB = {
         {
             title: "Aerodynamic Lift Equations for Large Vertebrates",
             content: `
-                <p>To evaluate if a cryptid could fly, physicists use the lift equation: <em>L = 0.5 * d * v² * s * Cl</em>, where <em>d</em> is air density, <em>v</em> is velocity, <em>s</em> is wing surface area, and <em>Cl</em> is the lift coefficient. For an animal weighing 200 pounds, the wing area <em>s</em> must be massive to generate sufficient lift at normal flight speeds.</p>
+                <p>To evaluate if a cryptid could fly, physicists use the lift equation: <em>L = 0.5 * d * vÂ² * s * Cl</em>, where <em>d</em> is air density, <em>v</em> is velocity, <em>s</em> is wing surface area, and <em>Cl</em> is the lift coefficient. For an animal weighing 200 pounds, the wing area <em>s</em> must be massive to generate sufficient lift at normal flight speeds.</p>
                 <p>The largest flying bird in history, the extinct Argentavis, weighed approximately 150 pounds and had a wingspan of 20 feet. It relied on wind currents and thermals to soar, rather than continuous flapping. A humanoid flyer would have to follow similar aerodynamic constraints, making active flight in dense forests impossible.</p>
             `
         },
         {
             title: "Owls and the Psychology of Nighttime Apparitions",
             content: `
-                <p>The Great Horned Owl (<em>Bubo virginianus</em>) stands up to 2 feet tall and has a 4-foot wingspan. Sighted at night, their silent flight and flat, round face can appear ghostly and humanoid. The owl's habit of defense—expanding its wings and swaying—can make it appear much larger to a startled observer.</p>
+                <p>The Great Horned Owl (<em>Bubo virginianus</em>) stands up to 2 feet tall and has a 4-foot wingspan. Sighted at night, their silent flight and flat, round face can appear ghostly and humanoid. The owl's habit of defenseâ€”expanding its wings and swayingâ€”can make it appear much larger to a startled observer.</p>
                 <p>Psychologists have shown that fear reduces visual acuity and increases suggestibility. An unexpected encounter with a nesting owl at night can trigger a fight-or-flight response, leading the witness to describe a giant, red-eyed demon rather than a bird, explaining many Mothman and Jersey Devil reports.</p>
             `
         },
@@ -687,7 +687,7 @@ const TEXTBOOK_DB = {
             title: "Bone Degradation in Acidic Forest Soils",
             content: `
                 <p>A common argument against Bigfoot is: "If they are real, why don't we find their bones?" In the temperate forests of the Pacific Northwest, the soil is highly acidic, created by decomposing pine needles. Acidic soil degrades bones rapidly, dissolving calcium carbonate within a few years.</p>
-                <p>Additionally, forest scavengers—such as rodents, porcupines, and coyotes—consume bones for their mineral content, chewing them until nothing remains. This rapid degradation explains why skeletal remains of even common wildlife, like bears and cougars, are rarely found by hikers, showing how a population could exist without leaving fossil evidence.</p>
+                <p>Additionally, forest scavengersâ€”such as rodents, porcupines, and coyotesâ€”consume bones for their mineral content, chewing them until nothing remains. This rapid degradation explains why skeletal remains of even common wildlife, like bears and cougars, are rarely found by hikers, showing how a population could exist without leaving fossil evidence.</p>
             `
         },
         {
@@ -737,7 +737,7 @@ const TEXTBOOK_DB = {
         {
             title: "The Psychology of Deception: Financial Motivations",
             content: `
-                <p>A significant portion of cryptozoology involves the psychology of perception. Human vision is not a camera; it is an interpretive engine. Under low-light conditions, in dense foliage, or when primed by local legends, the brain is highly susceptible to <em>pareidolia</em>—the psychological tendency to perceive meaningful patterns (like faces or bodies) where none exist.</p>
+                <p>A significant portion of cryptozoology involves the psychology of perception. Human vision is not a camera; it is an interpretive engine. Under low-light conditions, in dense foliage, or when primed by local legends, the brain is highly susceptible to <em>pareidolia</em>â€”the psychological tendency to perceive meaningful patterns (like faces or bodies) where none exist.</p>
                 <p>Historically, hoaxes have plagued the field, motivated by financial gain, notoriety, or humor. The Cardiff Giant of 1869, the Jackalope taxidermy, and the 2008 Bigfoot carcass hoax in Georgia demonstrate that even experienced researchers can be deceived. Hoax detection relies on rigorous forensic examination: checking for artificial adhesives, taxidermy stitching, DNA contaminants, and checking the chain of custody of the evidence.</p>
             `
         },
@@ -772,7 +772,7 @@ const TEXTBOOK_DB = {
         {
             title: "Photo Analysis: Exposing Shadows and Parallax Errors",
             content: `
-                <p>Modern photographic analysis uses digital tools to identify altered or fake images. By analyzing the angle and color of shadows, analysts can determine if an object was pasted into a scene. They also check for **compression artifacts**—telltale patterns of pixels left by image editing software.</p>
+                <p>Modern photographic analysis uses digital tools to identify altered or fake images. By analyzing the angle and color of shadows, analysts can determine if an object was pasted into a scene. They also check for **compression artifacts**â€”telltale patterns of pixels left by image editing software.</p>
                 <p>In many cryptid photos, the target is blurry, while the background is sharp. This is often a sign of deliberate alteration or camera movement. By verifying these photographic elements, IHSE analysts can identify fakes before they are publicized, protecting scientific integrity.</p>
             `
         },
@@ -828,7 +828,7 @@ const TEXTBOOK_DB = {
         {
             title: "Confabulation: Eyewitness Memory Degradation",
             content: `
-                <p>Memory is not a static recording; it is reconstructed every time it is recalled. Over time, memories are subject to **confabulation**—the unconscious integration of new information, suggestions, or media images into the original memory.</p>
+                <p>Memory is not a static recording; it is reconstructed every time it is recalled. Over time, memories are subject to **confabulation**â€”the unconscious integration of new information, suggestions, or media images into the original memory.</p>
                 <p>A witness who saw a blurry gray shape in the forest may, after reading about Bigfoot, recall seeing fur, glowing eyes, and a bipedal gait. This degradation makes old eyewitness accounts unreliable, highlighting the need for immediate, written statements and physical evidence.</p>
             `
         },
@@ -913,14 +913,14 @@ const TEXTBOOK_DB = {
                     <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">Table of Contents</h2>
                     <table style="width:100%; border-collapse:collapse; font-size:0.9rem; margin-bottom:1.5rem; border:none;">
                         <tbody>
-                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; font-weight:bold;">IHSE 101 — INTRODUCTION TO CRYPTOZOOLOGY</td><td style="text-align:right; font-weight:bold; color:#8d7657;">3</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; font-weight:bold;">IHSE 101 â€” INTRODUCTION TO CRYPTOZOOLOGY</td><td style="text-align:right; font-weight:bold; color:#8d7657;">3</td></tr>
                             <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; font-weight:bold;">WEEK-BY-WEEK SYLLABUS</td><td style="text-align:right; font-weight:bold; color:#8d7657;">4</td></tr>
-                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 1 — Foundations of Cryptozoological Science</td><td style="text-align:right; color:#8d7657;">7</td></tr>
-                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 2 — Taxonomy, Holotypes & IHSE Protocols</td><td style="text-align:right; color:#8d7657;">10</td></tr>
-                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 3 — Metrology, Calibration & Field Reliability</td><td style="text-align:right; color:#8d7657;">14</td></tr>
-                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 4 — Historical Foundations & Archival Analysis</td><td style="text-align:right; color:#8d7657;">17</td></tr>
-                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 5 — Modern Tools: eDNA, Cognitive Bias & Constraints</td><td style="text-align:right; color:#8d7657;">20</td></tr>
-                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 6 — Terrestrial Hominids & the Fossil Gap</td><td style="text-align:right; color:#8d7657;">25</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 1 â€” Foundations of Cryptozoological Science</td><td style="text-align:right; color:#8d7657;">7</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 2 â€” Taxonomy, Holotypes & IHSE Protocols</td><td style="text-align:right; color:#8d7657;">10</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 3 â€” Metrology, Calibration & Field Reliability</td><td style="text-align:right; color:#8d7657;">14</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 4 â€” Historical Foundations & Archival Analysis</td><td style="text-align:right; color:#8d7657;">17</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 5 â€” Modern Tools: eDNA, Cognitive Bias & Constraints</td><td style="text-align:right; color:#8d7657;">20</td></tr>
+                            <tr style="border-bottom:1px solid #e2ded5;"><td style="padding:0.5rem 0; padding-left:1.5rem; color:#5a4b37;">WEEK 6 â€” Terrestrial Hominids & the Fossil Gap</td><td style="text-align:right; color:#8d7657;">25</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -935,7 +935,7 @@ const TEXTBOOK_DB = {
                         <strong>Academic Term:</strong> Fall / Spring / Summer (Flexible Enrollment)<br>
                         <strong>Course Length:</strong> 6 Weeks<br>
                         <strong>Delivery Format:</strong> Online + Optional Field Practicum<br>
-                        <strong>Primary Text:</strong> IHSE Cryptozoology Compendium – Print Edition (Smokeline Press, 2026)
+                        <strong>Primary Text:</strong> IHSE Cryptozoology Compendium â€“ Print Edition (Smokeline Press, 2026)
                     </p>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">Course Description</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify;">
@@ -951,7 +951,7 @@ const TEXTBOOK_DB = {
                     <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">Required Materials & outcomes</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">Required Texts & Materials</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify;">
-                        &bull; Primary Text (Exclusive): <em>IHSE Cryptozoology Compendium – Print Edition</em> &copy; 2026 Joseph Bryan Thornburg, Smokeline Press. ISBN: 978-1-105-47315-9.<br>
+                        &bull; Primary Text (Exclusive): <em>IHSE Cryptozoology Compendium â€“ Print Edition</em> &copy; 2026 Joseph Bryan Thornburg, Smokeline Press. ISBN: 978-1-105-47315-9.<br>
                         &bull; IHSE Calibration Log Templates &amp; Evidence Documentation Forms.<br>
                         &bull; Access to IHSE Digital Evidence Vault (Student Tier).<br>
                         &bull; Optional Field Kit: Plaster, evidence bags, gloves, red-light headlamp.
@@ -1011,7 +1011,7 @@ const TEXTBOOK_DB = {
             title: "Week 1: Definitions & Scope",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Definitions &amp; Scope</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 1 &mdash; Definitions &amp; Scope</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Definition and Scope of Cryptozoology</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Cryptozoology, as defined in the Compendium, is the scientific investigation of unverified biological taxa whose existence is suggested by persistent regional folklore, repeated eyewitness accounts, physical traces (tracks, scat, hair, nesting sites), environmental DNA anomalies, and historical records. The Compendium emphasizes that cryptozoology is a biological discipline. Its scope includes relict megafauna, ecologically plausible species that remain unclassified, and species known historically but lacking modern physical specimens.
@@ -1023,7 +1023,7 @@ const TEXTBOOK_DB = {
             title: "Week 1: Boundaries of Zoology",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Boundaries of Zoology</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 1 &mdash; Boundaries of Zoology</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Boundaries of Zoology vs. Anomalous Biology</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         The Compendium&rsquo;s Page 5 (&ldquo;The Boundaries of Zoology&rdquo;) establishes a scientific tension: Zoology requires physical holotypes, repeatable observations, and formal morphological descriptions. Anomalous Biology, by contrast, must deal with incomplete datasets, often lacking physical specimens, and must integrate ecology, anthropology, cognitive science, and forensics. The Compendium argues that zoology&rsquo;s boundaries are porous: many species (giant squid, mountain gorilla, okapi) were cryptids before formal recognition.
@@ -1035,7 +1035,7 @@ const TEXTBOOK_DB = {
             title: "Week 1: Heuvelmans&rsquo; Posture",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Posture &amp; Holotypes</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 1 &mdash; Posture &amp; Holotypes</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Heuvelmans&rsquo; Scientific Posture</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Bernard Heuvelmans, the founder of modern cryptozoology, advocated a dual-discipline posture. First, <strong>Open-Mindedness</strong>: anomalies should not be dismissed simply because they challenge consensus, and folklore may encode zoological data. Second, <strong>Scientific Rigor</strong>: every claim must be testable, falsifiable, and grounded in biological plausibility, evaluated using forensic standards.
@@ -1047,7 +1047,7 @@ const TEXTBOOK_DB = {
             title: "Week 1: ICZN Holotype Requirements",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; ICZN Standards</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 1 &mdash; ICZN Standards</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">4. ICZN Holotype Requirements</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         The International Commission on Zoological Nomenclature (ICZN) requires a single physical holotype specimen deposited in a recognized repository, a formal morphological description, genetic sequencing, and repeatability of examination. The Compendium stresses that eyewitness accounts, tracks, and photographs do not qualify, and eDNA alone cannot establish a species. The absence of a physical holotype is the primary barrier preventing cryptids from entering formal taxonomy, justifying IHSE&rsquo;s Holotype Alternatives in Extremis (Protocols 10 & 13).
@@ -1059,7 +1059,7 @@ const TEXTBOOK_DB = {
             title: "Week 1: Limits & Assignments",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Limits &amp; assignments</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 1 &mdash; Limits &amp; assignments</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Epistemological Limits (Taxonomic Principle 9)</h4>
                     <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
                         Principle 9 addresses the philosophy of scientific limits: Failure to recover a specimen is not evidence of nonexistence. Low-density populations in extreme terrain can evade detection for centuries. However, researchers must guard against confirmation bias and cognitive anchoring.
@@ -1077,7 +1077,7 @@ const TEXTBOOK_DB = {
             title: "Week 2: Holotype Standards",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Holotype Standards</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 2 &mdash; Holotype Standards</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Holotype Standards</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         The Compendium emphasizes that formal zoological recognition requires strict adherence to the International Commission on Zoological Nomenclature (ICZN). A species cannot be named without a holotype.
@@ -1093,7 +1093,7 @@ const TEXTBOOK_DB = {
             title: "Week 2: Descriptions & Genetics",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Descriptions &amp; Genetics</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 2 &mdash; Descriptions &amp; Genetics</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1.3 Morphological Description</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         The holotype must be accompanied by detailed anatomical measurements, high-resolution photographs, comparative morphology with related taxa, and specific diagnostic traits.
@@ -1109,7 +1109,7 @@ const TEXTBOOK_DB = {
             title: "Week 2: Alternatives in Extremis",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Holotype Alternatives</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 2 &mdash; Holotype Alternatives</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Holotype Alternatives in Extremis (Protocols 10 & 13)</h4>
                     <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
                         <strong>2.1 Purpose:</strong> Address situations where a species is critically endangered, a population is too small to risk specimen collection, or ethical/environmental constraints prohibit lethal sampling.
@@ -1127,10 +1127,10 @@ const TEXTBOOK_DB = {
             title: "Week 2: Verification Methods",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Verification Methods</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 2 &mdash; Verification Methods</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Multi-Spectral Verification</h4>
                     <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
-                        Required to prevent digital manipulation or hoaxes. Uses visible light (400–700 nm), infrared (700–1400 nm) to reveal heat and vascular signatures, ultraviolet (10–400 nm) to highlight biological fluorescence, and LiDAR structural mapping.
+                        Required to prevent digital manipulation or hoaxes. Uses visible light (400â€“700 nm), infrared (700â€“1400 nm) to reveal heat and vascular signatures, ultraviolet (10â€“400 nm) to highlight biological fluorescence, and LiDAR structural mapping.
                     </p>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">4. Independent Genomic Validation</h4>
                     <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
@@ -1147,7 +1147,7 @@ const TEXTBOOK_DB = {
             title: "Week 3: Metrology Standards",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 3 &mdash; Metrology, Calibration & Field Reliability</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 3 &mdash; Metrology, Calibration & Field Reliability</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. IHSE Metrology Standards</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         IHSE metrology is built on the principle that data is only as reliable as the instruments that produce it. Calibration tables establish strict tolerances derived from error propagation models, environmental interference studies, and forensic admissibility standards. IHSE metrology values three imperatives: <strong>Precision</strong> (narrow tolerances), <strong>Repeatability</strong> (independent duplication), and <strong>Auditability</strong> (traceable records).
@@ -1159,11 +1159,11 @@ const TEXTBOOK_DB = {
             title: "Week 3: Calibration Tolerances",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 3 &mdash; Calibration Tolerances</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 3 &mdash; Calibration Tolerances</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Calibration Tolerances</h4>
                     <p style="font-size:0.88rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
                         &bull; <strong>eDNA Filter Kit:</strong> Pore Size Consistency &plusmn;0.02 microns. Calibration: Pre-expedition. Rationale: Prevent contamination or targeted biological exclusion.<br>
-                        &bull; <strong>Acoustic Recorder:</strong> Frequency Response &plusmn;1.5 Hz. Calibration: Every 6 months. Rationale: Avoid distortion of vocal infrasound (10–40 Hz) or harmonics.<br>
+                        &bull; <strong>Acoustic Recorder:</strong> Frequency Response &plusmn;1.5 Hz. Calibration: Every 6 months. Rationale: Avoid distortion of vocal infrasound (10â€“40 Hz) or harmonics.<br>
                         &bull; <strong>LiDAR Scanner:</strong> Spatial Resolution &plusmn;2 mm. Calibration: Annual. Rationale: Ensure forensic-grade limb and gait reconstruction.
                     </p>
                 </div>
@@ -1173,7 +1173,7 @@ const TEXTBOOK_DB = {
             title: "Week 3: Auditability & Reliability",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 3 &mdash; Auditability &amp; reliability</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 3 &mdash; Auditability &amp; reliability</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Auditability Requirements &amp; 4. Instrument Reliability</h4>
                     <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
                         All calibration events must be logged (date, technician, raw vs. corrected values), digitally archived, chain-of-custody compliant, and field-verifiable to meet peer-review and legal standards. Environmental stressors (temperature, humidity, dust, battery voltage) degrade calibration. Spot checks and recalibration are mandatory.
@@ -1189,7 +1189,7 @@ const TEXTBOOK_DB = {
             title: "Week 4: Bestiaries vs. Zoology",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Historical Foundations &amp; Archival Analysis</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 4 &mdash; Historical Foundations &amp; Archival Analysis</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Bestiaries vs. Scientific Zoology</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Early natural history blurred the line between observation and myth. Medieval bestiaries mixed real and mythic animals, treating folklore as zoological fact. The Scientific Revolution introduced Linnaean taxonomy, requiring physical specimens. Cryptozoology must operate as a scientific discipline, not a folkloric study. It is not the study of myths &mdash; it is the study of unresolved zoological hypotheses.
@@ -1201,7 +1201,7 @@ const TEXTBOOK_DB = {
             title: "Week 4: Heuvelmans & Modern Cryptozoology",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Birth of Modern Cryptozoology</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 4 &mdash; Birth of Modern Cryptozoology</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Heuvelmans and the Birth of Modern Cryptozoology</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Bernard Heuvelmans reframed the field in 1955 by treating folklore as data: categorizing reports by morphology, comparing traditions for cross-cultural consistency, and evaluating biological plausibility. Persistent descriptions across independent cultures point toward real biological entities. Folklore is not evidence &mdash; but it is a map pointing toward evidence.
@@ -1213,7 +1213,7 @@ const TEXTBOOK_DB = {
             title: "Week 4: Skepticism & Sighting Logs",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Skepticism &amp; Logs</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 4 &mdash; Skepticism &amp; Logs</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Skeptical Movement &amp; 4. Archival Sighting Logs</h4>
                     <p style="font-size:0.9rem; line-height:1.5; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Skepticism is scientifically necessary to weed out misidentifications and hoaxes. However, dogmatic dismissal is anti-empirical. The Compendium includes three archival logs (ARC411, ARC912, ARC181) describing the "Hairy Forest Dweller" over centuries. These logs allow tracking of morphological consistency, identifying range contraction, and detecting cultural patterns. Cross-century consistency suggests a real biological basis.
@@ -1225,7 +1225,7 @@ const TEXTBOOK_DB = {
             title: "Week 4: Transitions & Assignments",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Transitions &amp; assignments</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 4 &mdash; Transitions &amp; assignments</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Historical Cryptid-to-Species Transitions</h4>
                     <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem; text-align:justify;">
                         Several species were once considered cryptids: the giant squid (described in 1857 from a carcass), okapi (1901, skin/skull), and mountain gorilla (1902, specimen). Lessons: absence of evidence is not evidence of absence, large animals can hide in dense canopy, and folklore preserves zoological memory.
@@ -1241,7 +1241,7 @@ const TEXTBOOK_DB = {
             title: "Week 5: eDNA & Metagenomics",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Modern Tools: eDNA &amp; Metagenomics</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 5 &mdash; Modern Tools: eDNA &amp; Metagenomics</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Environmental DNA (eDNA)</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Environmental DNA (eDNA) has revolutionized cryptozoology by allowing the detection of organisms without direct observation. Organisms shed skin, hair, mucus, or fecal matter containing genetic material. eDNA is vital for detecting low-density, nocturnal, or alpine species in extreme terrains.
@@ -1257,7 +1257,7 @@ const TEXTBOOK_DB = {
             title: "Week 5: Metagenomics",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Metagenomics</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 5 &mdash; Metagenomics</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Metagenomics</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Metagenomics sequences all DNA present in a sample, producing a complete ecosystem snapshot. It allows researchers to identify entire food webs, verify ecological carrying capacity, and detect rare or unknown species. If a region repeatedly produces primate sightings, metagenomics can reveal primate DNA or rule out known species.
@@ -1269,7 +1269,7 @@ const TEXTBOOK_DB = {
             title: "Week 5: Cognitive Bias & Plausibility",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Bias &amp; Plausibility</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 5 &mdash; Bias &amp; Plausibility</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. Cognitive Bias &amp; 3.1 Cognitive Bias Filtering</h4>
                     <p style="font-size:0.9rem; line-height:1.5; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Human perception is highly unreliable without controls. <strong>Pareidolia</strong> causes the brain to interpret ambiguous shapes (shadows, branches) as faces or animals. <strong>Folkloric Anchoring</strong> occurs when dominant regional narratives cause witnesses to subconsciously reconstruct memories to match famous cryptids. IHSE filters sighting reports by evaluating lighting, angle, distance, observer emotional state/experience, and cultural context.
@@ -1281,7 +1281,7 @@ const TEXTBOOK_DB = {
             title: "Week 5: Ecological Plausibility",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Ecological Plausibility</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 5 &mdash; Ecological Plausibility</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">4. Ecological Plausibility Analysis</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         No cryptid claim is credible unless the ecosystem can support it. Investigators must ask: Is there sufficient biomass and prey? Is there cover for a low-density breeding population? Has human encroachment altered range boundaries? IHSE uses GIS mapping, range overlays, and predator-prey models to verify environmental sustainability.
@@ -1293,7 +1293,7 @@ const TEXTBOOK_DB = {
             title: "Week 5: Readings & Sighting Assignment",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Assignments &amp; readings</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 5 &mdash; Assignments &amp; readings</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">5. Required Reading</h4>
                     <p style="font-size:0.85rem; margin-bottom:1rem;">Prolegomena Page 5 (Metagenomics & eDNA) and Page 6 (Cognitive Bias) of the Compendium.</p>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">6. Assignment</h4>
@@ -1307,14 +1307,14 @@ const TEXTBOOK_DB = {
             title: "Week 6: Relict Hominoids & Gigantopithecus",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 6 &mdash; Terrestrial Hominids &amp; the Fossil Gap</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 6 &mdash; Terrestrial Hominids &amp; the Fossil Gap</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">1. Global Distribution of Relict Hominoids</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Large, bipedal primate reports occur globally, not regionally (e.g. Sasquatch in North America, Yeti in Himalayas, Yeren in China, Orang Pendek in Indonesia). This cross-continental distribution suggests a shared Pleistocene lineage surviving in low-density, high-canopy, low-contact ecosystems. The Compendium frames these global patterns as biological, non-random phenomena.
                     </p>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">2. Gigantopithecus blacki &mdash; The Paleoprimate Candidate</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
-                        Gigantopithecus blacki (Southeast Asia, 2M–300k years ago) reached 10 feet in height and 600–1000 lbs. It is the largest known primate. The Compendium notes that its extinction timeline is uncertain, and its morphology and forest habitat match descriptions of Yeti and Yeren, making it a biologically plausible ancestral candidate.
+                        Gigantopithecus blacki (Southeast Asia, 2Mâ€“300k years ago) reached 10 feet in height and 600â€“1000 lbs. It is the largest known primate. The Compendium notes that its extinction timeline is uncertain, and its morphology and forest habitat match descriptions of Yeti and Yeren, making it a biologically plausible ancestral candidate.
                     </p>
                 </div>
             `
@@ -1323,7 +1323,7 @@ const TEXTBOOK_DB = {
             title: "Week 6: North American Fossil Gap",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 6 &mdash; Fossil Gap &amp; Biomechanics</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 6 &mdash; Fossil Gap &amp; Biomechanics</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.4rem;">3. The North American Fossil Gap</h4>
                     <p style="font-size:0.9rem; line-height:1.6; margin-bottom:1rem; text-align:justify; text-indent:1.5rem;">
                         Skeptics argue the lack of North American hominid fossils disproves Sasquatch. The Compendium provides counterpoints: forest primates leave poor fossil records; acidic soils destroy bone rapidly; North American fossil sampling is &lt;1% complete; and large mammals like black bears have extremely sparse fossil records despite huge populations. The fossil gap is taphonomic, not evidentiary proof of nonexistence.
@@ -1335,7 +1335,7 @@ const TEXTBOOK_DB = {
             title: "Week 6: Biomechanics & Capstone Assignment",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 6 &mdash; Course Capstone</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 6 &mdash; Course Capstone</h2>
                     <h4 style="font-family:var(--font-header); font-size:1.05rem; color:#8d7657; margin-bottom:0.3rem;">5. Required Reading &amp; 6. Assignment</h4>
                     <p style="font-size:0.85rem; line-height:1.4; margin-bottom:0.6rem; text-align:justify;">
                         Read Chapter I, Pages 1-2. Assignment: Comparative Morphology Paper. Compare hominoid bipedalism, gait pressure ridges, and midtarsal breaks with known primates.
@@ -1737,7 +1737,7 @@ const TEXTBOOK_DB = {
                         Each week, students must review the designated compendium readings, complete the corresponding analytical worksheets, and submit their written reflections and designs. Completion of all exercises culminate in the submission of the Final IHSE Investigative Dossier.
                     </p>
                     <div class="academic-note" style="margin-top:2rem;">
-                        <strong>Curriculum Advisory:</strong> All assignments must meet the scientific standards of the Institute of Hidden Species Expeditions (IHSE) to qualify for graduation.
+                        <strong>Curriculum Advisory:</strong> All assignments must meet the scientific standards of the Institute of Hominology & Scientific Exploration (IHSE) to qualify for graduation.
                     </div>
                 </div>
             `
@@ -1746,7 +1746,7 @@ const TEXTBOOK_DB = {
             title: "Week 1 &mdash; Foundations of Cryptozoological Science",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 1 &mdash; Foundations of Cryptozoological Science</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 1 &mdash; Foundations of Cryptozoological Science</h2>
                     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem; font-style:italic;">Compendium Sections: Preface; Pages 1&ndash;10</p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.4rem;">Learning Objectives</h4>
@@ -1819,7 +1819,7 @@ const TEXTBOOK_DB = {
             title: "Week 2 &mdash; Taxonomy, Holotypes & IHSE Protocols",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 2 &mdash; Taxonomy, Holotypes &amp; IHSE Protocols</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 2 &mdash; Taxonomy, Holotypes &amp; IHSE Protocols</h2>
                     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem; font-style:italic;">Compendium Sections: Pages 6, 11, 14; Field Protocols 10 &amp; 13</p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.4rem;">Learning Objectives</h4>
@@ -1896,7 +1896,7 @@ const TEXTBOOK_DB = {
             title: "Week 3 &mdash; Metrology, Calibration & Field Reliability",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 3 &mdash; Metrology, Calibration &amp; Field Reliability</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 3 &mdash; Metrology, Calibration &amp; Field Reliability</h2>
                     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem; font-style:italic;">Compendium Sections: Pages 12 &amp; 15; Field Protocols 2, 7, 8, 9</p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.4rem;">Learning Objectives</h4>
@@ -1969,7 +1969,7 @@ const TEXTBOOK_DB = {
             title: "Week 4 &mdash; Historical Foundations & Archival Analysis",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 4 &mdash; Historical Foundations &amp; Archival Analysis</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 4 &mdash; Historical Foundations &amp; Archival Analysis</h2>
                     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem; font-style:italic;">Compendium Sections: Prolegomena Pages 1&ndash;15; Sighting Map Coordinates</p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.4rem;">Learning Objectives</h4>
@@ -2048,7 +2048,7 @@ const TEXTBOOK_DB = {
             title: "Week 5 &mdash; Modern Tools: eDNA, Cognitive Bias & Ecological Constraints",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 5 &mdash; Modern Tools: eDNA, Cognitive Bias &amp; Ecological Constraints</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 5 &mdash; Modern Tools: eDNA, Cognitive Bias &amp; Ecological Constraints</h2>
                     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem; font-style:italic;">Compendium Sections: Prolegomena Pages 5&ndash;6; Field Protocols 3, 5, 8</p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.4rem;">Learning Objectives</h4>
@@ -2121,7 +2121,7 @@ const TEXTBOOK_DB = {
             title: "Week 6 &mdash; Terrestrial Hominids & the Fossil Gap",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 WEEK 6 &mdash; Terrestrial Hominids &amp; the Fossil Gap</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ WEEK 6 &mdash; Terrestrial Hominids &amp; the Fossil Gap</h2>
                     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem; font-style:italic;">Compendium Sections: Chapter I, Pages 1&ndash;20; Field Protocols 4, 12</p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.4rem;">Learning Objectives</h4>
@@ -2206,7 +2206,7 @@ const TEXTBOOK_DB = {
             title: "Final Project &mdash; IHSE Investigative Dossier",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">📘 FINAL PROJECT &mdash; IHSE Investigative Dossier</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1.2rem;">ðŸ“˜ FINAL PROJECT &mdash; IHSE Investigative Dossier</h2>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.5rem;">Dossier Requirements</h4>
                     <p style="font-size:0.95rem; line-height:1.6; text-align:justify; margin-bottom:1rem;">
@@ -2277,7 +2277,7 @@ const TEXTBOOK_DB = {
             title: "IHSE Field Project Dossier &mdash; Cover Page",
             content: `
                 <div style="text-align:center; padding: 1.5rem 0;">
-                    <h3 style="font-family:var(--font-ui); font-size:0.8rem; letter-spacing:4px; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem;">Institute of Hidden Species Expeditions</h3>
+                    <h3 style="font-family:var(--font-ui); font-size:0.8rem; letter-spacing:4px; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem;">Institute of Hominology & Scientific Exploration</h3>
                     <div style="margin: 1.5rem auto; width: 80px; height: 80px; border: 2px solid #8d7657; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
                         <div style="width: 60px; height: 60px; border: 1px dashed #8d7657; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <span style="font-family:var(--font-header); font-size:1.4rem; font-weight:bold; color:#8d7657;">IHSE</span>
@@ -2306,7 +2306,7 @@ const TEXTBOOK_DB = {
                     </div>
                     
                     <div style="margin-top: 3rem; font-family:var(--font-body); font-size: 0.8rem; font-style: italic; color: var(--text-muted);">
-                        Notice: This document is the property of the Institute of Hidden Species Expeditions (IHSE). Copying or unauthorized dissemination of classified cryptid records is strictly prohibited under Protocol 9.
+                        Notice: This document is the property of the Institute of Hominology & Scientific Exploration (IHSE). Copying or unauthorized dissemination of classified cryptid records is strictly prohibited under Protocol 9.
                     </div>
                 </div>
             `
@@ -2315,12 +2315,12 @@ const TEXTBOOK_DB = {
             title: "Field Project Guidelines",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:12rem;">📋 IHSE Dossier Guidelines</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:12rem;">ðŸ“‹ IHSE Dossier Guidelines</h2>
                     <p style="font-size:0.9rem; line-height:1.6; text-align:justify; margin-bottom:1rem; text-indent: 1.5rem;">
                         This workbook template constitutes the final practical examination for <strong>Introductory Cryptozoology (Level 1)</strong>. Student investigators are required to compile a rigorous, scientific field dossier evaluating a candidate anomalous species of their choosing.
                     </p>
                     <p style="font-size:0.9rem; line-height:1.6; text-align:justify; margin-bottom:1rem; text-indent: 1.5rem;">
-                        All research and evidence submissions must strictly adhere to the academic standards of the Institute of Hidden Species Expeditions. Hypothetical classifications, ecological data, and physical evidence evaluations must be documented clearly without copyrighted text or unsubstantiated claims.
+                        All research and evidence submissions must strictly adhere to the academic standards of the Institute of Hominology & Scientific Exploration. Hypothetical classifications, ecological data, and physical evidence evaluations must be documented clearly without copyrighted text or unsubstantiated claims.
                     </p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.5rem; margin-top:1.2rem;">Evaluation Criteria</h4>
@@ -2400,7 +2400,7 @@ const TEXTBOOK_DB = {
             title: "0. Cryptid Selection &amp; 1. Executive Summary",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📌 0. Cryptid Selection Page</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ“Œ 0. Cryptid Selection Page</h2>
                     
                     <div style="margin-bottom: 0.8rem;">
                         <div style="display: flex; align-items: baseline; margin-bottom: 0.6rem;">
@@ -2426,7 +2426,7 @@ const TEXTBOOK_DB = {
                         <div style="display: flex; align-items: center; grid-column: span 2;"><span style="display: inline-block; width: 12px; height: 12px; border: 1px solid #8d7657; margin-right: 6px; border-radius: 2px;"></span> Other: <span style="flex-grow: 1; border-bottom: 1px dotted #8d7657; margin-left: 5px; height: 1rem;"></span></div>
                     </div>
 
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:0.6rem; margin-top:1.2rem;">📝 1. Executive Summary</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:0.6rem; margin-top:1.2rem;">ðŸ“ 1. Executive Summary</h2>
                     <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem; font-style:italic;">Provide a concise overview of the cryptid and your investigative goals (150&ndash;250 words).</p>
                     
                     <div style="border: 1px dashed rgba(141,118,87,0.4); padding: 0.5rem; border-radius: 4px; background-color: rgba(141,118,87,0.02); min-height: 180px;">
@@ -2445,7 +2445,7 @@ const TEXTBOOK_DB = {
             title: "2. Species Candidate Overview",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🧬 2. Species Candidate Overview</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ§¬ 2. Species Candidate Overview</h2>
                     
                     <h3 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.6rem;">2.1 Proposed Scientific Classification (Hypothetical)</h3>
                     <div style="margin-left: 1rem; margin-bottom: 1.2rem; font-size: 0.85rem;">
@@ -2517,7 +2517,7 @@ const TEXTBOOK_DB = {
             title: "3. Ecological Plausibility Analysis",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🌲 3. Ecological Plausibility Analysis</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸŒ² 3. Ecological Plausibility Analysis</h2>
                     
                     <div style="font-size: 0.85rem; margin-bottom: 1rem;">
                         <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">3.1 Habitat Region</h3>
@@ -2562,7 +2562,7 @@ const TEXTBOOK_DB = {
             title: "4. Historical Record Analysis",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📜 4. Historical Record Analysis</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ“œ 4. Historical Record Analysis</h2>
                     
                     <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
                         <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.3rem;">4.1 Indigenous or Early Cultural Accounts</h3>
@@ -2632,7 +2632,7 @@ const TEXTBOOK_DB = {
             title: "5. Evidence Evaluation",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🔍 5. Evidence Evaluation</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ” 5. Evidence Evaluation</h2>
                     
                     <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
                         <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">5.1 Trackway Evidence</h3>
@@ -2670,10 +2670,10 @@ const TEXTBOOK_DB = {
             `
         },
         {
-            title: "6. Cognitive‑Bias Filtering",
+            title: "6. Cognitiveâ€‘Bias Filtering",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🧠 6. Cognitive-Bias Filtering</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ§  6. Cognitive-Bias Filtering</h2>
                     
                     <div style="font-size: 0.85rem; margin-bottom: 0.8rem;">
                         <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.2rem;">6.1 Misidentification Candidates</h3>
@@ -2733,7 +2733,7 @@ const TEXTBOOK_DB = {
             title: "7. Comparative Morphology &amp; Biomechanics",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">🦍 7. Comparative Morphology</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ¦ 7. Comparative Morphology</h2>
                     
                     <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem;">7.1 Comparison Table</h3>
                     <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:1rem; border:1px solid #8d7657;">
@@ -2798,10 +2798,10 @@ const TEXTBOOK_DB = {
             `
         },
         {
-            title: "8. Holotype or Holotype‑Alternative Proposal",
+            title: "8. Holotype or Holotypeâ€‘Alternative Proposal",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📌 8. Holotype or Holotype-Alternative Proposal</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ“Œ 8. Holotype or Holotype-Alternative Proposal</h2>
                     
                     <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem;">8.1 Proposed Holotype Alternative (Protocol 10)</h3>
                     <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem; font-style:italic;">Select all non-lethal methodologies planned to satisfy species description parameters:</p>
@@ -2830,7 +2830,7 @@ const TEXTBOOK_DB = {
             title: "9. Calibration Documentation Summary",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">📐 9. Calibration Documentation Summary</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:1rem;">ðŸ“ 9. Calibration Documentation Summary</h2>
                     <p style="font-size:0.8rem; line-height:1.5; text-align:justify; margin-bottom:1rem;">
                         All metrological field measurements submitted to the IHSE database must be calibrated against secondary reference standards. List all field instruments used, their respective calibration dates, tolerance values, and certifying officers.
                     </p>
@@ -2889,7 +2889,7 @@ const TEXTBOOK_DB = {
             title: "10. Final Assessment &amp; Verdict",
             content: `
                 <div style="padding: 0.5rem 0;">
-                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:0.8rem;">🎓 10. Final Assessment</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.2rem; color:#2b2319; border-bottom:2px solid #8d7657; padding-bottom:0.4rem; margin-bottom:0.8rem;">ðŸŽ“ 10. Final Assessment</h2>
                     
                     <h3 style="font-family:var(--font-header); font-size:0.95rem; color:#8d7657; margin-bottom:0.4rem;">IHSE Scientific Verdict</h3>
                     <div style="display: grid; grid-template-columns: 1fr; gap: 0.4rem; font-size: 0.8rem; margin-bottom: 0.8rem; margin-left:0.5rem;">
@@ -3320,7 +3320,7 @@ function generateProceduralPage(chapId, pageNum) {
         } else {
             title = `Bio-Luminescence study: Tapetum Lucidum`;
             content = `
-                <p>The persistent reports of glowing red eyes in aerial cryptids at ${location} point to a highly specialized ocular anatomy. In known nocturnal animals, eye-shine is caused by the **tapetum lucidum**—a reflective layer behind the retina that increases light sensitivity by reflecting light back through the photoreceptors.</p>
+                <p>The persistent reports of glowing red eyes in aerial cryptids at ${location} point to a highly specialized ocular anatomy. In known nocturnal animals, eye-shine is caused by the **tapetum lucidum**â€”a reflective layer behind the retina that increases light sensitivity by reflecting light back through the photoreceptors.</p>
                 <p>However, the intensity and red coloration of the eye-shine reported in these sightings suggest a bio-luminescent component. It is possible that the organism possesses light-producing photophores within the ocular cavity, used for hunting or territorial display. This illumination would provide a significant advantage in low-visibility environments.</p>
                 <div class="academic-note">
                     "The red ocular reflection is likely a result of blood-vessel rich tapetal retro-reflection, enhanced by high-density rod cells." <br>&mdash; Col. Marcus Vance
@@ -3381,7 +3381,7 @@ function generateProceduralPage(chapId, pageNum) {
         } else {
             title = `Medullary Index Analysis: Primate Hair`;
             content = `
-                <p>Hair analysis remains a vital forensic tool for identifying unknown mammalian species. When analyzing hair samples recovered from ${location}, technicians must calculate the **medullary index**—the ratio of the medulla's diameter to the hair shaft's total diameter.</p>
+                <p>Hair analysis remains a vital forensic tool for identifying unknown mammalian species. When analyzing hair samples recovered from ${location}, technicians must calculate the **medullary index**â€”the ratio of the medulla's diameter to the hair shaft's total diameter.</p>
                 <p>In humans, the medullary index is typically under 0.33. In most non-human mammals, it exceeds 0.50. The samples recovered from the site display a medullary index of 0.42, falling in the gap between humans and typical quadrupeds. The scale pattern is imbricate, matching the characteristics of higher primates while showing a thick cortex typical of cold-climate animals.</p>
                 <div class="academic-note">
                     "The transitional medullary index of 0.42 is a persistent feature of these hair specimens, suggesting a unique primate lineage." <br>&mdash; Dr. Angela Martinez
@@ -3467,7 +3467,7 @@ const CRYPTID_CODEX = [
         summary: "A large, hairy, bipedal hominid reported to inhabit the dense forests of North America.",
         description: "Reports of Bigfoot describe a bipedal primate standing 7 to 10 feet tall, covered in dark brown or reddish hair. Witnesses report a strong, musky odor and a heavy, ape-like face. Footprint casts reveal lengths of 14 to 18 inches, with some showing dermal ridges. Theories suggest it could be a surviving population of Gigantopithecus that crossed the Bering land bridge.",
         diet: "Omnivorous (berries, shoots, fish, small mammals)",
-        size: "7–10 ft tall, 500–800 lbs",
+        size: "7â€“10 ft tall, 500â€“800 lbs",
         img: "assets/bigfoot.png",
         lat: 48.0,
         lng: -122.0
@@ -3483,7 +3483,7 @@ const CRYPTID_CODEX = [
         summary: "A long-necked aquatic creature reported to dwell in the deep waters of Loch Ness.",
         description: "The Loch Ness Monster is famously described as looking like a plesiosaur, with a long neck, small head, and flippers. The myth gained global fame in 1933. While sonar surveys have occasionally registered large moving objects, eDNA surveys in 2019 suggested a complete lack of reptilian DNA, proposing instead that sightings may be giant eels, swimming sturgeons, or boat wakes.",
         diet: "Piscivorous (fish, eels)",
-        size: "15–30 ft long, 2–4 tons",
+        size: "15â€“30 ft long, 2â€“4 tons",
         img: "assets/nessie.png",
         lat: 57.3,
         lng: -4.4
@@ -3499,7 +3499,7 @@ const CRYPTID_CODEX = [
         summary: "A winged humanoid creature with glowing red eyes, sighted in West Virginia in the late 1960s.",
         description: "Mothman is described as a wingless/winged humanoid standing over 6 feet tall, possessing a wingspan of 10 feet, and having large, reflective red eyes set in its chest. Sighted prior to the collapse of the Silver Bridge in 1967, it has been associated with disaster folklore. Biologists attribute it to misidentified Sandhill Cranes or Barn Owls.",
         diet: "Unknown (presumably insectivorous or nocturnal carnivore)",
-        size: "6–7 ft tall, 10 ft wingspan",
+        size: "6â€“7 ft tall, 10 ft wingspan",
         img: "assets/mothman.png",
         lat: 38.8,
         lng: -82.1
@@ -3515,7 +3515,7 @@ const CRYPTID_CODEX = [
         summary: "A legendary cryptid known for attacking livestock and draining their blood.",
         description: "Originally described in Puerto Rico as a reptilian, bipedal creature with spikes on its back. In the southern US, it is described as a hairless, canine-like creature. Forensic analysis of captured 'Chupacabras' in Texas has consistently identified them as coyotes or feral dogs suffering from severe sarcoptic mange, which accounts for their hairless, blue-gray skin.",
         diet: "Carnivorous (primarily livestock blood)",
-        size: "3–4 ft long, 30–50 lbs",
+        size: "3â€“4 ft long, 30â€“50 lbs",
         img: "assets/chupacabra.png",
         lat: 18.2,
         lng: -66.5
@@ -3531,7 +3531,7 @@ const CRYPTID_CODEX = [
         summary: "An ape-like cryptid said to inhabit the high altitudes of the Himalayan mountain range.",
         description: "The Yeti has been part of Sherpa folklore for centuries. Described as a large, shaggy creature walking upright. Famous expeditions have collected footprints and hair samples. Recent DNA analysis of Yeti relics (scalps, bones, hair) held in monasteries revealed they belong to Himalayan brown bears and Tibetan blue bears.",
         diet: "Omnivorous",
-        size: "6–8 ft tall, 300–500 lbs",
+        size: "6â€“8 ft tall, 300â€“500 lbs",
         img: "assets/bigfoot.png",
         lat: 28.0,
         lng: 86.9
@@ -3547,7 +3547,7 @@ const CRYPTID_CODEX = [
         summary: "A legendary giant sea monster of massive proportions, now recognized as the Giant Squid.",
         description: "Descibed by Nordic sailors as a giant island-sized beast with tentacles capable of dragging down ships. In the 19th century, washed-up carcasses proved the existence of the Giant Squid and Colossal Squid. This represents the ultimate example of a cryptid transitioning to verified scientific fact through physical evidence.",
         diet: "Carnivorous (deep-sea fish, other squid)",
-        size: "Up to 40–50 ft long, 1000 lbs",
+        size: "Up to 40â€“50 ft long, 1000 lbs",
         img: "assets/nessie.png",
         lat: 64.0,
         lng: -20.0
@@ -3563,7 +3563,7 @@ const CRYPTID_CODEX = [
         summary: "A water-dwelling creature of the Congo, described as resembling a small sauropod dinosaur.",
         description: "Folklore of the Pygmy tribes describes a semi-aquatic beast with a long neck and a single horn or tooth, known to block rivers and kill hippopotamuses. Cryptozoologists argue it is a surviving sauropod dinosaur. Skeptics suggest it is a cultural myth representing the spirit of the river, or misidentified elephants swimming with their trunks raised.",
         diet: "Herbivorous (specific river plants)",
-        size: "15–30 ft long, 5–8 tons",
+        size: "15â€“30 ft long, 5â€“8 tons",
         img: "assets/nessie.png",
         lat: -1.5,
         lng: 17.0
@@ -3579,7 +3579,7 @@ const CRYPTID_CODEX = [
         summary: "A legendary flying creature with a horse-like head, bat wings, and hooves.",
         description: "According to legend, the creature was born in 1735 as the 13th child of Mother Leeds and cursed. Sighted across New Jersey in 1909, prompting school closures. Scientifically, it is viewed as a combination of political hoaxes, regional ghost stories, and misidentified Sandhill Cranes or Great Horned Owls.",
         diet: "Omnivorous / Carnivorous",
-        size: "3–5 ft tall, 6 ft wingspan",
+        size: "3â€“5 ft tall, 6 ft wingspan",
         img: "assets/mothman.png",
         lat: 39.7,
         lng: -74.5
@@ -4739,7 +4739,7 @@ function renderBookPage() {
     let romanNumerals = { preface: "Preface", intro: "Prolegomena", ch1: "Chapter I", ch2: "Chapter II", ch3: "Chapter III", ch4: "Chapter IV", ch5: "Chapter V", outline: "Course Outline", protocols: "Field Protocols", workbook: "Student Workbook", project: "Field Project Template" };
     let chapterTitleStr = romanNumerals[chapId] || "IHSE Compendium";
     
-    leftHeader.innerText = `IHSE Compendium — ${chapterTitleStr}`;
+    leftHeader.innerText = `IHSE Compendium â€” ${chapterTitleStr}`;
     rightHeader.innerText = rightPageData ? `${rightPageData.title}` : `IHSE Field Archives`;
 
     const RESTRICTED_CHAPTERS = ["preface", "intro", "ch1", "ch2", "ch3", "ch4", "ch5", "outline", "protocols", "workbook", "project"];
@@ -4747,7 +4747,7 @@ function renderBookPage() {
         const isPending = (currentState.userRole === "pending");
         leftContent.innerHTML = `
             <div style="text-align: center; padding: 2rem 1.5rem;">
-                <div style="font-size: 2.2rem; margin-bottom: 0.8rem; color: var(--accent-red);">🔒</div>
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem; color: var(--accent-red);">ðŸ”’</div>
                 <h3 style="font-family: var(--font-header); font-size: 1.1rem; color: #2b2319; margin-bottom: 0.5rem; border:none; padding:0; text-transform:uppercase;">Clearance Required</h3>
                 <div style="width: 50px; height: 1px; background: #8d7657; margin: 1rem auto; opacity:0.5;"></div>
                 <p style="font-family: var(--font-body); font-size: 0.82rem; color: #5a4b37; line-height: 1.6; text-align: justify; text-indent:0; margin-bottom: 1.5rem;">
@@ -5057,8 +5057,8 @@ function selectMapCryptid(cryptid) {
             <div class="map-detail-cryptid">${cryptid.name}</div>
             <div class="map-detail-loc">${cryptid.region}</div>
             
-            <div class="map-detail-meta-row"><strong>Latitude:</strong> ${cryptid.lat.toFixed(4)}°N</div>
-            <div class="map-detail-meta-row"><strong>Longitude:</strong> ${cryptid.lng.toFixed(4)}°E</div>
+            <div class="map-detail-meta-row"><strong>Latitude:</strong> ${cryptid.lat.toFixed(4)}Â°N</div>
+            <div class="map-detail-meta-row"><strong>Longitude:</strong> ${cryptid.lng.toFixed(4)}Â°E</div>
             <div class="map-detail-meta-row"><strong>Taxon:</strong> ${cryptid.group}</div>
             
             <p class="map-detail-spec">${cryptid.summary}</p>
@@ -5621,7 +5621,7 @@ function drawCanvasCertificate(name, dateStr, certId) {
     ctx.fillStyle = "#5a4b37";
     ctx.textAlign = "center";
     ctx.font = "bold 20px 'Cinzel', Times, serif";
-    ctx.fillText("INSTITUTE OF HIDDEN SPECIES EXPEDITIONS", canvas.width / 2, 110);
+    ctx.fillText("Institute of Hominology & Scientific Exploration", canvas.width / 2, 110);
     
     ctx.font = "normal 14px 'Montserrat', sans-serif";
     ctx.fillText("IHSE ACADEMY", canvas.width / 2, 135);
@@ -5664,7 +5664,7 @@ function drawCanvasCertificate(name, dateStr, certId) {
     
     ctx.fillStyle = "#2b2319";
     ctx.font = "bold 18px 'Cinzel', Times, serif";
-    ctx.fillText("INTRODUCTORY CRYPTOZOOLOGY — LEVEL 1 (IHSE 101)", canvas.width / 2, 420);
+    ctx.fillText("INTRODUCTORY CRYPTOZOOLOGY â€” LEVEL 1 (IHSE 101)", canvas.width / 2, 420);
     
     // Curriculum summary box
     const boxWidth = 560;
@@ -5693,13 +5693,13 @@ function drawCanvasCertificate(name, dateStr, certId) {
     const col1X = boxX + 25;
     const col2X = boxX + 295;
     
-    ctx.fillText("• Scientific cryptozoological methodology", col1X, boxY + 47);
-    ctx.fillText("• Holotype & holotype-alternative standards", col1X, boxY + 72);
-    ctx.fillText("• Metrology & calibration protocols", col1X, boxY + 97);
+    ctx.fillText("â€¢ Scientific cryptozoological methodology", col1X, boxY + 47);
+    ctx.fillText("â€¢ Holotype & holotype-alternative standards", col1X, boxY + 72);
+    ctx.fillText("â€¢ Metrology & calibration protocols", col1X, boxY + 97);
     
-    ctx.fillText("• Archival & historical analysis", col2X, boxY + 47);
-    ctx.fillText("• eDNA & metagenomic investigation", col2X, boxY + 72);
-    ctx.fillText("• Cognitive-bias filtering & ecological plausibility", col2X, boxY + 97);
+    ctx.fillText("â€¢ Archival & historical analysis", col2X, boxY + 47);
+    ctx.fillText("â€¢ eDNA & metagenomic investigation", col2X, boxY + 72);
+    ctx.fillText("â€¢ Cognitive-bias filtering & ecological plausibility", col2X, boxY + 97);
     
     // Reset alignment
     ctx.textAlign = "center";
@@ -6114,7 +6114,7 @@ window.printFullManual = function() {
                 Ordained Minister<br>
                 Founder &amp; Expedition Architect, Institute of Hidden Spice Expeditions
             </div>
-            <div style="margin-top: 4rem; font-family:'Montserrat', sans-serif; font-size:0.9rem; color:#888;">© 2026 Joseph Bryan Thornburg. All rights reserved.</div>
+            <div style="margin-top: 4rem; font-family:'Montserrat', sans-serif; font-size:0.9rem; color:#888;">Â© 2026 Joseph Bryan Thornburg. All rights reserved.</div>
         </div>
     `;
 
@@ -6523,7 +6523,7 @@ window.openJoinModal = function() {
             formView.style.display = "none";
             pendingView.style.display = "none";
             successView.style.display = "block";
-            document.getElementById("success-welcome-text").innerHTML = `Welcome to the Institute of Hidden Species Expeditions, Investigator <strong>${currentState.userName}</strong>!<br><br>Your credentials have been authenticated. You have full clearance.`;
+            document.getElementById("success-welcome-text").innerHTML = `Welcome to the Institute of Hominology & Scientific Exploration, Investigator <strong>${currentState.userName}</strong>!<br><br>Your credentials have been authenticated. You have full clearance.`;
         } else if (currentState.userRole === "pending") {
             formView.style.display = "none";
             pendingView.style.display = "block";
@@ -6704,7 +6704,7 @@ window.mockApproveRequest = function() {
     const successView = document.getElementById("join-success-view");
     successView.style.display = "block";
     document.getElementById("success-welcome-text").innerHTML = `
-        Welcome to the Institute of Hidden Species Expeditions!<br><br>
+        Welcome to the Institute of Hominology & Scientific Exploration!<br><br>
         Your credentials have been authenticated. You now have full clearance to view chapters, workbooks, and sit for the exam.
     `;
     
@@ -6734,7 +6734,7 @@ function renderClearanceGate(isPending) {
     if (isPending) {
         return `
             <div class="clearance-gate-overlay" style="max-width: 600px; margin: 3rem auto; padding: 3rem; background-color: var(--bg-card); border: 2px solid var(--accent-gold); border-radius: var(--border-radius); text-align: center; box-shadow: var(--box-shadow);">
-                <div style="font-size: 3rem; margin-bottom: 1rem; animation: pulse 2s infinite;">⏳</div>
+                <div style="font-size: 3rem; margin-bottom: 1rem; animation: pulse 2s infinite;">â³</div>
                 <h2 style="font-family: var(--font-header); font-size: 1.8rem; color: var(--text-primary); margin-bottom: 1.5rem; border: none; padding: 0;">MEMBERSHIP REQUEST PENDING</h2>
                 <div style="width: 80px; height: 2px; background: var(--accent-gold); margin: 1.5rem auto;"></div>
                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
@@ -6754,7 +6754,7 @@ function renderClearanceGate(isPending) {
 
     return `
         <div class="clearance-gate-overlay" style="max-width: 600px; margin: 3rem auto; padding: 3rem; background-color: var(--bg-card); border: 2px solid var(--accent-gold); border-radius: var(--border-radius); text-align: center; box-shadow: var(--box-shadow);">
-            <div style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--accent-red);">🔒</div>
+            <div style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--accent-red);">ðŸ”’</div>
             <h2 style="font-family: var(--font-header); font-size: 1.8rem; color: var(--text-primary); margin-bottom: 1rem; border: none; padding: 0;">IHSE CLEARANCE LEVEL REQUIRED</h2>
             <div style="width: 80px; height: 2px; background: var(--accent-gold); margin: 1.5rem auto;"></div>
             <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
@@ -7025,4 +7025,5 @@ window.adminPreviewCertificate = function() {
     // 9. Minimize/hide the admin floating panel so the user can see the certificate clearly
     minimizeAdminPanel();
 };
+
 
