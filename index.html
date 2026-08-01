@@ -3,106 +3,1409 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IHSE — Institute of Hominology & Scientific Exploration</title>
-    <meta name="description" content="Institute of Hominology & Scientific Exploration — Official portal for cryptozoological consulting, field operations, and the IHSE Cryptozoology Course.">
+    <title>IHSE — Institute of Hominology & Scientific Expedition</title>
+    <meta name="description" content="Institute of Hominology & Scientific Expedition (IHSE) — Official portal for scientific cryptid research, field operations, forensic labs, and advanced academic studies.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0d0f0c;
-            --bg-card: #141812;
-            --border: #2a3224;
-            --gold: #c8a84b;
-            --gold-glow: rgba(200,168,75,0.3);
-            --green: #4a8c5c;
-            --text: #dde8d5;
-            --muted: #5a6e51;
-            --secondary: #8fa882;
+            --bg-main: #060805;
+            --bg-card: #0c100a;
+            --bg-panel: #11160e;
+            --bg-glass: rgba(12, 16, 10, 0.85);
+            --border: #222d1b;
+            --border-bright: #394a2f;
+            --text-primary: #e3ebd9;
+            --text-secondary: #9cb28c;
+            --text-muted: #5e7251;
+            
+            --gold: #d4af37;
+            --gold-dark: #aa8524;
+            --gold-glow: rgba(212, 175, 55, 0.25);
+            --gold-bright-glow: rgba(212, 175, 55, 0.45);
+            
+            --orange: #e07a22;
+            --orange-glow: rgba(224, 122, 34, 0.2);
+            --green-bright: #52c270;
+            --red-bright: #eb5757;
+            
+            --font-ui: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --font-mono: 'Share Tech Mono', monospace;
+            
+            --radius-lg: 16px;
+            --radius-md: 8px;
+            --shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: var(--font-ui);
+            line-height: 1.6;
             min-height: 100vh;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 2rem;
-            background-image:
-                radial-gradient(ellipse at 20% 20%, rgba(74,140,92,0.07) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(200,168,75,0.05) 0%, transparent 50%);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(82, 194, 112, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(212, 175, 55, 0.03) 0%, transparent 40%),
+                linear-gradient(180deg, var(--bg-main) 0%, #0d120a 50%, var(--bg-main) 100%);
+            position: relative;
         }
-        .wrap { text-align: center; max-width: 800px; width: 100%; }
-        .emblem {
-            width: 90px; height: 90px; border-radius: 50%;
+
+        /* Tactical Grid Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(34, 45, 27, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(34, 45, 27, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── HEADER NAVBAR ── */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 76px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4rem;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            height: 64px;
+            background: rgba(6, 8, 5, 0.95);
+            border-color: var(--border-bright);
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-badge {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
             border: 2px solid var(--gold);
-            background: linear-gradient(135deg, #141812, #1e2a1a);
-            display: flex; align-items: center; justify-content: center;
-            font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold);
-            box-shadow: 0 0 40px var(--gold-glow);
-            margin: 0 auto 2rem;
-            animation: glow 4s ease-in-out infinite;
+            background: linear-gradient(135deg, #11160e, #1a2216);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: 700;
+            box-shadow: 0 0 14px var(--gold-glow);
+            transition: var(--transition);
         }
-        @keyframes glow {
-            0%,100% { box-shadow: 0 0 40px var(--gold-glow); }
-            50% { box-shadow: 0 0 70px rgba(200,168,75,0.5); }
+
+        .logo-text-wrap {
+            display: flex;
+            flex-direction: column;
         }
-        .label { font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
-        h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin-bottom: 1rem; }
-        .tagline { color: var(--secondary); font-size: 1rem; line-height: 1.7; max-width: 500px; margin: 0 auto 3rem; }
-        .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
-        @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-        .card {
-            background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: 14px; padding: 2.2rem 2rem; text-decoration: none;
-            color: var(--text); transition: all 0.3s; position: relative; overflow: hidden;
+
+        .logo-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--gold);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .header-ctas {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-header {
+            padding: 0.45rem 1.1rem;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-header.portal {
+            background: transparent;
+            color: var(--orange);
+            border: 1px solid var(--orange);
+        }
+
+        .btn-header.portal:hover {
+            background: rgba(224, 122, 34, 0.1);
+            box-shadow: 0 0 10px var(--orange-glow);
+        }
+
+        .btn-header.course {
+            background: var(--gold);
+            color: #060805;
+            border: 1px solid var(--gold);
+        }
+
+        .btn-header.course:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            box-shadow: 0 0 15px var(--gold-glow);
+        }
+
+        /* ── HERO SECTION ── */
+        .hero-section {
+            min-height: 95vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 8rem 2rem 4rem;
+            overflow: hidden;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(12, 16, 10, 0.4) 0%, var(--bg-main) 80%);
+            z-index: 1;
+        }
+
+        .hero-seal {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px double var(--gold);
+            background: radial-gradient(circle, #1a2216, #0c100a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: var(--gold);
+            box-shadow: 0 0 50px var(--gold-glow);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); box-shadow: 0 0 50px var(--gold-glow); }
+            50% { transform: translateY(-10px); box-shadow: 0 0 70px var(--gold-bright-glow); }
+        }
+
+        .hero-label {
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.4rem, 6vw, 4.4rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            max-width: 1000px;
+            position: relative;
+            z-index: 2;
+            color: var(--text-primary);
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        .hero-tagline-container {
+            height: 30px;
+            margin-bottom: 3.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tagline {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transform: translateY(10px);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            white-space: nowrap;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .hero-tagline.active {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 5rem;
+        }
+
+        .btn-main {
+            padding: 0.9rem 2.2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-main.primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #060805;
+            border: none;
+            box-shadow: 0 6px 20px var(--gold-glow);
+        }
+
+        .btn-main.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.45);
+        }
+
+        .btn-main.secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-bright);
+        }
+
+        .btn-main.secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* ── SECTION HEADER ── */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-tag {
+            font-size: 0.72rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
             display: block;
         }
-        .card::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-            opacity: 0; transition: opacity 0.3s;
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--text-primary);
+            font-weight: 700;
         }
-        .card.portal::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-        .card.course::before { background: linear-gradient(90deg, transparent, var(--green), transparent); }
-        .card:hover { transform: translateY(-6px); border-color: #3d4e35; }
-        .card:hover::before { opacity: 1; }
-        .card.portal:hover { box-shadow: 0 20px 60px rgba(200,168,75,0.15); }
-        .card.course:hover { box-shadow: 0 20px 60px rgba(74,140,92,0.15); }
-        .card-icon { font-size: 2.4rem; margin-bottom: 1rem; }
-        .card h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .card p { color: var(--secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.2rem; }
-        .card-badge {
-            display: inline-block; padding: 0.3rem 0.9rem; border-radius: 20px;
-            font-size: 0.72rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 1rem auto 0;
+            font-size: 0.95rem;
         }
-        .card.portal .card-badge { background: rgba(200,168,75,0.12); color: var(--gold); border: 1px solid rgba(200,168,75,0.3); }
-        .card.course .card-badge { background: rgba(74,140,92,0.12); color: #6dbf82; border: 1px solid rgba(74,140,92,0.3); }
-        .footer-note { color: var(--muted); font-size: 0.75rem; }
-        .footer-note span { color: var(--gold); }
+
+        .divider-gold {
+            width: 80px;
+            height: 1px;
+            background: var(--gold);
+            margin: 1.5rem auto 0;
+            opacity: 0.5;
+        }
+
+        /* ── CORE PILLARS SECTION ── */
+        .pillars-section {
+            padding: 8rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-bright);
+            box-shadow: var(--shadow);
+            background: var(--bg-panel);
+        }
+
+        .pillar-card:hover::before {
+            opacity: 1;
+        }
+
+        .pillar-icon {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--text-primary);
+        }
+
+        .pillar-card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.7;
+        }
+
+        /* ── INTERACTIVE CAROUSEL (CODEX) ── */
+        .codex-section {
+            padding: 8rem 4rem;
+            background: linear-gradient(180deg, var(--bg-main) 0%, #0d120a 50%, var(--bg-main) 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background: var(--bg-card);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .carousel-track-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+            width: 400%; /* 4 slides */
+        }
+
+        .carousel-slide {
+            width: 25%; /* 1/4 of track */
+            flex-shrink: 0;
+            display: grid;
+            grid-template-columns: 45% 55%;
+            align-items: center;
+        }
+
+        .slide-img-wrap {
+            height: 480px;
+            background: #060805;
+            position: relative;
+            overflow: hidden;
+            border-right: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.75;
+            transition: var(--transition);
+        }
+
+        .carousel-slide:hover .slide-img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .slide-info-pane {
+            padding: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            text-align: left;
+        }
+
+        .slide-tag {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .slide-title {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+
+        .slide-subtitle {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: -0.5rem;
+        }
+
+        .slide-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            border-top: 1px dashed var(--border);
+            border-bottom: 1px dashed var(--border);
+            padding: 1rem 0;
+            font-size: 0.8rem;
+        }
+
+        .meta-item strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+        }
+
+        .meta-item span {
+            color: var(--text-primary);
+        }
+
+        .slide-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 2rem;
+            right: 3.5rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        .carousel-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border-bright);
+            background: rgba(12, 16, 10, 0.6);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .carousel-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* ── PORTAL GATEWAYS SECTION ── */
+        .gateways-section {
+            padding: 8rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gateways-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .gate-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .gate-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gate-card.field::before {
+            background: linear-gradient(90deg, transparent, var(--orange), transparent);
+        }
+
+        .gate-card.academic::before {
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .gate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            background: var(--bg-panel);
+        }
+
+        .gate-card:hover::before {
+            opacity: 1;
+        }
+
+        .gate-card.field:hover {
+            border-color: rgba(224, 122, 34, 0.3);
+            box-shadow: 0 20px 60px rgba(224, 122, 34, 0.08);
+        }
+
+        .gate-card.academic:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.08);
+        }
+
+        .gate-icon {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gate-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: var(--text-primary);
+        }
+
+        .gate-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .gate-badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gate-badge {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .gate-card.field .gate-badge {
+            background: rgba(224, 122, 34, 0.1);
+            color: var(--orange);
+            border: 1px solid rgba(224, 122, 34, 0.25);
+        }
+
+        .gate-card.academic .gate-badge {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .btn-gate {
+            align-self: flex-start;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .gate-card.field .btn-gate {
+            background: var(--orange);
+            color: #060805;
+            box-shadow: 0 4px 15px var(--orange-glow);
+        }
+
+        .gate-card.field .btn-gate:hover {
+            background: #f2913a;
+            box-shadow: 0 6px 22px rgba(224, 122, 34, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .gate-card.academic .btn-gate {
+            background: var(--gold);
+            color: #060805;
+            box-shadow: 0 4px 15px var(--gold-glow);
+        }
+
+        .gate-card.academic .btn-gate:hover {
+            background: var(--gold-dark);
+            box-shadow: 0 6px 22px rgba(212, 175, 55, 0.45);
+            transform: translateY(-2px);
+        }
+
+        /* ── STATS DASHBOARD ── */
+        .stats-section {
+            padding: 5rem 4rem;
+            background: var(--bg-panel);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stat-val {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .stat-lbl {
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* ── FOUNDER SECTION ── */
+        .founder-section {
+            padding: 8rem 4rem;
+            background: linear-gradient(180deg, var(--bg-main) 0%, #0d120a 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .founder-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 32% 68%;
+            gap: 3.5rem;
+            align-items: center;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .founder-seal-img {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            box-shadow: 0 0 25px var(--gold-glow);
+            background: #11160e;
+        }
+
+        .founder-info {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .founder-title-lbl {
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .founder-info h3 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        .founder-info h4 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: -0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .founder-quote {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .founder-bio {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ── DONATIONS & CONSULTING SECTION ── */
+        .support-section {
+            padding: 8rem 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .support-card {
+            background: radial-gradient(circle at top left, #12180f, var(--bg-card));
+            border: 1px solid var(--border-bright);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .support-card h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .support-card p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .pay-box {
+            background: rgba(6, 8, 5, 0.4);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2.5rem;
+            min-width: 250px;
+            transition: var(--transition);
+        }
+
+        .pay-box:hover {
+            border-color: var(--gold);
+            background: var(--bg-panel);
+            transform: translateY(-2px);
+        }
+
+        .pay-lbl {
+            font-size: 0.68rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .pay-val {
+            font-family: var(--font-mono);
+            font-size: 1.05rem;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #030403;
+            border-top: 1px solid var(--border);
+            padding: 4rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+        }
+
+        .footer-copyright span {
+            color: var(--gold);
+        }
+
+        /* ── RESPONSIVE DESIGN ── */
+        @media (max-width: 1024px) {
+            header { padding: 0 2rem; }
+            .pillars-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .gateways-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .carousel-slide { grid-template-columns: 1fr; }
+            .slide-img-wrap { height: 300px; border-right: none; border-bottom: 1px solid var(--border); }
+            .founder-card { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem; }
+            .founder-seal-img { max-width: 200px; margin: 0 auto; }
+            .support-card { padding: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            header { justify-content: center; height: auto; padding: 1rem; flex-direction: column; gap: 1rem; }
+            header.scrolled { height: auto; }
+            nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .header-ctas { flex-wrap: wrap; justify-content: center; }
+            .hero-section { padding-top: 12rem; }
+            .hero-btns { flex-direction: column; width: 100%; max-width: 300px; }
+            .codex-section { padding: 4rem 1rem; }
+            .slide-info-pane { padding: 1.5rem; }
+            .slide-title { font-size: 1.8rem; }
+            .carousel-controls { right: 1.5rem; }
+            .support-section { padding: 4rem 1rem; }
+        }
     </style>
 </head>
 <body>
-<div class="wrap">
-    <div class="emblem">IHSE</div>
-    <p class="label">Official Gateway</p>
-    <h1>Institute of Hominology<br>&amp; Scientific Exploration</h1>
-    <p class="tagline">We document the undocumented — with scientific rigor and field discipline. Choose your destination below.</p>
 
-    <div class="cards">
-        <a href="portal.html" class="card portal">
-            <div class="card-icon">🔒</div>
-            <h2>Field Operations Portal</h2>
-            <p>Consulting services, field report dispatch, cost estimator, payment gateway, and the NEO-CRYPTID secure terminal.</p>
-            <span class="card-badge">→ Enter Portal</span>
+    <!-- ── NAVIGATION HEADER ── -->
+    <header id="navbar">
+        <a href="#" class="logo-wrap">
+            <div class="logo-badge">IHSE</div>
+            <div class="logo-text-wrap">
+                <span class="logo-title">IHSE</span>
+                <span class="logo-sub">Scientific Expedition</span>
+            </div>
         </a>
-        <a href="course.html" class="card course">
-            <div class="card-icon">📚</div>
-            <h2>Cryptozoology Course</h2>
-            <p>IHSE's advanced cryptozoology curriculum — textbook chapters, the cryptid codex, sighting map, field lab, and examination hall.</p>
-            <span class="card-badge">→ Enter Course</span>
-        </a>
-    </div>
+        <nav>
+            <a href="#mission" class="nav-link">Mission</a>
+            <a href="#codex" class="nav-link">Codex</a>
+            <a href="#gateways" class="nav-link">Portals</a>
+            <a href="#founder" class="nav-link">Founder</a>
+        </nav>
+        <div class="header-ctas">
+            <a href="portal.html" class="btn-header portal">Field Portal</a>
+            <a href="course.html" class="btn-header course">Course Access</a>
+        </div>
+    </header>
 
-    <p class="footer-note">© 2026 <span>Institute of Hominology &amp; Scientific Exploration</span>. All Rights Reserved.</p>
-</div>
+    <!-- ── HERO SECTION ── -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-seal">IHSE</div>
+        <p class="hero-label">Official Command Station</p>
+        <h1>Institute of Hominology<br>&amp; Scientific Expedition</h1>
+        
+        <div class="hero-tagline-container">
+            <p class="hero-tagline active" id="tagline-1">We document the undocumented — with scientific rigor and field discipline.</p>
+            <p class="hero-tagline" id="tagline-2">Analyzing trace castings, vocal spectrograms, and eDNA forensics.</p>
+            <p class="hero-tagline" id="tagline-3">Investigating relic hominid populations and cryptid biology since 2026.</p>
+        </div>
+
+        <div class="hero-btns">
+            <a href="#gateways" class="btn-main primary">Explore Portals</a>
+        </div>
+    </section>
+
+    <!-- ── CORE MISSION PILLARS ── -->
+    <section class="pillars-section" id="mission">
+        <div class="section-header">
+            <span class="section-tag">Academic Pillars</span>
+            <h2>Scientific Expedition Discipline</h2>
+            <p>The IHSE bridges the gap between academic theory and rigorous wilderness operations, focusing on empirical evidence collection.</p>
+            <div class="divider-gold"></div>
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">🔍</div>
+                <h3>Hominology Study</h3>
+                <p>Formal taxonomic documentation of relict hominoid populations (including Sasquatch/bipedal species) through environmental tracking and nesting habit cataloging.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🗺️</div>
+                <h3>Field Expeditions</h3>
+                <p>Deploying specialized grid search mapping, long-term camera traps, ultrasonic acoustic traps, and local geological surveys in target regions.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🧪</div>
+                <h3>Forensic Laboratory</h3>
+                <p>Conducting follicular medullary index comparisons, sub-surface cast analysis, eDNA sample sweeps, and environmental sound waveform demodulation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STATS DASHBOARD ── -->
+    <section class="stats-section">
+        <div class="stats-wrap">
+            <div class="stat-card">
+                <div class="stat-val" data-target="0">0</div>
+                <div class="stat-lbl">Cataloged Case Files</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-val" data-target="0">0</div>
+                <div class="stat-lbl">Active Expeditions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-val" data-target="0">0</div>
+                <div class="stat-lbl">Certified Graduates</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-val" data-target="0">0</div>
+                <div class="stat-lbl">Confidence Index %</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── INTERACTIVE CODEX CAROUSEL ── -->
+    <section class="codex-section" id="codex">
+        <div class="section-header">
+            <span class="section-tag">Database Excerpt</span>
+            <h2>The Cryptid Codex</h2>
+            <p>Review cataloged profiles of key biological entities documented during IHSE expeditions.</p>
+            <div class="divider-gold"></div>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    
+                    <!-- Slide 1: Sasquatch -->
+                    <div class="carousel-slide">
+                        <div class="slide-img-wrap">
+                            <img src="assets/bigfoot.png" class="slide-img" alt="Sasquatch Illustration">
+                        </div>
+                        <div class="slide-info-pane">
+                            <span class="slide-tag">Class I Hominid</span>
+                            <h3 class="slide-title">Sasquatch</h3>
+                            <h4 class="slide-subtitle">Gigantopithecus canadensis (Hypothetical)</h4>
+                            <div class="slide-meta-grid">
+                                <div class="meta-item">
+                                    <strong>Primary Habitat</strong>
+                                    <span>Pacific Northwest, North America</span>
+                                </div>
+                                <div class="meta-item">
+                                    <strong>Average Height</strong>
+                                    <span>7.5 - 9.0 ft (2.3 - 2.7 m)</span>
+                                </div>
+                            </div>
+                            <p class="slide-desc">Bipedal primate characterized by a sagittal crest, heavy musculature, and specialized dermal friction ridge structures on the feet. Field evidence includes massive plaster castings and low-frequency acoustic vocal signatures.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Mothman -->
+                    <div class="carousel-slide">
+                        <div class="slide-img-wrap">
+                            <img src="assets/mothman.png" class="slide-img" alt="Mothman Illustration">
+                        </div>
+                        <div class="slide-info-pane">
+                            <span class="slide-tag">Class III Aerial</span>
+                            <h3 class="slide-title">Mothman</h3>
+                            <h4 class="slide-subtitle">Anomalopteryx wv-rubra (Hypothetical)</h4>
+                            <div class="slide-meta-grid">
+                                <div class="meta-item">
+                                    <strong>Primary Habitat</strong>
+                                    <span>Point Pleasant, West Virginia</span>
+                                </div>
+                                <div class="meta-item">
+                                    <strong>Wing Span</strong>
+                                    <span>8.0 - 10.0 ft (2.4 - 3.0 m)</span>
+                                </div>
+                            </div>
+                            <p class="slide-desc">Winged hominid exhibiting high-intensity bioluminescent ocular cells. Observations detail high-speed vertical takeoffs, structural meditation behaviors, and low acoustic warning sounds prior to electromagnetic disturbances.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Nessie -->
+                    <div class="carousel-slide">
+                        <div class="slide-img-wrap">
+                            <img src="assets/nessie.png" class="slide-img" alt="Loch Ness Monster Illustration">
+                        </div>
+                        <div class="slide-info-pane">
+                            <span class="slide-tag">Class II Marine</span>
+                            <h3 class="slide-title">Nessie</h3>
+                            <h4 class="slide-subtitle">Nessiteras rhombopteryx (Hypothetical)</h4>
+                            <div class="slide-meta-grid">
+                                <div class="meta-item">
+                                    <strong>Primary Habitat</strong>
+                                    <span>Loch Ness, Scotland</span>
+                                </div>
+                                <div class="meta-item">
+                                    <strong>Body Length</strong>
+                                    <span>30.0 - 45.0 ft (9.1 - 13.7 m)</span>
+                                </div>
+                            </div>
+                            <p class="slide-desc">Aquatic reptile structurally similar to relic plesiosaurs. Features four rhomboidal flippers, a elongated neck structure, and specialized acoustic echoing signatures detected via lake bottom sonar arrays.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Chupacabra -->
+                    <div class="carousel-slide">
+                        <div class="slide-img-wrap">
+                            <img src="assets/chupacabra.png" class="slide-img" alt="Chupacabra Illustration">
+                        </div>
+                        <div class="slide-info-pane">
+                            <span class="slide-tag">Class V Carnivore</span>
+                            <h3 class="slide-title">Chupacabra</h3>
+                            <h4 class="slide-subtitle">Canis vampyrus (Hypothetical)</h4>
+                            <div class="slide-meta-grid">
+                                <div class="meta-item">
+                                    <strong>Primary Habitat</strong>
+                                    <span>Puerto Rico / Southwest USA</span>
+                                </div>
+                                <div class="meta-item">
+                                    <strong>Mass Index</strong>
+                                    <span>35 - 55 lbs (15.8 - 25.0 kg)</span>
+                                </div>
+                            </div>
+                            <p class="slide-desc">Predatory quad-pedal canine hybrid, notable for dorsal spikes, specialized fangs, and hematophagous feeding patterns. eDNA profiles from saliva swabbing reveal complex hybrid canid-lupine genomes.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevSlideBtn">&#8592;</button>
+                <button class="carousel-btn" id="nextSlideBtn">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PORTAL GATEWAYS SECTION ── -->
+    <section class="gateways-section" id="gateways">
+        <div class="section-header">
+            <span class="section-tag">Deployment Gates</span>
+            <h2>Select Your Destination</h2>
+            <p>Access the specialized nodes of the Institute's operations. Select whether to review command dispatches or sit for academic studies.</p>
+            <div class="divider-gold"></div>
+        </div>
+
+        <div class="gateways-grid">
+            <!-- Field Operations Portal Card -->
+            <div class="gate-card field">
+                <div class="gate-icon">🔒</div>
+                <h3>Field Operations Portal</h3>
+                <p>The operational hub for contract consulting, expedition cost estimation, sighting logging, and real-time remote commands.</p>
+                <div class="gate-badge-list">
+                    <span class="gate-badge">Consulting Gateway</span>
+                    <span class="gate-badge">Cost Estimator</span>
+                    <span class="gate-badge">Dispatch Logs</span>
+                    <span class="gate-badge">NEO-CRYPTID Node</span>
+                </div>
+                <a href="portal.html" class="btn-gate">Enter Portal &rarr;</a>
+            </div>
+
+            <!-- Academic Course Card -->
+            <div class="gate-card academic">
+                <div class="gate-icon">📚</div>
+                <h3>Cryptozoology Course</h3>
+                <p>The academic archives containing the advanced 20-page textbook, forensics laboratory tools, and the Certificate of Cryptid Studies exam hall.</p>
+                <div class="gate-badge-list">
+                    <span class="gate-badge">Skeuomorphic Ledger</span>
+                    <span class="gate-badge">Evidence Lab</span>
+                    <span class="gate-badge">Interactive Map</span>
+                    <span class="gate-badge">Certification Exam</span>
+                </div>
+                <a href="course.html" class="btn-gate">Enter Course &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ── FOUNDER'S MESSAGE ── -->
+    <section class="founder-section" id="founder">
+        <div class="founder-card">
+            <img src="seal.png" class="founder-seal-img" alt="IHSE Emblem Seal">
+            <div class="founder-info">
+                <span class="founder-title-lbl">Founding Directorate</span>
+                <h3>Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</h3>
+                <h4>Lead Investigator &amp; Founder • Ordained Minister</h4>
+                
+                <p class="founder-quote">
+                    "In the shadow of the unknown, science and faith must walk hand-in-hand to illuminate the truth. We do not chase myths; we document taxonomy with field discipline."
+                </p>
+
+                <p class="founder-bio">
+                    Dr. Joseph Bryan Thornburg, PhD (Cryptozoology), established the Institute of Hominology &amp; Scientific Expedition in 2026 to bring rigorous empirical methods to cryptozoological investigations. Combining forensic methodologies with structured wilderness tracking, he coordinates all active cases, lab evaluations, and student training programs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SUPPORT & DONATION ── -->
+    <section class="support-section">
+        <div class="support-card">
+            <h3>Support IHSE Investigations</h3>
+            <p>Expedition gear, acoustic telemetry arrays, and DNA analysis processing require significant support. Contribute directly to active field operations or request consultation services.</p>
+            
+            <div class="payment-methods">
+                <div class="pay-box">
+                    <div class="pay-lbl">PayPal Account</div>
+                    <div class="pay-val">joseph.thornburg08@gmail.com</div>
+                </div>
+                <div class="pay-box">
+                    <div class="pay-lbl">Cash App Tag</div>
+                    <div class="pay-val">$JosephThornburg1</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-logo">IHSE</div>
+        <div class="footer-links">
+            <a href="#mission" class="footer-link">Mission</a>
+            <a href="#codex" class="footer-link">Codex</a>
+            <a href="#gateways" class="footer-link">Portals</a>
+            <a href="#founder" class="footer-link">Founder</a>
+            <a href="portal.html" class="footer-link">Field Ops</a>
+            <a href="course.html" class="footer-link">Archives</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 <span>Institute of Hominology &amp; Scientific Expedition</span>. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- ── INTERACTIVE JAVASCRIPT ── -->
+    <script>
+        // ── Navigation Scroll Class ──
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ── Rotating Tagline Logic ──
+        let activeTaglineIdx = 0;
+        const taglines = [
+            document.getElementById('tagline-1'),
+            document.getElementById('tagline-2'),
+            document.getElementById('tagline-3')
+        ];
+
+        setInterval(() => {
+            taglines[activeTaglineIdx].classList.remove('active');
+            activeTaglineIdx = (activeTaglineIdx + 1) % taglines.length;
+            taglines[activeTaglineIdx].classList.add('active');
+        }, 5000);
+
+        // ── Animated Stats Logic ──
+        const stats = document.querySelectorAll('.stat-val');
+        const animatedStats = new Set();
+
+        const animateStats = () => {
+            stats.forEach(stat => {
+                if (animatedStats.has(stat)) return;
+                
+                const rect = stat.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+                
+                if (isVisible) {
+                    animatedStats.add(stat);
+                    const target = parseInt(stat.getAttribute('data-target'));
+                    let current = 0;
+                    const duration = 1500; // ms
+                    const steps = 60;
+                    const increment = target / steps;
+                    const stepTime = duration / steps;
+                    
+                    const counter = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            stat.textContent = target.toLocaleString();
+                            clearInterval(counter);
+                        } else {
+                            stat.textContent = Math.floor(current).toLocaleString();
+                        }
+                    }, stepTime);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateStats);
+        window.addEventListener('load', animateStats);
+
+        // ── Codex Carousel Logic ──
+        const track = document.getElementById('carouselTrack');
+        const nextBtn = document.getElementById('nextSlideBtn');
+        const prevBtn = document.getElementById('prevSlideBtn');
+        let currentSlide = 0;
+        const totalSlides = 4;
+
+        const updateCarousel = () => {
+            track.style.transform = `translateX(-${currentSlide * 25}%)`;
+        };
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+    </script>
 </body>
 </html>

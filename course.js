@@ -2,7 +2,7 @@
    CRYPTOZOOLOGY: AN ADVANCED EXPLORATION FOR COLLEGE GRADUATES
    Handles interactive textbook navigation (now with 20 pages per chapter),
    codex database, map plots, Web Audio growl synthesizer, canvas-based lab,
-   and certificate exports under the Institute of Hominology & Scientific Exploration (IHSE).
+   and certificate exports under the Institute of Hominology & Scientific Expedition (IHSE).
    ========================================================================== */
 
 // Preload the official seal for high-res canvas rendering
@@ -20,10 +20,10 @@ const TEXTBOOK_DB = {
                     <h1 style="font-family:var(--font-header); font-size:2.2rem; line-height:1.3; color:#2b2319; margin-bottom:1rem;">Cryptozoology: An Advanced Exploration for College Graduates</h1>
                     <div style="margin: 2rem 0; height:2px; background-color:#8d7657; opacity:0.3;"></div>
                     <p style="font-family:var(--font-body); font-style:italic; font-size:1.1rem; color:#5a4b37; text-align:center; text-indent:0; margin-bottom:2rem;">By</p>
-                    <h2 style="font-family:var(--font-header); font-size:1.3rem; font-weight:600; color:#2b2319; margin-bottom:0.5rem; text-align:center;">Joseph Bryan Thornburg, M. Msc. (Cryptozoology)</h2>
+                    <h2 style="font-family:var(--font-header); font-size:1.3rem; font-weight:600; color:#2b2319; margin-bottom:0.5rem; text-align:center;">Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</h2>
                     <p style="font-family:var(--font-ui); font-size:0.85rem; line-height:1.6; color:#5a4b37; text-align:center; text-indent:0;">
                         Ordained Minister<br>
-                        Founder & Lead Investigator, Institute of Hominology & Scientific Exploration
+                        Founder & Lead Investigator, Institute of Hominology & Scientific Expedition
                     </p>
                     <div style="margin-top: 3rem;" class="cover-seal-icon">IHSE</div>
                 </div>
@@ -878,7 +878,7 @@ const TEXTBOOK_DB = {
             title: "About the Author",
             content: `
                 <div style="font-family:var(--font-ui); font-size:0.8rem; line-height:1.6; color:#5a4b37; padding: 0.5rem 0;">
-                    <p style="text-indent:0; margin-bottom:1rem;"><strong>Joseph Bryan Thornburg, M. Msc.</strong></p>
+                    <p style="text-indent:0; margin-bottom:1rem;"><strong>Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</strong></p>
                     <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Joseph Bryan Thornburg was born on December 6, 1967, in Chula Vista, California, and raised in Tampa, Florida. A graduate of Hillsborough Senior High School, he entered the United States Army in 1987, serving as a 13B10 Cannon Crewmember. His military career included active duty during Operation Desert Shield and Operation Desert Storm, where he developed the discipline, fieldcraft, and operational mindset that would later shape his scientific and expeditionary work. After completing his Army service in 1991, he continued to serve his state and community in the Florida Army National Guard until 1995, including deployment during Hurricane Andrew.</p>
                     <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Following his military career, Thornburg worked as a line chef and personal chef, honing precision, timing, and resource management&mdash;skills that would later influence his expedition planning and methodological rigor. He also worked as an independent contractor with Uber, DoorDash, and Amazon Flex, experiences that deepened his understanding of logistics, adaptability, and modern systems navigation.</p>
                     <p style="text-indent:0; text-align:justify; margin-bottom:1rem;">Thornburg pursued higher education at Thomas Francis University, earning a Bachelor&rsquo;s and Master&rsquo;s degree in Metaphysical Humanistic Science, followed by a Doctor of Philosophy in Metaphysical Humanistic Science with a concentration in Cryptozoology. His academic work blends zoological theory, metaphysical inquiry, and field investigation, forming the foundation of his mythic-scientific approach to cryptid research.</p>
@@ -1358,7 +1358,7 @@ const TEXTBOOK_DB = {
                     <div style="margin: 2rem 0; height:2px; background-color:#8d7657; opacity:0.3;"></div>
                     <h2 style="font-family:var(--font-header); font-size:1.3rem; font-weight:600; color:#2b2319; margin-bottom:1.5rem; text-align:center;">Standard Operating Procedures</h2>
                     <p style="font-family:var(--font-body); font-style:italic; font-size:1rem; color:#5a4b37; line-height:1.6; margin-bottom:2rem; text-align:justify; text-indent:0;">
-                        This protocol manual establishes the mandatory standards of practice for all field investigators and research fellows operating under the auspices of the <strong>Institute of Hominology & Scientific Exploration (IHSE)</strong>.
+                        This protocol manual establishes the mandatory standards of practice for all field investigators and research fellows operating under the auspices of the <strong>Institute of Hominology & Scientific Expedition (IHSE)</strong>.
                     </p>
                     <p style="font-family:var(--font-body); font-size:0.95rem; color:#2b2319; line-height:1.7; margin-bottom:2rem; text-align:justify; text-indent:1.5rem;">
                         As cryptozoology matures into an interdisciplinary science, the methods of evidence collection, ecological preservation, witness elicitation, and technological calibration must match or exceed those of traditional field biology and forensics. These 13 core modules provide the theoretical foundation and practical applications required to conduct robust, ethical, and scientifically verifiable investigations.
@@ -1737,7 +1737,7 @@ const TEXTBOOK_DB = {
                         Each week, students must review the designated compendium readings, complete the corresponding analytical worksheets, and submit their written reflections and designs. Completion of all exercises culminate in the submission of the Final IHSE Investigative Dossier.
                     </p>
                     <div class="academic-note" style="margin-top:2rem;">
-                        <strong>Curriculum Advisory:</strong> All assignments must meet the scientific standards of the Institute of Hominology & Scientific Exploration (IHSE) to qualify for graduation.
+                        <strong>Curriculum Advisory:</strong> All assignments must meet the scientific standards of the Institute of Hominology & Scientific Expedition (IHSE) to qualify for graduation.
                     </div>
                 </div>
             `
@@ -2277,7 +2277,7 @@ const TEXTBOOK_DB = {
             title: "IHSE Field Project Dossier &mdash; Cover Page",
             content: `
                 <div style="text-align:center; padding: 1.5rem 0;">
-                    <h3 style="font-family:var(--font-ui); font-size:0.8rem; letter-spacing:4px; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem;">Institute of Hominology & Scientific Exploration</h3>
+                    <h3 style="font-family:var(--font-ui); font-size:0.8rem; letter-spacing:4px; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem;">Institute of Hominology & Scientific Expedition</h3>
                     <div style="margin: 1.5rem auto; width: 80px; height: 80px; border: 2px solid #8d7657; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
                         <div style="width: 60px; height: 60px; border: 1px dashed #8d7657; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <span style="font-family:var(--font-header); font-size:1.4rem; font-weight:bold; color:#8d7657;">IHSE</span>
@@ -2306,7 +2306,7 @@ const TEXTBOOK_DB = {
                     </div>
                     
                     <div style="margin-top: 3rem; font-family:var(--font-body); font-size: 0.8rem; font-style: italic; color: var(--text-muted);">
-                        Notice: This document is the property of the Institute of Hominology & Scientific Exploration (IHSE). Copying or unauthorized dissemination of classified cryptid records is strictly prohibited under Protocol 9.
+                        Notice: This document is the property of the Institute of Hominology & Scientific Expedition (IHSE). Copying or unauthorized dissemination of classified cryptid records is strictly prohibited under Protocol 9.
                     </div>
                 </div>
             `
@@ -2320,7 +2320,7 @@ const TEXTBOOK_DB = {
                         This workbook template constitutes the final practical examination for <strong>Introductory Cryptozoology (Level 1)</strong>. Student investigators are required to compile a rigorous, scientific field dossier evaluating a candidate anomalous species of their choosing.
                     </p>
                     <p style="font-size:0.9rem; line-height:1.6; text-align:justify; margin-bottom:1rem; text-indent: 1.5rem;">
-                        All research and evidence submissions must strictly adhere to the academic standards of the Institute of Hominology & Scientific Exploration. Hypothetical classifications, ecological data, and physical evidence evaluations must be documented clearly without copyrighted text or unsubstantiated claims.
+                        All research and evidence submissions must strictly adhere to the academic standards of the Institute of Hominology & Scientific Expedition. Hypothetical classifications, ecological data, and physical evidence evaluations must be documented clearly without copyrighted text or unsubstantiated claims.
                     </p>
                     
                     <h4 style="font-family:var(--font-header); font-size:1rem; color:#8d7657; margin-bottom:0.5rem; margin-top:1.2rem;">Evaluation Criteria</h4>
@@ -5621,7 +5621,7 @@ function drawCanvasCertificate(name, dateStr, certId) {
     ctx.fillStyle = "#5a4b37";
     ctx.textAlign = "center";
     ctx.font = "bold 20px 'Cinzel', Times, serif";
-    ctx.fillText("Institute of Hominology & Scientific Exploration", canvas.width / 2, 110);
+    ctx.fillText("Institute of Hominology & Scientific Expedition", canvas.width / 2, 110);
     
     ctx.font = "normal 14px 'Montserrat', sans-serif";
     ctx.fillText("IHSE ACADEMY", canvas.width / 2, 135);
@@ -5737,8 +5737,8 @@ function drawCanvasCertificate(name, dateStr, certId) {
     
     ctx.fillStyle = "#2b2319";
     ctx.font = "italic 14px 'Lora', Georgia, serif";
-    ctx.fillText("Joseph Bryan Thornburg, M. Msc.", 240, 710);
-    ctx.fillText("Joseph Bryan Thornburg, M. Msc.", 960, 710);
+    ctx.fillText("Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)", 240, 710);
+    ctx.fillText("Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)", 960, 710);
     
     ctx.fillStyle = "#8d7657";
     ctx.font = "10px 'Montserrat', sans-serif";
@@ -5955,13 +5955,13 @@ window.downloadHtmlBook = function() {
         <!-- Cover Page -->
         <div class="cover-page">
             <div class="cover-border">
-                <div class="cover-institute">Institute of Hominology & Scientific Exploration</div>
+                <div class="cover-institute">Institute of Hominology & Scientific Expedition</div>
                 <div class="cover-title" style="font-size:2.2rem; font-weight:900; margin-bottom:0.5rem;">CRYPTOZOOLOGY</div>
                 <div class="cover-subtitle" style="font-size:1.1rem; margin-bottom:1.5rem; letter-spacing:1px;">An Advanced Exploration for College Graduates</div>
-                <div style="font-family:'Montserrat', sans-serif; font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; color:#2b2319;">Joseph Bryan Thornburg, M. Msc. (Cryptozoology)</div>
+                <div style="font-family:'Montserrat', sans-serif; font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; color:#2b2319;">Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</div>
                 <div style="font-family:'Lora', serif; font-size:0.8rem; line-height:1.4; font-style:italic; margin-bottom:3rem; color:#5a4b37;">
                     Ordained Minister<br>
-                    Founder &amp; Lead Investigator, Institute of Hominology & Scientific Exploration
+                    Founder &amp; Lead Investigator, Institute of Hominology & Scientific Expedition
                 </div>
                 <div class="cover-seal">IHSE</div>
                 <div style="margin-top: 4rem; font-family:'Montserrat', sans-serif; font-size:0.8rem; letter-spacing:2px; color:var(--text-muted);">
@@ -6106,13 +6106,13 @@ window.printFullManual = function() {
     </head>
     <body>
         <div class="cover-page">
-            <div class="cover-subtitle">Institute of Hominology & Scientific Exploration</div>
+            <div class="cover-subtitle">Institute of Hominology & Scientific Expedition</div>
             <div class="cover-title" style="font-size: 2.5rem;">CRYPTOZOOLOGY</div>
             <div class="cover-subtitle" style="font-size: 1.1rem; margin-top: 0.5rem; letter-spacing: 2px;">An Advanced Exploration for College Graduates</div>
-            <div style="font-family:'Montserrat', sans-serif; font-size:1.3rem; font-weight:600; margin-top: 2rem; color:#2b2319;">Joseph Bryan Thornburg, M. Msc. (Cryptozoology)</div>
+            <div style="font-family:'Montserrat', sans-serif; font-size:1.3rem; font-weight:600; margin-top: 2rem; color:#2b2319;">Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)</div>
             <div style="font-family:'Lora', serif; font-size:0.95rem; line-height:1.5; font-style:italic; margin-top:0.5rem; margin-bottom:2rem; color:#5a4b37;">
                 Ordained Minister<br>
-                Founder &amp; Lead Investigator, Institute of Hominology & Scientific Exploration
+                Founder &amp; Lead Investigator, Institute of Hominology & Scientific Expedition
             </div>
             <div style="margin-top: 4rem; font-family:'Montserrat', sans-serif; font-size:0.9rem; color:#888;">Â© 2026 Joseph Bryan Thornburg. All rights reserved.</div>
         </div>
@@ -6523,7 +6523,7 @@ window.openJoinModal = function() {
             formView.style.display = "none";
             pendingView.style.display = "none";
             successView.style.display = "block";
-            document.getElementById("success-welcome-text").innerHTML = `Welcome to the Institute of Hominology & Scientific Exploration, Investigator <strong>${currentState.userName}</strong>!<br><br>Your credentials have been authenticated. You have full clearance.`;
+            document.getElementById("success-welcome-text").innerHTML = `Welcome to the Institute of Hominology & Scientific Expedition, Investigator <strong>${currentState.userName}</strong>!<br><br>Your credentials have been authenticated. You have full clearance.`;
         } else if (currentState.userRole === "pending") {
             formView.style.display = "none";
             pendingView.style.display = "block";
@@ -6704,7 +6704,7 @@ window.mockApproveRequest = function() {
     const successView = document.getElementById("join-success-view");
     successView.style.display = "block";
     document.getElementById("success-welcome-text").innerHTML = `
-        Welcome to the Institute of Hominology & Scientific Exploration!<br><br>
+        Welcome to the Institute of Hominology & Scientific Expedition!<br><br>
         Your credentials have been authenticated. You now have full clearance to view chapters, workbooks, and sit for the exam.
     `;
     
@@ -7025,6 +7025,8 @@ window.adminPreviewCertificate = function() {
     // 9. Minimize/hide the admin floating panel so the user can see the certificate clearly
     minimizeAdminPanel();
 };
+
+
 
 
 

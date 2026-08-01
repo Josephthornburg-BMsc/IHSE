@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IHSE — Institute of Hominology & Scientific Exploration</title>
-    <meta name="description" content="Institute of Hominology & Scientific Exploration — Field Operations Portal. Consulting, field reports, expedition planning, and NEO-CRYPTID dispatch terminal.">
+    <title>IHSE — Institute of Hominology & Scientific Expedition</title>
+    <meta name="description" content="Institute of Hominology & Scientific Expedition - Field Operations Portal. Consulting, field reports, and expedition planning.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
@@ -296,46 +296,6 @@
         .log-entry-notes { font-size: 0.82rem; color: var(--text-secondary); font-style: italic; }
         .log-empty { padding: 3rem; text-align: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.82rem; }
 
-        /* ── NEO-CRYPTID TERMINAL ── */
-        #terminal-section { padding: 4rem 2rem; }
-        .terminal-wrap { max-width: 900px; margin: 0 auto; }
-        .terminal-card {
-            background: #060907; border: 1px solid #1e3a1e; border-radius: var(--radius);
-            overflow: hidden; box-shadow: 0 0 60px rgba(74,140,92,0.12);
-        }
-        .terminal-titlebar {
-            background: #0d150d; padding: 0.75rem 1.2rem; border-bottom: 1px solid #1e3a1e;
-            display: flex; align-items: center; gap: 1rem;
-        }
-        .t-dots { display: flex; gap: 6px; }
-        .t-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .t-dot.r { background: #8b2020; }
-        .t-dot.y { background: #8b6a20; }
-        .t-dot.g { background: var(--accent-green); }
-        .terminal-label { font-family: var(--font-mono); font-size: 0.72rem; color: #4a8c5c; letter-spacing: 2px; }
-        .terminal-output {
-            min-height: 320px; max-height: 480px; overflow-y: auto;
-            padding: 1.5rem; font-family: var(--font-mono); font-size: 0.82rem;
-            line-height: 1.8; color: #6dbf82;
-        }
-        .t-line { margin-bottom: 0.1rem; }
-        .t-line.cmd { color: #c8a84b; }
-        .t-line.sys { color: #4a8c5c; }
-        .t-line.warn { color: #d4882a; }
-        .t-line.err { color: #8b4040; }
-        .t-line.data { color: #8fa882; }
-        .terminal-input-row {
-            border-top: 1px solid #1e3a1e; padding: 0.75rem 1.2rem;
-            display: flex; align-items: center; gap: 0.5rem;
-            background: #0a110a;
-        }
-        .t-prompt { font-family: var(--font-mono); color: var(--accent-green-bright); font-size: 0.82rem; white-space: nowrap; }
-        .t-input {
-            flex: 1; background: transparent; border: none; outline: none;
-            font-family: var(--font-mono); font-size: 0.82rem; color: #6dbf82;
-            caret-color: var(--accent-green-bright);
-        }
-
         /* ── ABOUT ── */
         #about-section { padding: 4rem 2rem; }
         .about-wrap { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -385,7 +345,7 @@
         <div class="logo-badge">IHSE</div>
         <div class="logo-text-wrap">
             <span class="logo-title">IHSE</span>
-            <span class="logo-sub">Institute of Hominology &amp; Scientific Exploration</span>
+            <span class="logo-sub">Institute of Hominology &amp; Scientific Expedition</span>
         </div>
     </div>
     <nav class="header-nav">
@@ -393,7 +353,6 @@
         <button class="nav-btn" id="nav-services" onclick="showSection('services')">Services</button>
         <button class="nav-btn" id="nav-estimator" onclick="showSection('estimator')">Estimator</button>
         <button class="nav-btn" id="nav-reports" onclick="showSection('reports')">Field Reports</button>
-        <button class="nav-btn" id="nav-terminal" onclick="showSection('terminal')">NEO-CRYPTID</button>
         <button class="nav-btn" id="nav-about" onclick="showSection('about')">About</button>
         <a href="index.html" style="padding:0.38rem 0.9rem; border-radius:20px; border:1px solid var(--accent-gold); color:var(--accent-gold); font-size:0.72rem; font-weight:600; letter-spacing:0.5px; text-transform:uppercase; text-decoration:none; transition:all 0.25s;" onmouseover="this.style.background='rgba(200,168,75,0.12)'" onmouseout="this.style.background='transparent'">📚 Course</a>
     </nav>
@@ -408,7 +367,7 @@
     <div class="hero">
         <div class="hero-emblem">IHSE</div>
         <p class="hero-sub">Field Operations Portal</p>
-        <h1>Institute of Hominology<br>&amp; Scientific Exploration</h1>
+        <h1>Institute of Hominology<br>&amp; Scientific Expedition</h1>
         <p>Professional cryptozoological consulting, expedition planning, and evidence analysis. We document the undocumented — with scientific rigor and field discipline.</p>
         <div class="hero-btns">
             <button class="btn-primary" onclick="showSection('services')">View Services</button>
@@ -594,42 +553,6 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     NEO-CRYPTID TERMINAL
-═══════════════════════════════════════════════ -->
-<section id="terminal-section" class="page-section">
-    <div class="section-header">
-        <p class="section-label">Classified System</p>
-        <h2>NEO-CRYPTID Terminal</h2>
-        <p>Secure command interface for authorized IHSE field investigators. Type <code style="color:var(--accent-gold); background:var(--bg-panel); padding:0.1rem 0.4rem; border-radius:4px;">help</code> to see available commands.</p>
-    </div>
-    <div class="terminal-wrap">
-        <div class="terminal-card">
-            <div class="terminal-titlebar">
-                <div class="t-dots">
-                    <div class="t-dot r"></div>
-                    <div class="t-dot y"></div>
-                    <div class="t-dot g"></div>
-                </div>
-                <span class="terminal-label">NEO-CRYPTID // IHSE DISPATCH TERMINAL v4.1</span>
-            </div>
-            <div class="terminal-output" id="terminal-output">
-                <div class="t-line sys">IHSE SECURE TERMINAL — PROTOCOL 9 ACTIVE</div>
-                <div class="t-line sys">Institute of Hominology &amp; Scientific Exploration</div>
-                <div class="t-line sys">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-                <div class="t-line data">Connecting to IHSE dispatch network...</div>
-                <div class="t-line data">Authenticating field node... <span style="color:var(--accent-green-bright)">OK</span></div>
-                <div class="t-line data">Loading cryptid database... <span style="color:var(--accent-green-bright)">7,432 entries indexed</span></div>
-                <div class="t-line sys">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-                <div class="t-line">Type <span style="color:var(--accent-gold)">help</span> for command list.</div>
-            </div>
-            <div class="terminal-input-row">
-                <span class="t-prompt">IHSE@field:~$</span>
-                <input class="t-input" id="terminal-input" type="text" placeholder="Enter command..." autocomplete="off" onkeydown="handleTerminalInput(event)">
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ═══════════════════════════════════════════════
      ABOUT
@@ -639,10 +562,10 @@
         <div class="about-text">
             <p class="section-label" style="font-size:0.7rem; letter-spacing:4px; text-transform:uppercase; color:var(--accent-gold); margin-bottom:0.8rem;">Who We Are</p>
             <h2>The Science Behind the Search</h2>
-            <p>The Institute of Hominology &amp; Scientific Exploration was founded on a singular premise: that anomalous biological phenomena deserve the same rigorous investigative standards applied to conventional wildlife research.</p>
+            <p>The Institute of Hominology &amp; Scientific Expedition was founded on a singular premise: that anomalous biological phenomena deserve the same rigorous investigative standards applied to conventional wildlife research.</p>
             <p>Our team employs forensic analysis, ecological modeling, ethological observation, and cutting-edge eDNA techniques to evaluate evidence that mainstream institutions routinely dismiss.</p>
             <p>We are not believers. We are investigators.</p>
-            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:1.5rem;">— Joseph Bryan Thornburg, M. Msc.<br>Founder &amp; Lead Investigator, IHSE</p>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:1.5rem;">—Dr. Joseph Bryan Thornburg, PhD (Cryptozoology)<br>Founder &amp; Lead Investigator, IHSE</p>
         </div>
         <div class="about-credentials">
             <div class="cred-item">
@@ -655,7 +578,7 @@
             <div class="cred-item">
                 <div class="cred-icon">📜</div>
                 <div>
-                    <h4>M. Msc. Cryptozoology</h4>
+                    <h4>PhD (Cryptozoology)</h4>
                     <p>Graduate-level training in anomalous biological phenomena and field investigation.</p>
                 </div>
             </div>
@@ -683,7 +606,7 @@
      FOOTER
 ═══════════════════════════════════════════════ -->
 <footer>
-    <div>© 2026 <span>Institute of Hominology &amp; Scientific Exploration</span>. All Rights Reserved.</div>
+    <div>© 2026 <span>Institute of Hominology &amp; Scientific Expedition</span>. All Rights Reserved.</div>
     <div style="margin-top:0.4rem;">Questions? Contact us via the estimator or field report portal.</div>
 </footer>
 
@@ -875,140 +798,7 @@ function loadReports() {
     };
 }
 
-// ═══════════════════════════════════════════
-// NEO-CRYPTID TERMINAL
-// ═══════════════════════════════════════════
-const termHistory = [];
-let histIdx = -1;
 
-const CRYPTIDS = ['Bigfoot / Sasquatch','Loch Ness Monster','Chupacabra','Mothman','Dover Demon','Wendigo','Jersey Devil','Skunk Ape','Ogopogo','Thunderbird','Megalodon','Yeti / Abominable Snowman'];
-const LOCATIONS = ['Pacific Northwest, WA','Loch Ness, Scotland','Puerto Rico','Point Pleasant, WV','Dover, MA','Great Lakes Region','Pine Barrens, NJ','Florida Everglades','Okanagan Lake, BC','Arizona desert','Mariana Trench','Himalayas, Nepal'];
-
-const COMMANDS = {
-    help: () => [
-        {c:'sys', t:'══════ IHSE COMMAND REFERENCE ══════'},
-        {c:'data', t:'status          — System status'},
-        {c:'data', t:'scan [location] — Scan for cryptid activity'},
-        {c:'data', t:'lookup [name]   — Look up cryptid in database'},
-        {c:'data', t:'reports         — Show recent dispatch reports'},
-        {c:'data', t:'contacts        — IHSE contact info'},
-        {c:'data', t:'pay             — Open payment portal'},
-        {c:'data', t:'clear           — Clear terminal'},
-        {c:'data', t:'decrypt [code]  — Attempt NEO-CRYPTID decryption'},
-        {c:'sys',  t:'════════════════════════════════════'},
-    ],
-    status: () => [
-        {c:'sys', t:'SYSTEM STATUS CHECK'},
-        {c:'data', t:`Node ID:       FIELD-NODE-${Math.floor(Math.random()*9000+1000)}`},
-        {c:'data', t:`Uptime:        ${Math.floor(Math.random()*999+1)} hours`},
-        {c:'data', t:`DB Entries:    7,432 cryptid classifications`},
-        {c:'data', t:`Active Cases:  ${Math.floor(Math.random()*30+5)}`},
-        {c:'data', t:`Protocol 9:    ACTIVE`},
-        {c:'', t:'All systems operational.'},
-    ],
-    reports: () => {
-        const lines = [{c:'sys', t:'RECENT DISPATCH LOG (LAST 5)'}];
-        for (let i = 0; i < 5; i++) {
-            const c = CRYPTIDS[Math.floor(Math.random()*CRYPTIDS.length)];
-            const l = LOCATIONS[Math.floor(Math.random()*LOCATIONS.length)];
-            lines.push({c:'data', t:`IHSE-${Date.now().toString(36).toUpperCase().slice(-6)}  |  ${c}  |  ${l}`});
-        }
-        return lines;
-    },
-    contacts: () => [
-        {c:'sys', t:'IHSE CONTACT INFORMATION'},
-        {c:'data', t:'Lead Investigator: Joseph Bryan Thornburg, M. Msc.'},
-        {c:'data', t:'PayPal:            joseph.thornburg08@gmail.com'},
-        {c:'data', t:'Cash App:          $JosephThornburg1'},
-        {c:'', t:'Use the estimator to request consulting services.'},
-    ],
-    pay: () => {
-        setTimeout(() => openPaymentModal(), 300);
-        return [{c:'', t:'Opening payment portal...'}];
-    },
-    clear: () => { document.getElementById('terminal-output').innerHTML = ''; return []; },
-};
-
-function handleTerminalInput(e) {
-    if (e.key === 'ArrowUp') {
-        histIdx = Math.min(histIdx + 1, termHistory.length - 1);
-        e.target.value = termHistory[histIdx] || '';
-        return;
-    }
-    if (e.key === 'ArrowDown') {
-        histIdx = Math.max(histIdx - 1, -1);
-        e.target.value = histIdx >= 0 ? termHistory[histIdx] : '';
-        return;
-    }
-    if (e.key !== 'Enter') return;
-    const raw = e.target.value.trim();
-    e.target.value = '';
-    if (!raw) return;
-    termHistory.unshift(raw); histIdx = -1;
-
-    printTermLine(raw, 'cmd', '$ ');
-
-    const [cmd, ...args] = raw.toLowerCase().split(/\s+/);
-    const arg = args.join(' ');
-
-    if (cmd === 'scan') {
-        const loc = arg || 'unknown location';
-        const c   = CRYPTIDS[Math.floor(Math.random()*CRYPTIDS.length)];
-        printTermLines([
-            {c:'sys', t:'SCANNING: ' + loc.toUpperCase()},
-            {c:'data', t:'Running acoustic signature analysis...'},
-            {c:'data', t:'Checking eDNA water-sample database...'},
-            {c:'data', t:`Possible match: ${c}`},
-            {c:'warn', t:`Confidence: ${Math.floor(Math.random()*40+45)}% — Recommend field verification`},
-        ]);
-        return;
-    }
-    if (cmd === 'lookup') {
-        const query = arg || 'unknown';
-        const match = CRYPTIDS.find(c => c.toLowerCase().includes(query)) || null;
-        if (match) {
-            const loc = LOCATIONS[Math.floor(Math.random()*LOCATIONS.length)];
-            printTermLines([
-                {c:'sys', t:'DATABASE LOOKUP: ' + match.toUpperCase()},
-                {c:'data', t:`Primary Habitat:   ${loc}`},
-                {c:'data', t:`Classification:    Undocumented Hominid / Cryptid`},
-                {c:'data', t:`Evidence Quality:  ${['Strong','Moderate','Circumstantial'][Math.floor(Math.random()*3)]}`},
-                {c:'data', t:`Case Files:        ${Math.floor(Math.random()*200+50)} reports on record`},
-                {c:'', t:'Use SCAN for live field analysis.'},
-            ]);
-        } else {
-            printTermLine(`No match for "${arg}" in database. Try: bigfoot, mothman, chupacabra`, 'warn');
-        }
-        return;
-    }
-    if (cmd === 'decrypt') {
-        const code = arg.toUpperCase();
-        printTermLines([
-            {c:'sys', t:'DECRYPTION ATTEMPT: ' + code},
-            {c:'data', t:'Running NEO-CRYPTID cipher...'},
-            {c:'data', t:'Checking against Protocol 9 key matrix...'},
-            {c:code === 'DELTA-7' ? '' : 'err', t: code === 'DELTA-7' ? 'ACCESS GRANTED — Welcome, Investigator.' : `DECRYPTION FAILED — "${code}" not recognized.`},
-        ]);
-        return;
-    }
-    if (COMMANDS[cmd]) {
-        printTermLines(COMMANDS[cmd]());
-    } else {
-        printTermLine(`Command not found: "${cmd}". Type help for command list.`, 'err');
-    }
-}
-
-function printTermLine(text, cls = '', prefix = '') {
-    const out = document.getElementById('terminal-output');
-    const div = document.createElement('div');
-    div.className = 't-line ' + cls;
-    div.textContent = prefix + text;
-    out.appendChild(div);
-    out.scrollTop = out.scrollHeight;
-}
-function printTermLines(lines) {
-    lines.forEach(l => printTermLine(l.t, l.c || ''));
-}
 
 // ═══════════════════════════════════════════
 // TOAST
