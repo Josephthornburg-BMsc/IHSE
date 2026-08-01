@@ -836,8 +836,8 @@ function loadReports() {
                 <div class="log-entry-location">📍 ${r.location} &nbsp;|&nbsp; 🧑 ${r.name} &nbsp;|&nbsp; 📅 ${r.date}</div>
                 <div class="log-entry-notes">${r.notes.substring(0, 200)}${r.notes.length > 200 ? '...' : ''}</div>
                 <div class="log-entry-actions">
-                    <button class="btn-action edit" onclick="editReport(${r.id})">✏ Edit</button>
-                    <button class="btn-action delete" onclick="deleteReport(${r.id})">🗑 Delete</button>
+                    <button class="btn-action edit" onclick="editReport('${r.reportId}')">✏ Edit</button>
+                    <button class="btn-action delete" onclick="deleteReport('${r.reportId}')">🗑 Delete</button>
                 </div>
             `;
             container.appendChild(el);
@@ -845,12 +845,13 @@ function loadReports() {
     };
 }
 
-function editReport(id) {
+function editReport(reportId) {
     if (!reportsDB) return;
     const tx = reportsDB.transaction(STORE, 'readonly');
-    const req = tx.objectStore(STORE).get(id);
+    const req = tx.objectStore(STORE).getAll();
     req.onsuccess = e => {
-        const r = e.target.result;
+        const reports = e.target.result;
+        const r = reports.find(item => item.reportId === reportId);
         if (!r) return;
         
         // Populate inputs
@@ -861,7 +862,7 @@ function editReport(id) {
         document.getElementById('rep-notes').value = r.notes;
         
         // Update form state
-        editingReportId = id;
+        editingReportId = r.id; // Store the auto-incremented primary key
         document.getElementById('form-heading').textContent = 'Edit Report (' + r.reportId + ')';
         document.getElementById('btn-submit-report').textContent = 'Save Changes';
         document.getElementById('btn-cancel-edit').style.display = 'inline-block';
@@ -884,17 +885,25 @@ function cancelEdit() {
     document.getElementById('btn-cancel-edit').style.display = 'none';
 }
 
-function deleteReport(id) {
+function deleteReport(reportId) {
     if (!reportsDB) return;
     if (!confirm('Are you sure you want to delete this case report?')) return;
     
     const tx = reportsDB.transaction(STORE, 'readwrite');
-    tx.objectStore(STORE).delete(id).onsuccess = () => {
-        if (editingReportId === id) {
-            cancelEdit();
-        }
-        loadReports();
-        showToast('🗑 Report deleted successfully.');
+    const store = tx.objectStore(STORE);
+    const req = store.getAll();
+    req.onsuccess = e => {
+        const reports = e.target.result;
+        const r = reports.find(item => item.reportId === reportId);
+        if (!r) return;
+        
+        store.delete(r.id).onsuccess = () => {
+            if (editingReportId === r.id) {
+                cancelEdit();
+            }
+            loadReports();
+            showToast('🗑 Report deleted successfully.');
+        };
     };
 }
 
