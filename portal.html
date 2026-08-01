@@ -295,6 +295,15 @@
         .log-entry-location { font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.3rem; }
         .log-entry-notes { font-size: 0.82rem; color: var(--text-secondary); font-style: italic; }
         .log-empty { padding: 3rem; text-align: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.82rem; }
+        .log-entry-actions { display: flex; gap: 0.6rem; margin-top: 0.8rem; }
+        .btn-action {
+            padding: 0.35rem 0.7rem; border-radius: 4px; border: 1px solid var(--border);
+            background: transparent; color: var(--text-secondary); font-size: 0.72rem;
+            cursor: pointer; transition: all 0.2s; font-family: var(--font-ui);
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .btn-action:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+        .btn-action.delete:hover { border-color: var(--accent-red); color: #f07b7b; }
 
         /* ── ABOUT ── */
         #about-section { padding: 4rem 2rem; }
@@ -506,7 +515,7 @@
     </div>
     <div class="reports-wrap">
         <div class="report-form-card">
-            <h3 style="font-family:var(--font-serif); margin-bottom:1.5rem; font-size:1.1rem;">Submit New Report</h3>
+            <h3 id="form-heading" style="font-family:var(--font-serif); margin-bottom:1.5rem; font-size:1.1rem;">Submit New Report</h3>
             <div class="report-form-grid">
                 <div class="form-group">
                     <label>Investigator Name</label>
@@ -536,7 +545,10 @@
                     <textarea id="rep-notes" placeholder="Describe the encounter, evidence observed, environmental conditions..."></textarea>
                 </div>
             </div>
-            <button class="btn-primary" style="margin-top:1rem;" onclick="submitReport()">Submit Report</button>
+            <div style="display:flex; gap:1rem; align-items:center; margin-top:1rem;">
+                <button id="btn-submit-report" class="btn-primary" onclick="submitReport()">Submit Report</button>
+                <button id="btn-cancel-edit" class="btn-outline" style="display:none; padding:0.8rem 1.5rem;" onclick="cancelEdit()">Cancel</button>
+            </div>
         </div>
 
         <div class="reports-log">
@@ -739,6 +751,8 @@ function initDB() {
     req.onerror = () => console.error('DB init failed');
 }
 
+let editingReportId = null;
+
 function submitReport() {
     const name     = document.getElementById('rep-name').value.trim();
     const date     = document.getElementById('rep-date').value;
@@ -750,20 +764,44 @@ function submitReport() {
         showToast('⚠ Please fill in all fields.', 'warn');
         return;
     }
-    const report = {
-        name, date, category, location, notes,
-        reportId: 'IHSE-' + Date.now().toString(36).toUpperCase(),
-        submitted: new Date().toISOString()
-    };
+
     const tx = reportsDB.transaction(STORE, 'readwrite');
-    tx.objectStore(STORE).add(report).onsuccess = () => {
-        loadReports();
-        document.getElementById('rep-name').value = '';
-        document.getElementById('rep-date').value = '';
-        document.getElementById('rep-location').value = '';
-        document.getElementById('rep-notes').value = '';
-        showToast('✔ Report submitted: ' + report.reportId);
-    };
+    const store = tx.objectStore(STORE);
+
+    if (editingReportId !== null) {
+        // Update existing report
+        store.get(editingReportId).onsuccess = (e) => {
+            const report = e.target.result;
+            if (!report) return;
+            
+            report.name = name;
+            report.date = date;
+            report.category = category;
+            report.location = location;
+            report.notes = notes;
+            
+            store.put(report).onsuccess = () => {
+                cancelEdit();
+                loadReports();
+                showToast('✔ Changes saved successfully.');
+            };
+        };
+    } else {
+        // Create new report
+        const report = {
+            name, date, category, location, notes,
+            reportId: 'IHSE-' + Date.now().toString(36).toUpperCase(),
+            submitted: new Date().toISOString()
+        };
+        store.add(report).onsuccess = () => {
+            loadReports();
+            document.getElementById('rep-name').value = '';
+            document.getElementById('rep-date').value = '';
+            document.getElementById('rep-location').value = '';
+            document.getElementById('rep-notes').value = '';
+            showToast('✔ Report submitted: ' + report.reportId);
+        };
+    }
 }
 
 function loadReports() {
@@ -775,10 +813,17 @@ function loadReports() {
         const container = document.getElementById('log-entries');
         const empty     = document.getElementById('log-empty');
         document.getElementById('log-count').textContent = reports.length + ' ENTR' + (reports.length === 1 ? 'Y' : 'IES');
-        if (reports.length === 0) { empty.style.display = 'block'; return; }
-        empty.style.display = 'none';
+        
+        // Remove existing list elements
         const existing = container.querySelectorAll('.log-entry');
         existing.forEach(e => e.remove());
+        
+        if (reports.length === 0) {
+            empty.style.display = 'block';
+            return;
+        }
+        empty.style.display = 'none';
+        
         reports.forEach(r => {
             const el = document.createElement('div');
             el.className = 'log-entry';
@@ -790,9 +835,66 @@ function loadReports() {
                 <div class="log-entry-title">${r.category}</div>
                 <div class="log-entry-location">📍 ${r.location} &nbsp;|&nbsp; 🧑 ${r.name} &nbsp;|&nbsp; 📅 ${r.date}</div>
                 <div class="log-entry-notes">${r.notes.substring(0, 200)}${r.notes.length > 200 ? '...' : ''}</div>
+                <div class="log-entry-actions">
+                    <button class="btn-action edit" onclick="editReport(${r.id})">✏ Edit</button>
+                    <button class="btn-action delete" onclick="deleteReport(${r.id})">🗑 Delete</button>
+                </div>
             `;
             container.appendChild(el);
         });
+    };
+}
+
+function editReport(id) {
+    if (!reportsDB) return;
+    const tx = reportsDB.transaction(STORE, 'readonly');
+    const req = tx.objectStore(STORE).get(id);
+    req.onsuccess = e => {
+        const r = e.target.result;
+        if (!r) return;
+        
+        // Populate inputs
+        document.getElementById('rep-name').value = r.name;
+        document.getElementById('rep-date').value = r.date;
+        document.getElementById('rep-category').value = r.category;
+        document.getElementById('rep-location').value = r.location;
+        document.getElementById('rep-notes').value = r.notes;
+        
+        // Update form state
+        editingReportId = id;
+        document.getElementById('form-heading').textContent = 'Edit Report (' + r.reportId + ')';
+        document.getElementById('btn-submit-report').textContent = 'Save Changes';
+        document.getElementById('btn-cancel-edit').style.display = 'inline-block';
+        
+        // Scroll form card into view
+        document.querySelector('.report-form-card').scrollIntoView({ behavior: 'smooth' });
+    };
+}
+
+function cancelEdit() {
+    editingReportId = null;
+    document.getElementById('rep-name').value = '';
+    document.getElementById('rep-date').value = '';
+    document.getElementById('rep-category').value = 'Hominid / Bipedal';
+    document.getElementById('rep-location').value = '';
+    document.getElementById('rep-notes').value = '';
+    
+    document.getElementById('form-heading').textContent = 'Submit New Report';
+    document.getElementById('btn-submit-report').textContent = 'Submit Report';
+    document.getElementById('btn-cancel-edit').style.display = 'none';
+}
+
+function deleteReport(id) {
+    if (!reportsDB) return;
+    if (!confirm('Are you sure you want to delete this case report?')) return;
+    
+    const tx = reportsDB.transaction(STORE, 'readwrite');
+    tx.objectStore(STORE).delete(id).onsuccess = () => {
+        if (editingReportId === id) {
+            cancelEdit();
+        }
+        loadReports();
+        showToast('🗑 Report deleted successfully.');
     };
 }
 
