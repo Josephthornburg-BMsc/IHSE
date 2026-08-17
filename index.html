@@ -615,7 +615,7 @@
 
         .gateways-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 2.5rem;
         }
 
@@ -1037,8 +1037,10 @@
             <a href="#codex" class="nav-link">Codex</a>
             <a href="#gateways" class="nav-link">Portals</a>
             <a href="#founder" class="nav-link">Founder</a>
+            <a href="store.html" class="nav-link">Store</a>
         </nav>
         <div class="header-ctas">
+            <a href="store.html" class="btn-header portal">Field Store</a>
             <a href="portal.html" class="btn-header portal">Field Portal</a>
             <a href="course.html" class="btn-header course">Course Access</a>
         </div>
@@ -1264,6 +1266,20 @@
                     <span class="gate-badge">Certification Exam</span>
                 </div>
                 <a href="course.html" class="btn-gate">Enter Course &rarr;</a>
+            </div>
+
+            <!-- Field Store Card -->
+            <div class="gate-card academic">
+                <div class="gate-icon">🛒</div>
+                <h3>IHSE Field Store</h3>
+                <p>The official store of the Institute. Purchase museum-grade plaster cast footprint specimens, research publications, casting plaster kits, and secure research expedition bookings.</p>
+                <div class="gate-badge-list">
+                    <span class="gate-badge">Plaster Specimens</span>
+                    <span class="gate-badge">Bio-Acoustics</span>
+                    <span class="gate-badge">Literature Node</span>
+                    <span class="gate-badge">Active Booking</span>
+                </div>
+                <a href="store.html" class="btn-gate" style="background: var(--gold); color: #060805; box-shadow: 0 4px 15px var(--gold-glow);">Enter Store &rarr;</a>
             </div>
         </div>
     </section>
